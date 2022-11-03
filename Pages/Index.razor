@@ -1,4 +1,7 @@
 ﻿@page "/"
+@using TCSA.Models;
+@using TCSA.Data;
+
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-4">Main Banner</h1>
@@ -11,3 +14,16 @@
         <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
     </div>
 </div>
+
+@foreach (var article in articles.Where(x => x.Area == Area.HowItWorks)) {
+    <p>@article.Title</p>
+}
+
+@code {
+    protected List<Article> articles = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        articles = ArticlesHelper.GetArticles();
+    }
+}
