@@ -1,0 +1,19 @@
+﻿@using TCSA.Models;
+@using TCSA.Data;
+
+@page "/project/{ProjectId}"
+
+<h3>Project Id: @ProjectId</h3>
+<h2>Project Id: @Project.Title</h2>
+
+@code {
+    [Parameter]
+    public string ProjectId { get; set; }
+    public Project Project { get; set; }
+
+    protected async override Task OnParametersSetAsync()
+    {
+        Project = ArticlesHelper.GetProjects().Single(x => x.Id == int.Parse(ProjectId));
+    }
+
+}

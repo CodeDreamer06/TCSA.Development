@@ -35,15 +35,45 @@
     </div>
 </div>
 
-@foreach (var article in articles.Where(x => x.Area == Area.StartHere))
-{
-    <p>@article.Title</p>
-}
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
+            <h1 class="display-4">First Steps</h1>
+        </div>
+        @foreach (var article in articles.Where(x => x.Area == Area.StartHere))
+        {
+            <div class="col">
+                <div class="card text-center w-75" style="width: 18rem;">
+                    <a href="@($"project/{article.Id}")"><img class="card-img-top" src="@article.IconUrl" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">@article.Title</h5>
+                        <p class="card-text">@article.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
 
-@foreach (var project in projects.Where(x => x.Area == Area.Console))
-{
-    <p>@project.Title</p>
-}
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
+            <h1 class="display-4">Console Apps</h1>
+        </div>
+        @foreach (var project in projects.Where(x => x.Area == Area.Console))
+        {
+            <div class="col">
+                <div class="card text-center" style="width: 18rem;">
+                    <img class="card-img-top" src="@project.IconUrl" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@project.Title</h5>
+                        <p class="card-text">@project.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
 
 @code {
     protected List<Article> articles = new();
@@ -57,7 +87,7 @@
 }
 
 <style>
-  .card {
-      border: none;
-  }
+    .card {
+        border: none;
+    }
 </style>
