@@ -19,6 +19,11 @@
     <p>@article.Title</p>
 }
 
+@foreach (var article in articles.Where(x => x.Area == Area.StartHere))
+{
+        <p>@article.Title</p>
+}
+
 @code {
     protected List<Article> articles = new();
 

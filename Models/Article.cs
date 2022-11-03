@@ -12,6 +12,7 @@ public class Article
 public enum Area
 {
     HowItWorks,
+    StartHere,
     Console,
     StartApplying,
     MVC,
