@@ -186,7 +186,7 @@ namespace TCSA.Data
                 {
                     Id = 12,
                     Title = "Portfolio",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/05/icons8-portfolio-512.png",
                     Description = "Time to create a portfolio! Let’s present your work using a nice front-end technology of your choice",
                     Area = Area.StartApplying
                 },
@@ -194,7 +194,7 @@ namespace TCSA.Data
                 {
                     Id = 13,
                     Title = "Resume",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/05/icons8-resume-512.png",
                     Description = "The last step before start applying for jobs. Let’s build a nice resume before hit the Apply button",
                     Area = Area.StartApplying
                 },
@@ -202,7 +202,7 @@ namespace TCSA.Data
                 {
                     Id = 14,
                     Title = "Water Drinking Logger",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/04/icons8-drinking-96.png",
                     Description = "Build your first full-stack app with ASP.NET C# Razor Pages and ADO.NET",
                     Area = Area.MVC
                 },
@@ -210,7 +210,7 @@ namespace TCSA.Data
                 {
                     Id = 15,
                     Title = "Movies",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/05/icons8-movie-512.png",
                     Description = "Build your first full-stack app with ASP.NET C# MVC and Entity Framework",
                     Area = Area.MVC
                 },
@@ -218,7 +218,7 @@ namespace TCSA.Data
                 {
                     Id = 16,
                     Title = "Todo List",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/03/external-checklist-vacation-planning-cycling-tour-flaticons-lineal-color-flat-icons-2.png",
                     Description = "Build your first MVC application with C#, Razor Syntax, Javascript and Bootstrap",
                     Area = Area.MVC
                 },
@@ -226,7 +226,7 @@ namespace TCSA.Data
                 {
                     Id = 17,
                     Title = "Budget",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/05/icons8-budget-512.png",
                     Description = "Build a personal finance app with multiple related tables in the back-end",
                     Area = Area.MVC
                 },
@@ -234,7 +234,7 @@ namespace TCSA.Data
                 {
                     Id = 18,
                     Title = "Authentication and Authorization",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/05/icons8-safe-ok-480.png",
                     Description = "Learn how to secure your app with ASP.NET Core Identity",
                     Area = Area.MVC
                 },
@@ -242,7 +242,7 @@ namespace TCSA.Data
                 {
                     Id = 19,
                     Title = "Ecommerce",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/05/icons8-online-store-64.png",
                     Description = "Build a fully functioning ecommerce for products of your choice",
                     Area = Area.MVC
                 },
@@ -250,7 +250,7 @@ namespace TCSA.Data
                 {
                     Id = 20,
                     Title = "E-Commerce Admin",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/05/icons8-admin-512.png",
                     Description = "Build an administration page for the e-commerce you build in project 6, using Asp.NET Role-based Authentication",
                     Area = Area.MVC
                 },
@@ -258,7 +258,7 @@ namespace TCSA.Data
                 {
                     Id = 21,
                     Title = "Tour of Heroes",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/06/icons8-superwoman-480.png",
                     Description = "Learn the basics of Angular by building a purely front-end app using the documentation",
                     Area = Area.Angular
                 },
@@ -266,7 +266,7 @@ namespace TCSA.Data
                 {
                     Id = 22,
                     Title = "Coffee Tracker",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/05/icons8-coffee-mug-128.png",
                     Description = "Track your coffee consumption with a C# Web Api and Angular",
                     Area = Area.Angular
                 },
@@ -274,7 +274,7 @@ namespace TCSA.Data
                 {
                     Id = 23,
                     Title = "Sleep Tracker",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/05/icons8-sleeping-512.png",
                     Description = "Build on your Angular foundation with an app to log and generate reports about your sleep",
                     Area = Area.Angular
                 },
@@ -282,7 +282,7 @@ namespace TCSA.Data
                 {
                     Id = 24,
                     Title = "Quiz Game",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/05/icons8-quiz-game-contestants-480.png",
                     Description = "Build a highly interactive Quiz Game with Angular and Angular Material",
                     Area = Area.Angular
                 },
@@ -290,7 +290,7 @@ namespace TCSA.Data
                 {
                     Id = 25,
                     Title = "Tic-Tac-Toe",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/07/icons8-tic-tak-toe-cross-and-circle-matrix-game-with-work-strategy-concept-384.png",
                     Description = "A very simple project to easy you into with this rich framework. You’ll be consuming an Api of your choice",
                     Area = Area.React
                 },
@@ -306,7 +306,7 @@ namespace TCSA.Data
                 {
                     Id = 27,
                     Title = "Shopping List",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/07/icons8-shopping-list-512.png",
                     Description = "Build your first full CRUD app with React, calling a .NET Web API",
                     Area = Area.React
                 },
@@ -314,7 +314,7 @@ namespace TCSA.Data
                 {
                     Id = 28,
                     Title = "Friends Manager",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/06/icons8-friend-512.png",
                     Description = "Build an app that will help you monitor and cultivate your friendships managing state with Redux",
                     Area = Area.React
                 },
@@ -322,7 +322,7 @@ namespace TCSA.Data
                 {
                     Id = 29,
                     Title = "Wardrobe Inventory",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/06/icons8-wardrobe-392.png",
                     Description = "Get started with Blazor by building an inventory for your clothes. With pictures!",
                     Area = Area.Blazor
                 },
@@ -330,7 +330,7 @@ namespace TCSA.Data
                 {
                     Id = 30,
                     Title = "Memory Game",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/06/icons8-memory-512.png",
                     Description = "Build a simple memory game where users will train their brain and track results",
                     Area = Area.Blazor
                 },
@@ -338,7 +338,7 @@ namespace TCSA.Data
                 {
                     Id = 31,
                     Title = "Food Journal",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/06/icons8-ingredients-480.png",
                     Description = "Log your food habits in your first CRUD Blazor App",
                     Area = Area.Blazor
                 },
@@ -346,7 +346,7 @@ namespace TCSA.Data
                 {
                     Id = 32,
                     Title = "Sports Statistics",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/06/icons8-football-team-480.png",
                     Description = "Build an application to track the performance of a sports team in real time",
                     Area = Area.Blazor
                 },
@@ -354,7 +354,7 @@ namespace TCSA.Data
                 {
                     Id = 33,
                     Title = "Math Game",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/08/icons8-maths-376.png",
                     Description = "Start your native app development journey building a simple game with the four basic mathematical operations",
                     Area = Area.MAUI
                 },
@@ -362,7 +362,7 @@ namespace TCSA.Data
                 {
                     Id = 34,
                     Title = "Books to Read",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/08/icons8-bookshelf-512.png",
                     Description = "Build an app to keep track of reading activity using the MVVM pattern",
                     Area = Area.MAUI
                 },
@@ -370,7 +370,7 @@ namespace TCSA.Data
                 {
                     Id = 35,
                     Title = "Monkeys Data",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/08/icons8-see-no-evil-monkey-256.png",
                     Description = "Build an advanced Mobile UI to present data about Monkeys, using Geolocation to show which monkey is closest to you",
                     Area = Area.MAUI
                 },
@@ -378,7 +378,7 @@ namespace TCSA.Data
                 {
                     Id = 36,
                     Title = "Warehouse Admin",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/08/icons8-warehouse-512.png",
                     Description = "Track warehouse operations using a complex data model with Maui",
                     Area = Area.MAUI
                 },
@@ -386,7 +386,7 @@ namespace TCSA.Data
                 {
                     Id = 37,
                     Title = "Deploying a Simple App",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/09/icons8-web-392.png",
                     Description = "Start with Azure creating an account and deploying a simple app without a database",
                     Area = Area.Azure
                 },
@@ -394,7 +394,7 @@ namespace TCSA.Data
                 {
                     Id = 38,
                     Title = "Deploying a full-stack .NET app",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/09/icons8-full-stack-512.png",
                     Description = "Deploy a crud app from the .NET ecosystem along with a database server",
                     Area = Area.Azure
                 },
@@ -402,7 +402,7 @@ namespace TCSA.Data
                 {
                     Id = 39,
                     Title = "Deploy a full-stack .NET + JS Framework app",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/09/icons8-website-468.png",
                     Description = "Deploy a full-stack app using a JS framework along with a .NET Web API",
                     Area = Area.Azure
                 },
@@ -410,7 +410,7 @@ namespace TCSA.Data
                 {
                     Id = 40,
                     Title = "Azure Functions",
-                    IconUrl = "2021/12/icons8-baby-app-96.png",
+                    IconUrl = "2022/09/icons8-cloud-connection-480.png",
                     Description = "Get started with serverless computing creating backend services directly on the cloud",
                     Area = Area.Azure
                 }

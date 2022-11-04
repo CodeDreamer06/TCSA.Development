@@ -45,6 +45,8 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <h1 class="display-4 area-title first-steps-area-title">First Steps</h1>
+            <p class="area-description area-description-dark">Get started with our program reading and following the instructions in these articles. If possible, follow them in order. They cover everything you need to prepare for your C# journey.</p>
+
             @foreach (var article in articles.Where(x => x.Area == Area.StartHere))
             {
                 <div class="col">
@@ -65,6 +67,134 @@
     <div class="row d-flex justify-content-center">
         <h1 class="display-4 area-title">Console Apps</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.Console))
+        {
+            <div class="col-3 my-3">
+                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
+                    <a href="@($"project/{project.Id}")"><img class="card-img-top" src="@(baseUrl)/@project.IconUrl)" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">@project.Title</h5>
+                        <p class="card-text">@project.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="area-first-steps">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <h1 class="display-4 area-title first-steps-area-title">Apply for Jobs</h1>
+            @foreach (var project in projects.Where(x => x.Area == Area.StartApplying))
+            {
+                <div class="col-3 my-3">
+                    <div class="card shadow rounded-lg text-center" style="width: 18rem;">
+                        <a href="@($"project/{project.Id}")"><img class="card-img-top" src="@(baseUrl)/@project.IconUrl)" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">@project.Title</h5>
+                            <p class="card-text">@project.Description</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h1 class="display-4 area-title">MVC</h1>
+        @foreach (var project in projects.Where(x => x.Area == Area.MVC))
+        {
+            <div class="col-3 my-3">
+                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
+                    <a href="@($"project/{project.Id}")"><img class="card-img-top" src="@(baseUrl)/@project.IconUrl)" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">@project.Title</h5>
+                        <p class="card-text">@project.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h1 class="display-4 area-title">Angular</h1>
+        @foreach (var project in projects.Where(x => x.Area == Area.Angular))
+        {
+            <div class="col-3 my-3">
+                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
+                    <a href="@($"project/{project.Id}")"><img class="card-img-top" src="@(baseUrl)/@project.IconUrl)" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">@project.Title</h5>
+                        <p class="card-text">@project.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h1 class="display-4 area-title">React</h1>
+        @foreach (var project in projects.Where(x => x.Area == Area.React))
+        {
+            <div class="col-3 my-3">
+                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
+                    <a href="@($"project/{project.Id}")"><img class="card-img-top" src="@(baseUrl)/@project.IconUrl)" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">@project.Title</h5>
+                        <p class="card-text">@project.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h1 class="display-4 area-title">Blazor</h1>
+        @foreach (var project in projects.Where(x => x.Area == Area.Blazor))
+        {
+            <div class="col-3 my-3">
+                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
+                    <a href="@($"project/{project.Id}")"><img class="card-img-top" src="@(baseUrl)/@project.IconUrl)" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">@project.Title</h5>
+                        <p class="card-text">@project.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h1 class="display-4 area-title">MAUI</h1>
+        @foreach (var project in projects.Where(x => x.Area == Area.MAUI))
+        {
+            <div class="col-3 my-3">
+                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
+                    <a href="@($"project/{project.Id}")"><img class="card-img-top" src="@(baseUrl)/@project.IconUrl)" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">@project.Title</h5>
+                        <p class="card-text">@project.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h1 class="display-4 area-title">Azure</h1>
+        @foreach (var project in projects.Where(x => x.Area == Area.Azure))
         {
             <div class="col-3 my-3">
                 <div class="card shadow rounded-lg text-center" style="width: 18rem;">
@@ -131,4 +261,15 @@
     .first-steps-area-title {
         color: white;
     }
+
+    .area-description-dark {
+        color: white;
+    }
+
+    .area-description {
+        font-size: 20px;
+        font-family: Roboto;
+        font-weight: 500;
+    }
+
 </style>
