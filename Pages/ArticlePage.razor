@@ -1,0 +1,18 @@
+﻿@using TCSA.Models;
+@using TCSA.Data;
+
+@page "/article/{ArticleId}"
+
+<h3>Article Id: @ArticleId</h3>
+<h2>Article Id: @Article.Title</h2>
+
+@code {
+    [Parameter]
+    public string ArticleId { get; set; }
+    public Article Article { get; set; }
+
+    protected async override Task OnParametersSetAsync()
+    {
+        Article = ArticlesHelper.GetArticles().Single(x => x.Id == int.Parse(ArticleId));
+    }
+}
