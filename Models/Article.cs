@@ -1,4 +1,6 @@
-﻿namespace TCSA.Models;
+﻿using Microsoft.AspNetCore.Components;
+
+namespace TCSA.Models;
 
 public class Article
 {
@@ -7,6 +9,24 @@ public class Article
     public string Description { get; set; }
     public string IconUrl { get; set; }
     public Area Area { get; set; }
+    public string Introduction { get; set; }
+    public List<Block> Blocks { get; set; }
+}
+
+public class Block
+{
+    public string? Title { get; set; }
+    public string? ImgUrl { get; set; }  
+    public List<Paragraph> Paragraphs { get; set; }
+}
+
+public class Paragraph
+{
+    public bool IsPicture { get; set; } = false;
+    public bool IsVideo { get; set; } = false;
+    public string? PictureUrl { get; set; }
+    public string? VideoUrl { get; set; }
+    public string? Body { get; set; }
 }
 
 public enum Area

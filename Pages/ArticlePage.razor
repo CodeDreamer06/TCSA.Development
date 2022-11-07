@@ -3,16 +3,84 @@
 
 @page "/article/{ArticleId}"
 
-<h3>Article Id: @ArticleId</h3>
-<h2>Article Id: @Article.Title</h2>
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4"></h1>
+        </div>
+    </div>
+</div>
+
+<div class="container w-50">
+    @foreach (var block in Article.Blocks)
+    {
+        <div class="row pb-4">
+            @if (!String.IsNullOrEmpty(block.ImgUrl))
+            {
+                <div class="col-2 icon-div">
+                    <img src="@(baseUrl)/@block.ImgUrl" width="70" alt="" class="img-thumbnail align-middle">
+                </div>
+            }
+            <div class="@GridStyle(!String.IsNullOrEmpty(block.ImgUrl))">
+                <h1 class="article-section-title">@block.Title</h1>
+
+                @foreach (var paragraph in block.Paragraphs)
+                {
+                    if (paragraph.IsPicture)
+                    {
+                        <img src="@(baseUrl)/@paragraph.PictureUrl" width="500">
+                    }
+
+                    if (paragraph.IsVideo)
+                    {
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="@paragraph.VideoUrl" allowfullscreen></iframe>
+                        </div>
+                    }
+
+                    if (!String.IsNullOrEmpty(paragraph.Body)) {
+                        <p>@paragraph.Body</p>
+                    }
+                }
+            </div>
+        </div>
+    }
+</div>
+
 
 @code {
     [Parameter]
     public string ArticleId { get; set; }
     public Article Article { get; set; }
+    protected string baseUrl = "https://www.thecsharpacademy.com/wp-content/uploads";
+
 
     protected async override Task OnParametersSetAsync()
     {
         Article = ArticlesHelper.GetArticles().Single(x => x.Id == int.Parse(ArticleId));
     }
+
+    private string GridStyle(bool hasIcon)
+    {
+        return hasIcon ? "col-10" : "col";
+    }
 }
+
+<style>
+    .jumbotron {
+        background-image: url("../img/article-banner.jpg");
+        background-size: cover;
+    }
+
+    .display-4 {
+        height: 200px;
+    }
+
+    .icon-div {
+        display: grid;
+    }
+
+    img {
+        align-self: center;
+    }
+</style>
