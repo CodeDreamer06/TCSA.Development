@@ -5,6 +5,10 @@
     {
       "library": "twitter-bootstrap@5.2.2",
       "destination": "wwwroot/bootstrap/"
+    },
+    {
+      "library": "bootstrap-icons@1.9.1",
+      "destination": "wwwroot/bootstrap-icons/"
     }
   ]
 }

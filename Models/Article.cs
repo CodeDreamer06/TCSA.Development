@@ -9,7 +9,6 @@ public class Article
     public string Description { get; set; }
     public string IconUrl { get; set; }
     public Area Area { get; set; }
-    public string Introduction { get; set; }
     public List<Block> Blocks { get; set; }
 }
 

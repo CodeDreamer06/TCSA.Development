@@ -11,41 +11,42 @@
     </div>
 </div>
 
-<div class="container w-50">
-    @foreach (var block in Article.Blocks)
-    {
-        <div class="row pb-4">
-            @if (!String.IsNullOrEmpty(block.ImgUrl))
+        <div class="container w-50">
+            @foreach (var block in Article.Blocks)
             {
-                <div class="col-2 icon-div">
-                    <img src="@(baseUrl)/@block.ImgUrl" width="70" alt="" class="img-thumbnail align-middle">
-                </div>
-            }
-            <div class="@GridStyle(!String.IsNullOrEmpty(block.ImgUrl))">
-                <h1 class="article-section-title">@block.Title</h1>
-
-                @foreach (var paragraph in block.Paragraphs)
-                {
-                    if (paragraph.IsPicture)
+                <div class="row pb-4">
+                    @if (!String.IsNullOrEmpty(block.ImgUrl))
                     {
-                        <img src="@(baseUrl)/@paragraph.PictureUrl" width="500">
-                    }
-
-                    if (paragraph.IsVideo)
-                    {
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="@paragraph.VideoUrl" allowfullscreen></iframe>
+                        <div class="col-2 icon-div">
+                            <img src="@(baseUrl)/@block.ImgUrl" width="70" alt="" class="img-thumbnail align-middle">
                         </div>
                     }
+                    <div class="@GridStyle(!String.IsNullOrEmpty(block.ImgUrl))">
+                        <h1 class="article-section-title">@block.Title</h1>
 
-                    if (!String.IsNullOrEmpty(paragraph.Body)) {
-                        <p>@paragraph.Body</p>
-                    }
-                }
-            </div>
+                        @foreach (var paragraph in block.Paragraphs)
+                        {
+                            if (paragraph.IsPicture)
+                            {
+                                <img src="@(baseUrl)/@paragraph.PictureUrl" width="500">
+                            }
+
+                            if (paragraph.IsVideo)
+                            {
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="@paragraph.VideoUrl" allowfullscreen></iframe>
+                                </div>
+                            }
+
+                            if (!String.IsNullOrEmpty(paragraph.Body))
+                            {
+                                <p>@paragraph.Body</p>
+                            }
+                        }
+                    </div>
+                </div>
+            }
         </div>
-    }
-</div>
 
 
 @code {
