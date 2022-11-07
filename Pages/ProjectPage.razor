@@ -3,13 +3,37 @@
 
 @page "/project/{ProjectId}"
 
-<h3>Project Id: @ProjectId</h3>
-<h2>Project Id: @Project.Title</h2>
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4"></h1>
+        </div>
+    </div>
+</div>
+
+<div class="container w-50">
+    <div class="row pb-4">
+        <div class="col">
+            <h1 class="article-section-title">Introduction</h1>
+        </div>
+    </div>
+
+    <div class="row pb-4">
+        <div class="col-2 icon-div">
+            <img src="@(baseUrl)/2022/05/icons8-checklist-512.png" width="70" alt="" class="img-thumbnail align-middle">
+        </div>
+        <div class=col-10>
+
+        </div>
+    </div>
+</div>
 
 @code {
     [Parameter]
     public string ProjectId { get; set; }
     public Project Project { get; set; }
+    protected string baseUrl = "https://www.thecsharpacademy.com/wp-content/uploads";
+
 
     protected async override Task OnParametersSetAsync()
     {

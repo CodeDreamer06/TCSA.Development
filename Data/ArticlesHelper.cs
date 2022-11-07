@@ -1,4 +1,5 @@
-﻿using TCSA.Models;
+﻿using System.Reflection;
+using TCSA.Models;
 
 namespace TCSA.Data
 {
@@ -761,7 +762,110 @@ namespace TCSA.Data
                     Title = "Calculator",
                     IconUrl = "2022/08/icons8-calculator-512.png",
                     Description = "In your first project, you’ll create a calculator with the help of Microsoft's Documentation",
-                    Area = Area.Console
+                    Area = Area.Console,
+                    Introduction = new List<Paragraph>
+                    {
+                        new Paragraph
+                        {
+                            Body="In your first project you’ll build a Console Calculator App with the help of Microsoft’s Documentation. If this is your first time building a project on your own, I suggest you first watch this series from our C# Foundation area, where we walk you through how to create a console app from scratch, while explaining important concepts in C#. If you have already watched it, or created applications before, this will be a breeze. But it’s still helpful to reinforce your knowledge. "
+                        },
+                        new Paragraph
+                        {
+                            Body="It will also serve as practice in a very important skill: following written documentation. This is something you’ll be doing on a regular basis as a professional developer, so it’s essential that you’re comfortable applying text-based instructions when developing software."
+                        }
+                    },
+                    Requirements = new List<string>
+                    {
+                        "Complete the following tutorial: Create a Calculator App (Microsoft Docs)"
+                    },
+                    Resources = new List<string>
+                    {
+                        "Visual Studio for Mac",
+                        "Visual Studio Code"
+                    },
+                    Tips = new List<string>
+                    {
+                        "Don't forget to ALWAYS, I mean ALWAYS have your code saved on Github (or whatever source control you use). This way you won't lose your work, and you can always refer back to it in the future. You're building a library of your own!",
+                        "Don't rush through the steps, even if this tutorial is easy for you. Make sure you understand EACH WORD of the code. Leave no stone unturned.",
+                        "If there's anything you don't understand, hover over the code, and you'll get an explanation of what the term means. If you still can't understand it, google is your best friend. You'll find explanations about pretty much everything in forums like stackoveflow.com.",
+                        "If this is your first project, I recommend doing it twice. You'll be surprised at how much your retention increases, and how many gaps were left in the first time.",
+                        "Upon completion of your project, go to our Discord community and brag about it! It's a very important step to complete a project and you should celebrate."
+                    },
+                     Challenges = new List<string>
+                    {
+                        "Create a functionality that will count the amount of times the calculator was used.",
+                        "Store a list with the latest calculations. And give the users the ability to delete that list.",
+                        "Allow the users to use the results in the list above to perform new calculations.",
+                        "Add extra calculations: Square Root, Taking the Power, 10x, Trigonometry functions.",
+                    },
+                     Blocks = new List<Block>
+                    {
+                        new Block
+                        {
+                            Title = "Source Control",
+                            ImgUrl = "2021/12/icons8-git-96.png",
+                            Paragraphs = new List<Paragraph>
+                            {
+                                new Paragraph
+                                {
+                                    Body = "If this is your first tutorial, you might be tempted to skip this step and start coding. Don’t do it or you’ll learn the hard way. One day after working for many hours on a difficult problem you won’t save your work on a source control repository and for whatever reason all of your work will be lost."
+                                },
+                                new Paragraph
+                                {
+                                    Body = "Get into the habit of saving every line of code you ever write. I promise it will save you from many headaches. All serious developers save their work on a backup repository. The most commonly used is Github. Create an account if you haven’t yet. "
+                                }, 
+                                new Paragraph
+                                {
+                                    Body="1. In Visual Studio, go to Git > Create Git Repository\r\n2. Enter your Login Details\r\n3. Click on Create and Push. "
+                                }, 
+                                new Paragraph
+                                {
+                                    Body="✅ Done! Your repository is good to go. Don’t forget to commit and push your changes after every step!"
+                                }, new Paragraph
+                                {
+                                    Body="You can take further step and learn how to integrate Github with Visual Studio watching this tutorial:"
+                                },
+                                new Paragraph
+                                {
+                                    IsVideo = true,
+                                    VideoUrl = "https://www.youtube.com/embed/oCvb-Q5lXb8"
+                                }
+                            }
+                        },
+                        new Block
+                        {
+                            Title = "Code Review",
+                            ImgUrl= "2022/10/icons8-code-review-64.png",
+                            Paragraphs = new List<Paragraph>
+                            {
+                                new Paragraph
+                                {
+                                    Body = "One of the biggest mistakes people make when starting to code is assuming they need to know A LOT before building interesting things. You’ll be surprised about what you can create with basic concepts you can learn within a few hours."
+                                },
+                                new Paragraph
+                                {
+                                    Body = "By all means, make lots of notes when you’re first learning to code. Go through the entire material once or twice. But that’s it! The basic syntax hasn’t and won’t change significantly across the years. You’ll have to get back to the basics many times during your journey. Everything you initially have contact with will only be internalised with PRACTICE. So make sure you don’t spend more than a few hours learning the basic theory."
+                                },
+                                new Paragraph
+                                {
+                                    Body = "Here’s an example of your self-talk when you start your first project: 'Oh, what do I need to do here? I think an if-else statement will be good to get the user input. How do I write it again? I remember I saw it in the documentation, but I’m not quite sure'. Then you’ll go back to your notes or the documentation, get what you need and apply in your code. You won’t know exactly how to do it, or even how it works yet, but you’ll know where to look and learn how it’s applied once you use it. "
+                                }
+                            }
+                        },
+                        new Block
+                        {
+                            Title = "Creating a Desktop App",
+                            ImgUrl = "2022/08/icons8-desktop-computer-512.png",
+                            Paragraphs = new List<Paragraph>
+                            {
+                                new Paragraph
+                                {
+                                    Body = "If you have watched the entire C# Foundation course, you have already created a Math Game Desktop app using the amazing .NET MAUI. It will be great practice to build a desktop Calculator App with the same functionality you’ve created for this console app. There will be some challenges, but you’ve already got all the skills necessary. And remember, if you get stuck, reach out on Discord and we will help!"
+                                }
+                            }
+                        }
+                    }
+
                 },
                 new Project
                 {
