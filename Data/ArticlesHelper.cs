@@ -77,7 +77,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "We won’t teach you how to code. We’ll teach you how to teach yourself and nudge you in the right direction. You have to do it yourself if you want to have any chance of succeeding in a real job. Even if you pay us a lot of money to be your full time code teacher, if you don’t learn how to learn on your own you don’t have a chance in this industry."
+                                Body = "<u>We won’t teach you how to code</u>. We’ll teach you how to teach yourself and nudge you in the right direction. You have to do it yourself if you want to have any chance of succeeding in a real job. Even if you pay us a lot of money to be your full time code teacher, if you don’t learn how to learn on your own you don’t have a chance in this industry."
                             },
                             new Paragraph
                             {
@@ -739,7 +739,48 @@ public static class ArticlesHelper
                 Title = "The Importance of Console Applications",
                 IconUrl = "2021/12/icons8-baby-app-96.png",
                 Description = "Building console applications will allow you to focus on the back end before diving into the complexities of front-end. Here’s why.",
-                Area = Area.Console
+                Area = Area.Console,
+                Blocks = new List<Block>
+                {
+                    new Block
+                    {
+                        ImgUrl= "2021/12/icons8-command-line-96.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "Web technologies are developing extremely fast. Websites these days are faster, more efficient, better looking and provide great user experience. When starting to learn web development, it’s easy to get tempted by all the hype of the latest frameworks. I started with Angular myself. I loved it from the moment I wrote my first component."
+                            },
+                            new Paragraph
+                            {
+                                Body = "But I quickly realised if I wanted to deal with data in the capacity I wanted, I would need to learn a back-end language. I took an approach that I find less than ideal. I dove into a bunch of tutorials about how to build full-stack apps. That made it very difficult for me to understand back-end properly. I wish I knew there was a better approach."
+                            },
+                            new Paragraph
+                            {
+                                Body = "Now I find it much more effective to build Console Apps to learn back-end. And the reason is simple: Focus. You can dedicate your full attention to your back-end language if you don’t have to worry about all the complexities of presenting data to the user in a beautiful way."
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        ImgUrl= "2021/12/icons8-console-64.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "That’s why I decided to make the first part of this program purely focused on Console Apps, without any front-end distractions. These apps will help progressively teach you: data types; basic control flow and syntax; dealing with databases; creating and calling APIs; Entity Framework; Repository Pattern and Unit Testing. As you can see there’s already a lot to keep you busy. "
+                            },
+                            new Paragraph
+                            {
+                                Body = "That doesn’t mean you won’t have an user interface. But instead of the website, you’ll be interacting with the user via the console line. You’ll still need to handle validation, basic presentation and all sorts of errors to provide a good user experience. And this knowledge will definitely transfer when you start creating full-stack apps."
+                            },
+                            new Paragraph
+                            {
+                                Body = "I know we all want to create fancy things as soon as possible. Even when I was creating this library of console apps, I was looking forward to going back to the latest web technologies, Maui, Blazor, Angular, Ionic, React, they are beautiful! But without a solid back-end foundation we’re very limited. The competition for a job is tough out there. You need to stack the deck in your favour. And it starts here, writing simple, clean, effective console programs. Now let’s start"
+                            }
+                        }
+                    }
+                }
             },
             new Article
             {
@@ -747,7 +788,78 @@ public static class ArticlesHelper
                 Title = "Graduation!",
                 IconUrl = "2021/12/icons8-baby-app-96.png",
                 Description = "This is your graduation from Console Apps! Find out how to start applying for jobs and what are the next steps in your coding journey.",
-                Area = Area.Console
+                Area = Area.Console,
+                Blocks = new List<Block>
+                {
+                    new Block
+                    {
+                        Title = "Congratulations",
+                        ImgUrl= "h2022/03/external-celebration-soccer-and-football-match-kosonicon-lineal-color-kosonicon-300x300.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "Well done!! If you got this point, I’m sure you feel accomplished. It wasn’t easy. You were probably frustrated and disheartened at times. You felt stuck and maybe even thought of quitting. But you pushed through! And now you can proudly affirm you know the basics of back-end development with C#. How are you planning to celebrate? 🍾 You deserve it!! 😁"
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "What you've learned",
+                        ImgUrl= "icons8-checklist-64.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "\r\nBasic C# Syntax and Control Flow\r\nConsole Application Techniques: User Input and Validation\r\nBasic SQL Syntax and Crud Commands\r\nPrinciples of MVC Design: Models, Controllers, UI, Services, Validators\r\nInteraction with files in your file system.\r\nCalling an External Api with Http Requests.\r\nEntity Framework\r\nCreating and calling Web APIs.\r\nWebscrapping\r\nSending e-mails with code\r\nFundamentals of Unit Testing\r\nThat's a lot!! Again... Well done!!!"
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "What Happens From Here",
+                        ImgUrl= "2021/12/icons8-where-what-quest-96.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "Now that you have a good understanding of the basic principles of back-end web development with C#, what’s the next step? Well, there’s a lot to do! ASP.NET is endless, but as I said before, most of what you’ll do from now on is a variation of what you’ve already done. Calling databases, getting the user input and processing data in between."
+                            }, 
+                            new Paragraph
+                            {
+                                Body = "The next steps in this program involve building full-stack applications with the following:"
+                            },
+                            new Paragraph
+                            {
+                                Body = "ASP.NET MVC With Razor Syntax\r\nSecuring Your App With Authorisation and Authentication With Asp.NET Identity.\r\nDeploying your full-stack app with Azure, Firebase\r\nDesktop Applications With WPF and XAML\r\nSingle Page Applications with Blazor\r\nMobile Applications With Xamarin Forms (and hopefully with .NET MAUI)\r\nCRUD Applications With React\r\nCRUD Applications With Angular\r\nBut I'll be surprised if you get to the end of this list and you don't have a job yet."
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Before We Continue",
+                        ImgUrl= "2022/03/icons8-permanent-job-96.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "Before we continue with our .NET C# program, I have to tell you. What you have done so far might be enough to land you a job. Yes, that’s right. The demand for C# developers is so high that a handful of console apps might suffice. "
+                            },
+                            new Paragraph
+                            {
+                                Body = "So while you learn everything else .NET has to offer, you’ll be also applying for jobs, with a decent chance of success. But we need to get organised first. You need a portfolio and a resume."
+                            },
+                            new Paragraph
+                            {
+                                Body = "While a portfolio isn’t absolutely necessary to land you a job, it does increase your chances. You’ll read more about it in the Portfolio Area. So let’s get ready for our next three steps:"
+                            },
+                            new Paragraph
+                            {
+                                Body = "If you don’t want to look for jobs right now, you can jump straight to the MVC Area, but I strongly recommend you still create a portfolio. Check out the portfolio project to understand why."
+                            }
+                        }
+                    }
+                }
             }
         };
     }
@@ -1218,7 +1330,7 @@ public static class ArticlesHelper
                     "When the users open the application, they should be presented with the Drinks Category Menu and invited to choose a category. Then they'll have the chance to choose a drink and see information about it.",
                     "When the users visualise the drink detail, there shouldn't be any properties with empty values"
                 },
-                RequirementsConclusion = "Don't panic! We'll help! 😁", 
+                RequirementsConclusion = "Don't panic! We'll help! 😁",
                 ResourcesIntro = "Here are the links for using HTTP calls with C# and to the Drinks API documentation:",
                 Resources = new List<string>
                 {
@@ -1316,7 +1428,7 @@ public static class ArticlesHelper
                     "Testing Web APIs with Swagger.",
                     "Postman Youtube Tutorial"
 
-                },             
+                },
                 Tips = new List<string>
                 {
                     "If this is your first contact with .NET Web API, follow the tutorial closely using the Todo List data model and http-repl for testing. In a second moment, follow the tutorial one more time, this time following the project's requirements.",
@@ -1507,7 +1619,56 @@ public static class ArticlesHelper
                 Title = "Portfolio",
                 IconUrl = "2022/05/icons8-portfolio-512.png",
                 Description = "Time to create a portfolio! Let’s present your work using a nice front-end technology of your choice",
-                Area = Area.StartApplying
+                Area = Area.StartApplying,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="It’s time to build your portfolio! But why? It can be argued that you can get a job without one. And it’s true. Many organisations don’t look at portfolios when hiring. So why bother? Let’s discuss a few reasons."
+                    },
+                    new Paragraph
+                    {
+                        Body="You want to stand out. It’s a highly competitive world out there. The fight to get through the tech industry job without any experience is tough. So you want to stack the deck in your favour by doing all you can to stand out. Your portfolio will convey an image of you. It will show that you care, that you’re organised, that you have a plan for your learning. It will show your design skills. Either you want it or not, you have a brand, everyone does. And a portfolio will make your brand stronger."
+                    },
+                     new Paragraph
+                    {
+                        Body="It pushes you. I’d even go as far as saying that you should build a portfolio before building any projects. That’s because it sets your vision. The vision of a full portfolio in a year time prevents you from procrastinating. It makes you get out of bed to code and put in the work. It keeps bugging you in the back of your mind: “My portfolio is empty, I have to keep going”. "
+                    },
+                     new Paragraph
+                     {
+                         Body = "It will also prevent you from quitting. No matter how many rejections you get, you know that if you keep building, eventually your portfolio will be so impressive that YOU WILL GET NOTICED. Imagine your prospective employer looking at your portfolio with projects covering dozens of different technologies? “We gotta check her out!”, they’ll think. "
+                     },
+                     new Paragraph
+                     {
+                         Body = "It's a project in itself: Building a portfolio is … PART OF YOUR PORTFOLIO! It will be part of your practice as a developer. You’ll have to choose a model, design it, look after the front-end details, put yourself in the viewer’s shoes, think of what to have in it, it’s great practice all-around."
+                     },
+                     new Paragraph
+                     {
+                         Body = "You’ll have to choose which technology to use: WordPress? HTML/CSS? Vanilla JS? A front-end framework? Choosing technologies is part of a developers job. And you get to practice that too. But enough talking about it, let’s do it!  "
+                     }
+                },
+                Requirements = new List<string>
+                {
+                    "Your portfolio should be a static website",
+                    "The following sections are required: A top area with a 'banner' or 'hero'; 'About me'; 'My work', 'Contact', Footer",
+                    "You can use any technology you want: WordPress, a front-end framework, bootstrap or just the good old Html/Css/Vanilla Js combo.",
+                    "The 'My Work' area should contain links to your github repositories. If you have full-stack web apps, it should contain links to their webpages.",
+                    "Your portfolio should contain a \"Download Resume\" button, preferably in the top area.",
+                    "It should be responsive and look good in any screen size."
+                },
+                ResourcesIntro = "Here are a few resources that might be helpful.",
+                Resources = new List<string>
+                {
+                    "10 Full Stack Web Developer Portfolio to Inspire You",
+                    "10 Web Developer Portfolio Tips",
+                    "Portfolio So Good I Hired Him (Youtube)"
+                },
+                Tips = new List<string>
+                {
+                    "Keep it simple. The best portfolios are the ones with an impressive amount of quality projects, not fancy, flashy, empty ones. Your goal here is to build your portfolio fast and get back to work.",
+                    "Before publishing your portfolio, make sure it's reviewed by someone in the industry. If you post your work on our Discord community, we'll be happy to help.",
+                    "Simple doesn't mean sloppy. Review it dozens of times so there are no misspellings, typos, broken links, non-matching colours, misaligned sections."
+                }
             },
             new Project
             {
@@ -1515,7 +1676,39 @@ public static class ArticlesHelper
                 Title = "Resume",
                 IconUrl = "2022/05/icons8-resume-512.png",
                 Description = "The last step before start applying for jobs. Let’s build a nice resume before hit the Apply button",
-                Area = Area.StartApplying
+                Area = Area.StartApplying,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Now that you have a portfolio of projects, you need a resume. A portfolio sometimes won’t be looked at, but the resume definitely will. This is the piece where you’ll summarise the relevant information about you, and i5 will ultimately dictate if your application will move forward or not."
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "Use a template",
+                    "You should have links to your github and your portfolio",
+                    "If you think a picture will favour you, use it, but please smile",
+                    "Your resume should have a maximum of two pages. But only have two pages if you have that much relevant experience",
+                    "Your resume should contain a cover letter and be different for each organisation"
+                },
+                ResourcesIntro = "Here are a few resources that might be helpful.",
+                Resources = new List<string>
+                {
+                    "The Odin Project: Build your Resume",
+                    "Free Code Camp: How to Write a Resume",
+                    "Entry Level Resume Examples",
+                    "Resume Builder",
+                    "Resume Tips (Youtube)"
+                },
+                ResourcesConclusion = "These should suffice, but you can always do your own research, there’s plenty of material online on how to build a nice entry level software engineering resume.  😁 Below is the resume that I landed me my first tech job. Bear in mind the project links might be broken since hosting full stack apps on Azure isn’t free and I might have removed them. ",
+                Tips = new List<string>
+                {
+                    "Don't send resumes machine-gun style. Tailor each application to each job. Write a different cover letter to each application. Do that after looking at their website and if possible, address your future manager by name. Write about something specific you saw in the website, which means you actually took your time to prepare this application. Careless applications have less chance of succeeding.",
+                    "Your resume has to look professional. Get a template, even if you need to buy one (it's cheap). There are infinite resume template services online. Remember, you're selling your brand, your resume has to look nice.",
+                    "Include mostly relevant experience. I included my experience as a Salsa teacher not because I thought my moves would help the company, but because I wanted to let them know I had experience leading and communicating with large groups of people.",
+                    "Track your applications. You can build an MVC app for this (in fact, we will have a project for that soon), but it can be as simple as an excel spreadsheet with a few columns: Date, Name Of the Company, Outcome. And whatever else you think is relevant."
+                }
             },
             new Project
             {
@@ -1523,7 +1716,45 @@ public static class ArticlesHelper
                 Title = "Water Drinking Logger",
                 IconUrl = "2022/04/icons8-drinking-96.png",
                 Description = "Build your first full-stack app with ASP.NET C# Razor Pages and ADO.NET",
-                Area = Area.MVC
+                Area = Area.MVC,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Welcome to the world of Razor Pages! Razor pages is a “newer, simplified web application programming model. It removes much of the ceremony of ASP.NET MVC by adopting a file-based routing approach. Each Razor Pages file found under the Pages directory equates to an endpoint.” There’s a lot of discussion in the .NET world about the pros and cons of Razor Pages vs MVC. Here at the C# Academy, we will learn both design patterns, so you’re better prepared to get your first job and excel at it. "
+                    },
+                    new Paragraph
+                    {
+                        Body="Another advantage of learning Razor Pages is that it uses Razor syntax, which is the same solution .NET uses for MVC and Blazor. That means that your knowledge will be applied in many different pieces of technology. If you’re hired to work with C#, you’ll most likely work with one of these at some stage. Even companies that use front-end frameworks such as Vue, React or Angular have applications using .NET front-end solutions as part of their domain. Your knowledge will go a long way."
+                    }
+                },
+                RequirementsIntro = "The requirements for this project are different than the ones in the Console Area. From what I’ve seen, being out in the world trying to figure out, as a beginner in C#, how Razor Pages or MVC work, just using the documentation or free tutorials, is very frustrating. As much as I like Microsoft’s documentation in general, it doesn’t seem to satisfy the needs of many beginners. For that reason, I put together a video tutorial with the basics of Razor Pages. As usual, it’s project-based. The business model should be very similar to our first couple of console Apps, the Habit Tracker, and the Coding Tracker. But in this video I’ll walk you through the project step-by-step. You might consider this “hand-holding”, and it is. But once you learn these basics, we will have project where you’ll have to implement different business cases using Razor Pages and MVC. Don’t worry, I won’t hold your hand for too  long. 😁",
+                Requirements = new List<string>
+                {
+                    "Follow the Razor Project Tutorial in the link provided, creating a list of steps with notes you think are important.",
+                    "Recreate the project, with a different business case. Track something different and use different styling. Time to be creative!!"
+                },
+                ResourcesIntro = "Here are a few resources that might be helpful.",
+                Resources = new List<string>
+                {
+                    "Razor Syntax Docs",
+                    "Razor Pages Docs",
+                    "Learn Razor Pages",
+                    "Bootstrap Crash Course",
+                    "Microsoft: Razor Pages vs MVC",
+                    "Stack Overflow: Razor Pages vs MVC"
+                },
+                Tips = new List<string>
+                {
+                    "Don't forget to have all of your code on Github, ALWAYS",
+                    "You'll come across many different files and pieces of code you've never seen. Study each one carefully, use the links in the resources area. You can find thorough explanations about each little piece of the code searching online."
+                },
+                Challenges = new List<string>
+                {
+                    "What if you want to allow split numbers? I.e. 2.25 cups of water, how would you change your data types?",
+                    "How about letting the user decide between standard measures (big bottle, bottle, glass)",
+                    "What if you want to have another habit being tracked in the same project? The limit to what you can create is the limit of your imagination."
+                }
             },
             new Project
             {
@@ -1531,7 +1762,52 @@ public static class ArticlesHelper
                 Title = "Movies",
                 IconUrl = "2022/05/icons8-movie-512.png",
                 Description = "Build your first full-stack app with ASP.NET C# MVC and Entity Framework",
-                Area = Area.MVC
+                Area = Area.MVC,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Welcome to the wonderful world of MVC.  You should be excited! Model-View-Controller is one of the most widely used design patterns in web development. The concepts you’ll learn apply to any language or framework, not just C#. You’ll be thinking MVC on a daily basis when you get a job."
+                    },
+                    new Paragraph
+                    {
+                        Body=".NET provides three solutions for full-stack development: Razor Pages, Blazor and MVC. MVC is by far the most popular and it’s widely used in enterprise. While Blazor is gaining ground and more .NET teams are starting to use it, chances are you’ll have to write and/or maintain MVC code at some stage in your career."
+                    },
+                    new Paragraph
+                    {
+                        Body="For this initial tutorial we’ll be using the official documentation. Its MVC tutorial does a very good job at explaining the basic concepts. There will be a bit of hand-holding at first. You’ll be using .NET’s “scaffolding” (Scaffolding in ASP.NET Core is a technique used to generate code at design time to support a number of common application scenarios when working with Entity Framework Core), which is necessary given the slight complexity of the project, but if you pay attention to each line of code, by the end of this project you’ll have a good grasp of MVC basics."
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application to manage information about movies.",
+                    "Users should be able to Add, Delete, Update and Read from a database, using website as the front-end.",
+                    "You need to use Entity Framework, raw SQL isn't allowed.",
+                    "There needs to be a search functionality where I can search movies by name.",
+                    "You should use SQL Server, not SQLite"
+                },
+                ResourcesIntro = "Here are a few resources that might be helpful.",
+                Resources = new List<string>
+                {
+                    "Microsoft Docs MVC Tutorial",
+                    "Microsoft Docs MVC vs Razor Pages",
+                    "Stack Overflow: MVC vs Razor Pages",
+                    "MVC vs MVVM Article"
+                },
+                ResourcesConclusion = "Notice that there’s a lot of talk about Razor Pages, MVVM, MVC. Those topics can be confusing. Give these texts a good read and reach out on Discord if it doesn’t make sense. And remember, Google is your best friend! 😁",
+                Tips = new List<string>
+                {
+                    "In the Microsoft Docs MVC Tutorial, the first three chapters contain a simple controller with a view, for basic understanding of .NET MVC. Don't skip that part. But the actual Movie App code starts on Part 4.",
+                    "Read every single line of the tutorial. Don't rush through the steps.",
+                    "Once you're finished, push your final version to Github, create a new repository and do it again, step-by-step, there's a lot going on in MVC, and one time isn't enough.",
+                    "I strongly recommend you make notes to help you connect the dots in ASP.NET MVC. There are lots of little details to learn and it will serve as a reference for your future MVC projects."
+                },
+                Challenges = new List<string>
+                {
+                    "Scaffolding means you're using .NET's tools to generate code for you. A very nice challenge for better retention would be to recreate the same project without scaffolding. It's ok if you copy and paste chunks of code from the original project. It will still be helpful.",
+                    "Once you've done it twice, do it a third time, but with different data. Intead of movies, countries? Cars? Music? Sports? Anything, it will further cement your knowledge.",
+                    "\r\nAdd one or more separate areas to the app. TV Series, for example. Or music. You'd have to create different pages for each, and a link in the nav bar."
+                }
             },
             new Project
             {
@@ -1539,7 +1815,45 @@ public static class ArticlesHelper
                 Title = "Todo List",
                 IconUrl = "2022/03/external-checklist-vacation-planning-cycling-tour-flaticons-lineal-color-flat-icons-2.png",
                 Description = "Build your first MVC application with C#, Razor Syntax, Javascript and Bootstrap",
-                Area = Area.MVC
+                Area = Area.MVC,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="In our previous project we dove into Microsoft’s Beginner MVC Tutorial and created our first full-stack application. In that app, each action has a dedicated page. However, what happens if I want to have a single page application and not open a new page every time they want to create, delete or update their data? This is what we will build now."
+                    },
+                    new Paragraph
+                    {
+                        Body="Again we will be using a tutorial from the official documentation, where we will be introduced to “Minimal APIs” and working with “Fetch API”, which will help us with moving data around asynchronously "
+                    },
+                    new Paragraph
+                    {
+                        Body="Get ready, now it really gets fun! You’ll finish this project understanding how C#, Javascript and Bootstrap work together.  From here, the limit to what you’ll be able to build will be close to the limit of your imagination. 😁"
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application where you should manage a todo list.",
+                    "Users should be able to Add, Delete, Update and Read from a database, using a SPA (single-page application). The user should never be redirected to a new page.",
+                    "You need to use Entity Framework, raw SQL isn't allowed.",
+                    "You don't need a navigation bar. No menu is necessary since you'll only have one page.",
+                    "Once you execute any operation, the todo-list needs to be updated accordingly.",
+                    "Your data model is only one table with to-dos. You. might be tempted to create more complex data-models (categories of todos for example) but avoid that for now. We're focusing on the front-end."
+                },
+                ResourcesIntro = "Here are a few resources that might be helpful.",
+                Resources = new List<string>
+                {
+                    "MVC + Fetch API + Minimal API Tutorial",
+                    "Fetch API Docs",
+                    "Javascript crash course on Youtube",
+                    "Fetch API crash course on Youtube"
+                },
+                Tips = new List<string>
+                {
+                    "When learning to connect JS to your MVC App, take a step-by-step approach: First try to call a simple alert, then try to send data to and from the controller into JS.",
+                    "Use console.log() to help you debug your javascript code when working together with C#.",
+                    "The tutorial uses Mongo DB as data solution. If it adds too much confusion, just connect your App to a SQL server or SQLite solution instead. The focus now is on the front-end, so where the data is coming from shouldn't matter."
+                }
             },
             new Project
             {
@@ -1547,7 +1861,41 @@ public static class ArticlesHelper
                 Title = "Budget",
                 IconUrl = "2022/05/icons8-budget-512.png",
                 Description = "Build a personal finance app with multiple related tables in the back-end",
-                Area = Area.MVC
+                Area = Area.MVC,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Personal finances apps are very useful for learning web development. They’ll force you to handle many data types: Dates, strings, decimals, integers, to mention the most basic. They’ll also challenge your front-end skills with heavy user interaction through forms and data-tables."
+                    },
+                    new Paragraph
+                    {
+                        Body="In terms of database design, they give you the chance to create interesting structures, such as one-to-many and many-to-many relationships between tables, which in turn expands pushes the boundaries of our knowledge of SQL and Entity Framework. So let’s build a budget app to expand on our MVC knowledge with a slightly more complex piece of software."
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application where you should record personal finance transactions.",
+                    "You should have two linked tables: Transaction and Category.",
+                    "You need to use Entity Framework, raw SQL isn't allowed.",
+                    "Each transaction MUST have a category and if you delete a category all it's transactions should be deleted.",
+                    "You should use SQL Server, not SQLite.",
+                    "You should have a search functionality where I can search transactions by name",
+                    "You should have a filter functionality, so I can show transactions per category and per date.",
+                    "You need to use modals to insert, delete and update transactions and categories. These operations shouldn't be done in a different page."
+                },
+                ResourcesIntro = "Here are a few resources that might be helpful.",
+                Resources = new List<string>
+                {
+                    "Relationships in EF Core",
+                    "One-To-Many Relationship in EF Core",
+                    "One-To-Many Relationship in EF Core on Youtube"
+                },
+                Tips = new List<string>
+                {
+                    "Don't forget validation! Your form shouldn't allow the user to input negatives or strings as a transaction value. Data annotations on your model are one way to go.",
+                    "Have separate controllers for Categories and Transactions."
+                }
             },
             new Project
             {
@@ -1555,7 +1903,39 @@ public static class ArticlesHelper
                 Title = "Authentication and Authorization",
                 IconUrl = "2022/05/icons8-safe-ok-480.png",
                 Description = "Learn how to secure your app with ASP.NET Core Identity",
-                Area = Area.MVC
+                Area = Area.MVC,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="So far we’ve learned how to build a full-stack app but we’ll never be able to deploy it without securing it first. If you publish a form that calls a database and allow anyone to use it, it will eventually be found by bots designed to find database vulnerabilities. If you pay for your data server as you use it, the result will be a massive bill. Believe me, I learned the hard way. 😁"
+                    },
+                    new Paragraph
+                    {
+                        Body="In principle, creating a custom authentication and authorisation system is fairly easy. You can even try yourself. Simply create an ‘user’ table with login and password and create a registration form that will insert a new user and a login form that will check the user input against that table. Then if the user is logged in you can allow him to view your page. If not, redirect him to the login/registration area.."
+                    },
+                    new Paragraph
+                    {
+                        Body = "The reality is a little bit more complex though, since any real A&A system will need to support functionalities like changing password, managing an account, confirming a registration, just to name a few. ASP.NET Identity offers scaffolding for dozens of these operations, shipping fully-functioning front and back-end solutions. And they’re customisable too! Let’s see how it works. "
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "In this project, you'll have two tasks.",
+                    "In a first moment you'll create a new Web App project with Identity as part of it.",
+                    "In a second moment you'll scaffold Identity into the Movies App you created before.",
+                    "You need to use Entity Framework, raw SQL isn't allowed."
+                },
+                ResourcesIntro = "Here are a few resources that might be helpful.",
+                Resources = new List<string>
+                {
+                    "Introduction to Identity",
+                    "Scaffolding Identity into Existing App"
+                },
+                Tips = new List<string>
+                {
+                    "After wiring Identity up, you need to apply it to the controller you want to protect."
+                }
             },
             new Project
             {
@@ -1563,7 +1943,46 @@ public static class ArticlesHelper
                 Title = "Ecommerce",
                 IconUrl = "2022/05/icons8-online-store-64.png",
                 Description = "Build a fully functioning ecommerce for products of your choice",
-                Area = Area.MVC
+                Area = Area.MVC,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Ecommerce is one of the most common business types of application in web development. Job offers in this area will only keep increasing as more people have access to the internet and get comfortable shopping online. If you’ve done all projects in our program, you have most of the tools necessary to launch a fully-functional ecommerce that can be deployed to production."
+                    },
+                    new Paragraph
+                    {
+                        Body="The main difference in this project will be the increased complexity, since we will have multiple views, classes and tables in the database. This project will be divided in two. In the first one we will build the app with support for registration and login. Then we will have another project where we will introduce an administration page where employees will be able to add products and manage users. And to finalise we will deploy it on Azure. There’s a fair bit of work to do, so let’s get started! "
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application where users will buy products. You can choose what type of product.",
+                    "It should contain a layout file with a navbar that will be displayed in every page.",
+                    "It should contain a Home Page with Feature Products and a search functionality where users can search products by category.",
+                    "It should contain a page for each product, with an Add To Cart Button.",
+                    "It should contain a mini-cart button page where users can check their order. Users can only view their mini-cart if they're logged in.",
+                    "It should contain registration, login, logout and password resetting pages/functionalities.",
+                    "You should have an orders controller, that will be triggered when users place an order.",
+                    "The starter project needs to be MVC Web App.",
+                    "You need to use the repository pattern.",
+                    "For data access, you should use Dapper.",
+                    "You should use ASP.NET Core Identity to handle users",
+                    "Once an user places an order, show a message saying the order has been processed and send a simple e-mail to the address used in registration"
+                },
+                ResourcesIntro = "Here are a few resources that might be helpful.",
+                Resources = new List<string>
+                {
+                    "Intro to Identity",
+                    "Dapper Tutorial"
+                },
+                Tips = new List<string>
+                {
+                    "Before starting, plan the design of your application: What will the flow of data be like?",
+                    "Don't worry about styling at first. Make sure everything works, then come back and make it look good.",
+                    "This is a big project. It might be easier to build each part at a time: First, the main page with all products, then the product detail, then the mini-cart and so on",
+                    "You will need the following tables: Users, products, orders. An user can have multiple orders. An order can't exist without one user and at least one product. A product can be in multiple orders. How are you going to plan the foreign keys that will link these tables?"
+                }
             },
             new Project
             {
@@ -1571,7 +1990,36 @@ public static class ArticlesHelper
                 Title = "E-Commerce Admin",
                 IconUrl = "2022/05/icons8-admin-512.png",
                 Description = "Build an administration page for the e-commerce you build in project 6, using Asp.NET Role-based Authentication",
-                Area = Area.MVC
+                Area = Area.MVC,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="A very common requirement in ecommerce is the development of an Administration Page. In a company, it’s almost always non-developers who will be adding products, managing employess, stock allocations, just to mention a few of the most common tasks. In that case, the business will need not only a customer facing e-commerce website, but an administration that will be accessible only by authorised personnel. "
+                    },
+                    new Paragraph
+                    {
+                        Body="This project is a continuation of the previous one, where you built an e-commerce of your choice. This time you’ll allow authorised users to update the products of your page (and anything else you think it’s worth being managed by an admin page). "
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application that will serve as an administration page for an e-commerce.",
+                    "You should use ASP.NET Identity with Roles to manage authorisation.",
+                    "You should have three roles: User, Admin and Director",
+                    "The director will be the one who will add the employees and with Administration powers.",
+                    "The employees profiles need to contain a picture that will be uploaded by the directors.",
+                    "The user shouldn't have access to the admin area",
+                    "This projects should be contained in the E-commerce solution you've developed before.",
+                    "When an user tries to access a forbidden area, present a clear error message"
+                },
+                ResourcesIntro = "Here are a few resources that might be helpful.",
+                Resources = new List<string>
+                {
+                    "Microsoft Docs – Role-Based Authorisation in .NET",
+                    "Article: How to work with Roles in ASP.NET Core Identity",
+                    "Article: ASP.NET Core Identity Roles based Authorization"
+                }
             },
             new Project
             {
@@ -1579,7 +2027,39 @@ public static class ArticlesHelper
                 Title = "Tour of Heroes",
                 IconUrl = "2022/06/icons8-superwoman-480.png",
                 Description = "Learn the basics of Angular by building a purely front-end app using the documentation",
-                Area = Area.Angular
+                Area = Area.Angular,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Welcome to the world of front-end frameworks! You should be excited, you’re about to take your first step in learning one of most required technologies of our time. Most job applications require knowledge of a Javascript front-end solutions, tried and tested tools for building scalable, interactive web applications."
+                    },
+                    new Paragraph
+                    {
+                        Body="The good news is that if you’ve been through the MVC area, learning the basics of Angular will be a breeze. It does most of the heavy lifting that Javascript does in MVC, so you’ll be building sooner than you imagine. "
+                    },
+                    new Paragraph
+                    {
+                        Body="Make no mistake, Angular and React are massive. There’s a fair amount of complexity and the learning curve is definitely steep. So be patient, you won’t become an expert overnight. However, these frameworks are very welcoming to beginners. Building simple apps with them is somewhat straightforward, so be careful not to get caught into unnecessary complexities early on. Let’s build a few simple apps first. And what better way to start than building a Coffee app? ☕🤩"
+                    }
+                },
+                RequirementsIntro="From Angular’s documentation page: 'The Tour of Heroes application that you build helps a staffing agency manage its stable of heroes. The application has many of the features you’d expect to find in any data-driven application. The finished application acquires and displays a list of heroes, edits a selected hero’s detail, and navigates among different views of heroic data.'",
+                Requirements = new List<string>
+                {
+                    "This project has only one requirement: You should complete the \"Tour of Heroes\" app in Angular's documentation page."
+                },
+                ResourcesIntro = "Here are a few resources that might be helpful.",
+                Resources = new List<string>
+                {
+                    "Angular Docs: Tour of Heroes Beginner’s Tutorial"
+                },
+                ResourcesConclusion = "Since this is your first Angular project, we will keep it very simple. There won’t be any .NET or C# this time, you’ll focus on Angular only. And the documentation will provide everything you need for your first app.",
+                Tips = new List<string>
+                {
+                    "Don't rush, everything here will be new, so take your time to understand each line of code.",
+                    "Make notes. Here are three types of notes you can take: 1. Lists of steps to build things; 2. Concepts you're first learning about; 3. Things you find interesting and likely to use in the future. Keep your notes short.",
+                    "If you feel you didn't retain much, you could redo the app and/or modify it and/or create a different app based on the gained knowledge. Tweaking projects goes a long way for content retention."
+                }
             },
             new Project
             {
@@ -1587,7 +2067,41 @@ public static class ArticlesHelper
                 Title = "Coffee Tracker",
                 IconUrl = "2022/05/icons8-coffee-mug-128.png",
                 Description = "Track your coffee consumption with a C# Web Api and Angular",
-                Area = Area.Angular
+                Area = Area.Angular,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Now that you’re familiar with Angular, let’s combine it with .NET! And what a powerful combination that is. The limit of what you can build using these two is only the limit of your imagination. We will be creating two separate applications: An Angular front-end and a C# Web Api. The front-end will call the api, similarly to what you’ve done before in our Shifts Logger project."
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application where you should record your consumption of coffee.",
+                    "You can choose something else to track, in case you're not a coffee person.",
+                    "You should create two projects: A.NET WebApi and an Angular app.",
+                    "You can choose whatever database solution you want: Sqlite, SQL server or whatever you're comfortable with.",
+                    "You can choose whatever ORM you want: Dapper, EF, ADO.NET.",
+                    "You should have a filter functionality, so I can show records per type and / or date.",
+                    "Your database should have a single 'Records' table.The objective is to focus on Angular, so we should avoid the complexities of relational data.",
+                    "You CANNOT use Angular Material."
+
+                },
+                Resources = new List<string>
+                {
+                    "Microsoft Docs: Web Api",
+                    "Angular Docs: Tour of Heroes Beginner’s Tutorial",
+                    "Angular CRUD Tutorial",
+                    "Angular + C# Web Api Youtube Tutorial",
+                    "Dealing With CORS (Cross Origin Resource Sharing)"
+                },
+                ResourcesConclusion = "Since this is your first full-stack Angular project, make sure you look up everything you don’t know. Try not to let any keyword, method or concept left-behind. This is the moment to build your foundation. And don’t forget to reach out on Discord if you have questions!",
+                Tips = new List<string>
+                {
+                    "Your main objective is to call your API from the Angular App. Everything else is just moving data around and styling.",
+                    "There are two ways to approach the construction of this app: Finishing the API first and then building the UI, or building each method end-to-end (ex: GetAllRecords method in the back-end plus list of records in the front-end). Choose one and stick to it.",
+                    "Don't use Angular Material (a library for styling) in this project. Angular alone can be challenging enough and adding a rich library early on might overwhelm you. Also, you'll appreciate Angular Material more if you built applications without it first."
+                }
             },
             new Project
             {
@@ -1595,7 +2109,46 @@ public static class ArticlesHelper
                 Title = "Sleep Tracker",
                 IconUrl = "2022/05/icons8-sleeping-512.png",
                 Description = "Build on your Angular foundation with an app to log and generate reports about your sleep",
-                Area = Area.Angular
+                Area = Area.Angular,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Your second Angular project has the objective of solidifying the knowledge you gained from the Coffee Tracker. Even though Angular is a beginner-friendly framework, it’s still a lot to take in, and if you’re coming from a C# background, there are a few things to get used to. But don’t worry! You will still be challenged. We’re building on the first project with two extra challenges."
+                    },
+                     new Paragraph
+                    {
+                        Body="In this project you’ll log data about your sleep, either manually inputting your time in bed or using a timer to automatically log it. Dealing with time is always a challenge and great practice. Also, you’ll be using Angular Material, a powerful UI component library ubiquitous in enterprise Angular projects. This is a massive library that does take some time to learn, but once you master it, it becomes extremely easy to build interesting and great-looking UI components. You’ll be saying goodbye to Bootstrap! "
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application where you should record sleep time.",
+                    "You should create two projects: A .NET WebApi and an Angular app.",
+                    "You need to use Angular Material.",
+                    "You can choose whatever database solution you want: Sqlite, SQL server or whatever you're comfortable with.",
+                    "You can choose whatever ORM you want: Dapper, EF, ADO.NET.",
+                    "You should have a filter functionality, so I can show records per type and / or date.",
+                    "Your database should have a single 'Records' table.The objective is to focus on Angular, so we should avoid the complexities of relational data.",
+                    "This app needs to have a timer that will log your sleep once stopped and saved.",
+                    "Users should also be able to input their sleep time using a form.",
+                    "Your list of sleep records should have pagination, so you're not loading all records every time you visualise the list."
+
+
+                },
+                Resources = new List<string>
+                {
+                    "Angular Material Docs",
+                    "Getting Started With Angular Material",
+                    "Angular Material CRUD Tutorial"
+                },
+                ResourcesConclusion = "Angular Material can be tricky at first, but trust us, you’ll learn to love it and once you master it, you will never look back. But as always, reach out in our Discord Community if you get stuck!",
+                Tips = new List<string>
+                {
+                    "When building your timer, I suggest you have a pause, play, stop and save buttons for better user experience.",
+                    "If you get stuck implementing Angular Material in your project, take a step back and build a couple of simple purely front-end projects from Youtube tutorials."
+
+                }
             },
             new Project
             {
@@ -1603,7 +2156,42 @@ public static class ArticlesHelper
                 Title = "Quiz Game",
                 IconUrl = "2022/05/icons8-quiz-game-contestants-480.png",
                 Description = "Build a highly interactive Quiz Game with Angular and Angular Material",
-                Area = Area.Angular
+                Area = Area.Angular,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Now you’ve completed two projects with Angular and hopefully you’re starting to get comfortable with it. This next project will have a slightly more complex design and will stimulate your creativity while reinforcing your knowledge of Angular. We’ll once again practice a more complex data relationship scenario. This project will keep you busy for a while, but you’ll learn a lot from it. "
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application where you will create and play quiz games.",
+                    "You should create two projects: A .NET WebApi and an Angular app.",
+                    "You can choose whatever database solution you want: Sqlite, SQL server or whatever you're comfortable with.",
+                    "You can choose only use Entity Framework, no other ORM is allowed.",
+                    "Your database should have three tables: Question, Quiz, Game.",
+                    "A question needs to have a Quiz associated with it, hence a foreign key is needed.",
+                    "A game needs to have a Quiz associated with it, hence a foreign key is needed.",
+                    "If a quiz is deleted, all questions and games associated with it need to be deleted.",
+                    "You need to use pagination, which means you can't show any lists or tables longer than the height of the screen.",
+                    "You need to use Angular Material"
+                },
+                Resources = new List<string>
+                {
+                    "Relationships in SQL",
+                    "One-to-man relationship Entity Framework",
+                    "Tables and Pagination in Angular Material"
+                },
+                ResourcesIntro = "The resourced from the previous Angular projects can be used for the completion of this project, plus these: ",
+                Tips = new List<string>
+                {
+                    "This project has loose design requirements, so search for quiz game designs on Google for inspiration, when you're planning your app.",
+                    "Try to work with a couple of UI elements you haven't used before, for practice. In Angular Material's Documentation, if you click on Components, you'll see a large list of components on the left side of the screen. Grab one or two that you think can fit the project.",
+                    "This is a very strong portfolio project, so make sure you pay attention to details, don't leave any stone unturned and ask for feedback in our community.",
+                    "Take your project a step further by creating interesting features such as: A timer for your games, which the users can use. Or reports such as: games played per week, favourite games, etc. Let your creativity loose!"
+
+                }
             },
             new Project
             {
@@ -1611,7 +2199,41 @@ public static class ArticlesHelper
                 Title = "Tic-Tac-Toe",
                 IconUrl = "2022/07/icons8-tic-tak-toe-cross-and-circle-matrix-game-with-work-strategy-concept-384.png",
                 Description = "A very simple project to easy you into with this rich framework. You’ll be consuming an Api of your choice",
-                Area = Area.React
+                Area = Area.React,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Welcome to React, the most popular front-end framework in the world. The hype isn’t unwarranted. React is truly a joy to work with. Building components and managing application state is made extremely easy by these guys and you’ll be building very cool apps in no time with this tool."
+                    },
+                    new Paragraph
+                    {
+                        Body="Right now (August 2022), I still consider a better idea to learn Angular first, since there are way too many React developers out there competing for jobs. And The C# Academy doesn’t have an opinion about which one is better. They’re both great, and ideally, we should learn both. And of course, if in your area there are more React jobs than Angular, go for it!"
+                    },
+                    new Paragraph
+                    {
+                        Body="In this project, you’ll build a Tic-tac-toe game with the help of the React Docs tutorial. I know, one of my pet-peeves is the insistence in learning through a useless game, particularly Tic-tac-toe. That doesn’t resemble anything you’ll work with in real life. "
+                    },
+                    new Paragraph
+                    {
+                        Body = "However, I have to admit, it’s a great tutorial. Truly beginner friendly. And it does have an interesting feature that lets you back previous moves. With this tutorial, you’ll be ready to jump into more interesting stuff right away."
+                    }
+                },
+                RequirementsIntro = "This project has only one requirement. You’ll build a Tic-Tac-Toe game following React’s documentation. The objective at this stage isn’t to modify it or do anything fancy with it. Right now all you need to do is learn the basics. And there’s a lot to learn. So stick to the tutorial and take your time studying each line of code.",
+                Resources = new List<string>
+                {
+                    "React Tic-Tac-Toe Tutorial",
+                    "React Documentation",
+                    "Article: Why Learn React in 2022?"
+                },
+                ResourcesConclusion = "Since this is your first React project, make sure you look up everything you don’t know. Try not to let any keyword, method or concept left-behind. This is the moment to build your foundation. And don’t forget to reach out on Discord if you have questions!\r\n\r\nHere’s my github repository for this project, where you can find branches for each stage of the development of this game. To navigate through the branches, choose from the dropdown as per the picture below: ",
+                Tips = new List<string>
+                {
+                    "Take your time to study each word in the code. This isn't time to rush, but to learn at a slow pace, with patience.",
+                    "Take notes, write diagrams. React has completely new concepts to us such as hooks and state management and drawing can be very helpful.",
+                    "Once your app is complete, I strongly suggest you redo it and try to add some styling. If you're confused after your first go, it's crucial you go back and start from scratch.",
+                    "If you want to take it a step further you could try to build another game. Sudoku? Checkers?"
+                }
             },
             new Project
             {
@@ -1619,7 +2241,46 @@ public static class ArticlesHelper
                 Title = "Call an External API",
                 IconUrl = "2021/12/icons8-baby-app-96.png",
                 Description = "Build a simple Get Endpoint with .NET and fetch data from it using React",
-                Area = Area.React
+                Area = Area.React,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Congratulations! You’ve finished your first React App. It was probably easy. After all, React’s documentation is excellent. It’s at the same time thorough but easy to follow. So let’s complicate things a little. "
+                    },
+                     new Paragraph
+                    {
+                        Body="It’s time for you to combine a React App to a .NET WebAPI. Since this is the first time you’re doing it, we will keep it simple. We will only be showing data coming from the API via Get requests. This will reinforce what you’ve learned in the first app, and will exercise your creativity. Oh, and by the way, we will also be training .NET Web Apis again. Let’s go!"
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application where you should present data coming from a .NET WebAPI using React.",
+                    "Your application can only have GET requests.",
+                    "You cannot use AXIOS to fetch the data, you have to use JS Fetch API",
+                    "You should create an API of your choice, with a model representing a single table.",
+                    "One of the properties of your API's model should be imageUrl, with a link to pictures that will be shown by the react app.",
+                    "You can choose whatever ORM you want: Dapper, EF, ADO.NET.",
+                    "Your app needs to have a list of records and a page to visualise an individual record.",
+                    "Your app should show a 'Loading Data...' message while the request hasn't been completed.",
+                    "If there's a server error, the user should be informed."
+                },
+                Resources = new List<string>
+                {
+                    "How to fetch data with React",
+                    "Enabling CORS (Cross Origin Resource Sharing) in .NET Web API",
+                    "Dealing With CORS errors (Stack Overflow)",
+                    "Handling Fetch API errors in React"
+
+                },
+                ResourcesConclusion = "Connecting to an API using Fetch JS is incredibly easy. But chances are you’ll find a cross-origin error. Don’t forget to visit these links to solve it. ",
+                Tips = new List<string>
+                {
+                    "This app should be relatively easy to build. Try not to over complicate it.",
+                    "If you want to add extra features, think of: pagination, filters and the ability to create a list of 'favourite' records.",
+                    "Think of a project that has plenty of good images online and keep it simple. Examples: Dogs, Cats, Movies, Cars, Athletes, Singers, Bands, Drinks.",
+                    "Another variation of this project would be to call a public api. Click to view a massive list."
+                }
             },
             new Project
             {
@@ -1627,7 +2288,38 @@ public static class ArticlesHelper
                 Title = "Shopping List",
                 IconUrl = "2022/07/icons8-shopping-list-512.png",
                 Description = "Build your first full CRUD app with React, calling a .NET Web API",
-                Area = Area.React
+                Area = Area.React,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="It’s time to advance in your React knowledge by creating a full CRUD application with a .NET backend. This time you’ll also need a full CRUD .NET web API, so you get some extra practice in that as well. We’re recommending you stick to the basics and don’t use Redux (a popular state management library used in React). Its learning curve can be quite steep and you’re still taking baby-steps in React. You’ll also have a greater appreciation of Redux if make a few apps without it first. "
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is a CRUD Shopping List App with React and .NET Web API .",
+                    "Users should be able to cross items from the shopping-list without deleting them. You can use a IsPickedUp boolean for that.",
+                    "You should create two projects: A .NET WebApi and a React app.",
+                    "You can choose whatever database solution you want: Sqlite, SQL server or whatever you're comfortable with.",
+                    "You can choose whatever ORM you want: Dapper, EF, ADO.NET.",
+                    "To keep it simple, don't create a project that allows multiple shopping lists.",
+                    "Your database should have a single \"ShoppingListItems\" table. The objective is to focus on React, so we should avoid the complexities of relational data.",
+                    "You CANNOT use Axios or Redux."
+
+
+                },
+                ResourcesIntro = "The resources from the previous projects will be helpful in the completion of this project, plus this tutorial:",
+                Resources = new List<string>
+                {
+                    "Crud React Tutorial Example"
+                },
+                ResourcesConclusion = "This is just an example of a tutorial where a React app uses it’s inbuilt Http client to call an api. However React is one of the most popular libraries out there, so feel free to search for other examples. ",
+                Tips = new List<string>
+                {
+                    "Start by building the complete CRUD .NET Webapi",
+                    "In your second step, make sure you can call the get method from the API using React. Once the data is flowing between apps, everything else becomes easier."
+                }
             },
             new Project
             {
@@ -1635,7 +2327,47 @@ public static class ArticlesHelper
                 Title = "Friends Manager",
                 IconUrl = "2022/06/icons8-friend-512.png",
                 Description = "Build an app that will help you monitor and cultivate your friendships managing state with Redux",
-                Area = Area.React
+                Area = Area.React,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="In this project we will manage our friendships. This won’t be just a contact book. It will be an app where we will keep track of the people we consider REAL friends. The main objective is to keep track of how much attention we’re giving to our friends. So not only we will have our friends details, but also data about our frequency of communication with them. "
+                    },
+                     new Paragraph
+                    {
+                        Body="We will be dealing with a more advanced way of managing state in React. We will use Redux to keep a central state management system so you don’t have to pass it around using props and pointer functions. Managing state with props is ok for small projects, but as soon as our system have more than a few layers, it can quickly get messy. Managing state in a central location will reduce the amount of code and make debugging much easier. Not to mention the visualization of the data pathways within our app. "
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "In this app you'll keep data about the friendships you want to cultivate.",
+                    "You can choose which properties you want to have in your \"Friend\" model, except that you need to have a \"LastContactDate\" and a \"LastContactType\" and a \"Desired Contact Frequency\" properties",
+                    "You're also required to have a \"Category\" table, which will be linked to your \"Friends\" table by a foreign key.",
+                    "Users should be able to easily visualize the friends that are getting the least attention (i.e. Last contact date has been longer than desired contact frequency)",
+                    "When adding a new friend, the form should contain a dropdown with the Category.",
+                    "You need to use Redux for state management.",
+                    "You need to handle validation and server errors."
+                },
+                ResourcesIntro = "Adding onto the resources of our previous React projects, you’ll need to find out how to use Redux:",
+                Resources = new List<string>
+                {
+                    "React-Redux Quick Guide",
+                    "Beginners Redux: Complete Guide",
+                    "React Redux Crud App (Youtube)."
+                },
+                ResourcesConclusion = "Angular Material can be tricky at first, but trust us, you’ll learn to love it and once you master it, you will never look back. But as always, reach out in our Discord Community if you get stuck!",
+                Tips = new List<string>
+                {
+                    "You won't find many tutorials of React-Redux with C# Web Api. But with the knowledge of the previous React projects you should be able to setup the required front-end and call a C# server.",
+                    "Initially don't worry about styling. Make sure everything is working as intended first and add styles in the end.",
+                    "Since you're new to Redux, you might need to create a \"stepping stone\" project where your only focus is to learn redux with a very simple app (i.e. todo list)."
+                },
+                Challenges = new List<string>
+                {
+                    "Once this project is done, I highly recommend you create two forks for two different ways of managing state: Context API, and Recoil.",
+                    "Find a way to get an e-mail sent to user with warnings such as : You haven't contacted John in 14 days!"
+                }
             },
             new Project
             {
@@ -1643,7 +2375,40 @@ public static class ArticlesHelper
                 Title = "Wardrobe Inventory",
                 IconUrl = "2022/06/icons8-wardrobe-392.png",
                 Description = "Get started with Blazor by building an inventory for your clothes. With pictures!",
-                Area = Area.Blazor
+                Area = Area.Blazor,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Welcome to Blazor!! The current .NET solution for web-development that Microsoft created to compete with React (Meta) and Angular (Google). You might be thinking, why learn Blazor where most jobs want React/Angular? And that’s a good point. In fact I wouldn’t start with Blazor in the front-end before knowing one of the big JS frameworks. But once you have one of those covered, having Blazor in your resume might give you the edge you need to land that dream-job. And make no mistake! Even though there are LESS Blazor jobs out there, they definitely exist. And not many people are fighting for them."
+                    },
+                     new Paragraph
+                    {
+                        Body="Blazor let’s you build user interfaces without using Javascript. Both client and server code is written in C#, allowing you to share code and libraries. It’s just a joy to work with. Up to 2022, there were two types of Blazor projects: Blazor Web Assembly, and Blazor Server. But recently Microsoft creates Blazor Hybrid, which allows you to use Blazor components to build the UI for apps with WPF and most importantly, MAUI. Wow!! Let’s get started??"
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application where you should store and retrieve wardrobe data..",
+                    "You should use a Blazor Webassembly project.",
+                    "You can choose whatever database solution you want: Sqlite, SQL server or whatever you're comfortable with.",
+                    "Since we'll only have basic CRUD operations, you should use Entity Framework.",
+                    "Your database should have a single table. The objective is to focus on learning Blazor, so we should avoid the complexities of relational data.",
+                    "Users of your app need to be able to upload pictures of wardrobe items.",
+                    "You CAN'T USE Javascript interop. The objective is to stay away from JS, even though it's still possible to use it."
+                },
+                Resources = new List<string>
+                {
+                    "Microsoft Docs: Blazors",
+                    "Why use Blazor?",
+                    "Blazor CRUD Tutorial"
+                },
+                ResourcesConclusion = "Since this is your first Blazor  project, I recommend you first complete the Blazor Todo App from Microsoft Learn. It’s a very simple project that will give you a basic understanding of how Blazor works. And don’t forget to reach out on Discord if you have questions!",
+                Tips = new List<string>
+                {
+                    "You only need a single project. Contrary to using Angular and React, you don't need to create two separate projects, since the front-end end and the back-end will be covered by Blazor.",
+                    "In this project, you're not allowed to use Javascript Interop. But a nice challenge after the completion of the project would be to integrate it to your project:"
+                }
             },
             new Project
             {
@@ -1651,7 +2416,42 @@ public static class ArticlesHelper
                 Title = "Memory Game",
                 IconUrl = "2022/06/icons8-memory-512.png",
                 Description = "Build a simple memory game where users will train their brain and track results",
-                Area = Area.Blazor
+                Area = Area.Blazor,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="The objective of this project is to provide extra practice so you can consolidate your knowledge of Blazor. The data model won’t be very complex. But manipulating the state of the UI will be slightly complex. "
+                    },
+                     new Paragraph
+                    {
+                        Body="We will build a simple memory game where the users are presented with a group of paired cards facing down and they can turn the cards up to try to match them with their pair. Once a pair is matched, it becomes inactive. The game is finished when all pairs are matched. "
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "Your memory game should have a timer.",
+                    "Once a game is finished it should record the date it was played and the time it took to finish in a \"games\" table.",
+                    "You should have just one level of difficulty.",
+                    "Your game should have 9 cards.",
+                    "The app should have two main components: the game and the games list.",
+                    "You shouldn't need a database for the game functionality. All the information about the cards can be in lists in the code base.",
+                    "Since it only requires basic operations, use Entity Framework for recording game history."
+                },
+                ResourcesConclusion = "\r\nResources\r\nYou should be able to complete this project with the same resources found in the Blazor Wardrobe Inventory project.",
+                Tips = new List<string>
+                {
+                    "Split the development in three phases: game functionality, games history, styling.",
+                    "When developing the functionality, have a simple game with 4 or 6 cards for faster testing.",
+                    "During development, use characters on your cards. Bring in icons or images in the styling phase."
+                },
+                Challenges = new List<string>
+                {
+                    "Add difficulty levels to your game: more cards.",
+                    "Add a game against the clock: How many cards can the user match in a minute?",
+                    "Add a search functionality to the games list",
+                    "Add a reports area where you'll query the database and show: How many games played per week/month/year and average score"
+                }
             },
             new Project
             {
@@ -1659,7 +2459,36 @@ public static class ArticlesHelper
                 Title = "Food Journal",
                 IconUrl = "2022/06/icons8-ingredients-480.png",
                 Description = "Log your food habits in your first CRUD Blazor App",
-                Area = Area.Blazor
+                Area = Area.Blazor,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="In your previous Blazor Apps, you’ve worked with fairly simple data models. The objective of the Food Journal project is to increase complexity with relational data, which always adds complexity to development of forms and collecting the user input. It also adds complexity to filters and report systems. Our goal won’t be to learn extra Blazor Features, but to use what was previously learned with a more challenging business case. So let’s get moving!"
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application to track meals.",
+                    "Your data schema should have at least a \"Meals\" and a \"Foods\" table, in a many-to-many relationship.",
+                    "You should have a MealType enumeration (Breakfast, Lunch, Dinner, Snack), which will be recorded in the meals table.",
+                    "Your app should have a vibrant color palette.",
+                    "There should be a feature that allows the users to quickly record frequent meals.",
+                    "There should be a search functionality (per date, per food, per meal type)",
+                    "There should be a report feature with queries such as how many times the user had a certain food per period of time."
+                },
+                Tips = new List<string>
+                {
+                    "Tracking every meal requires incredible discipline. Your app needs to make recording meals very easy. Make each meal and food a button to make the process very agile.",
+                    "If possible use icons to represent the foods, as it makes the app more pleasing to use. You can find excellent icons on icons8.com."
+                },
+                Challenges = new List<string>
+                {
+                    "Add macronutrients categorization.",
+                    "Add a \"cheat meal\" feature to record how many times the user ate junk food or candies.",
+                    "Add goals such as: drinking 20 liters of water in a week, or avoiding chocolate for 7 days.",
+                    "To enrich your app, try to fetch food data from a free Api: 6 Free Food Apis"
+                }
             },
             new Project
             {
@@ -1667,7 +2496,42 @@ public static class ArticlesHelper
                 Title = "Sports Statistics",
                 IconUrl = "2022/06/icons8-football-team-480.png",
                 Description = "Build an application to track the performance of a sports team in real time",
-                Area = Area.Blazor
+                Area = Area.Blazor,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="You were hired by a sports club to build a software that will keep track of their teams statistics. They’ve tried several different apps but none was exactly what they wanted so decided to budget for an in-house developer. You’re lucky that your Blazor skills are now soaring and you’re ready to deliver. So far you have learned almost everything needed to fulfil the projects requisites. We will only add the ability to show data charts to help their coaches visualize the players performances. Let’s get started!"
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an application that will track and generate reports about a sports team's performance.",
+                    "The app will have a page divided two areas: The UI where the in-game data will be tracked and an area showing the current statistics.",
+                    "The app will have a reports area in a different page showing the players statistics across multiple games. Coaches should be able to se detailed players information per game and per season. This area should contain barcharts with the players performance.",
+                    "The UI needs to contain a list of players with 5 parameters that will be tracked (i.e. passes, shots, rebounds, blocks, interceptions, in basketball.",
+                    "Data should be tracked with the click of a button. (i.e. a rebound button clicked on Dennis Rodman's row will track a rebound at a given time in the game).",
+                    "The reports area should be updated immediately upon a button being clicked."
+                },
+                ResourcesIntro="You should have all skills necessary to complete this project, except for adding charts . Here are a couple of resources to get you started.",
+                Resources = new List<string>
+                {
+                    "Simple Bar Chart in Blazor ",
+                    "High chart in Blazor",
+                    "Blazor JS Interop (Youtube)"
+                },
+                Tips = new List<string>
+                {
+                    "If you haven't used Blazor + JS Interop before this might be a could opportunity to start. You don't need JS for most things in Blazor, but it might come in handy at times. Create a small project to practice it.",
+                    "If you get stuck implementing Angular Material in your project, take a step back and build a couple of simple purely front-end projects from Youtube tutorials."
+                },
+                Challenges = new List<string>
+                {
+                    "Add the possibility of tracking the area of the playing field where an action happened, with a click on the fields area.",
+                    "Add an Admin area where players can be added.",
+                    "Add Authentication and Authorization so only logged in users can use the app.",
+                    "Add role-based authorization with roles like: \"view only\", \"admin\", and \"superuser\""
+                }
             },
             new Project
             {
@@ -1675,7 +2539,47 @@ public static class ArticlesHelper
                 Title = "Math Game",
                 IconUrl = "2022/08/icons8-maths-376.png",
                 Description = "Start your native app development journey building a simple game with the four basic mathematical operations",
-                Area = Area.MAUI
+                Area = Area.MAUI,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Welcome to .NET MAUI (Multi-platform App UI), the cross-platform framework for creating native mobile and desktop apps. Maybe you’ve heard of previous .NET solutions for native apps (Winforms, WPF, WinUI, Xamarin) and you might be wondering: Why MAUI? MAUI is the evolution from all those previous technologies, it’s the framework that has as an objective to provide a one-stop shop for anything todo with build applications in any device. "
+                    },
+                     new Paragraph
+                    {
+                        Body="Does that mean it’s not worth to learn those? The answer isn’t very simple. If you need to learn WPF for example for a job, then it’s better to be specific and learn that particular technology. Now for the long run it’s better to learn the latest solution. And the good news is that MAUI uses XAML as a mark-up and is commonly implemented with the MVVM (Model-View-ViewModel) design pattern. They’re both also used in WPF, WinUI and Xamarin, which means that the knowledge is easily transferrable amongst them."
+                    },
+                     new Paragraph
+                    {
+                        Body="But enough talk! Let’s build!"
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This application has only one requirement: You'll build a Math Game with MAUI (and no MVVM) with the help of the tutorial below:",
+                },
+                Resources = new List<string>
+                {
+                    "What is .NET MAUI?",
+                    "Maui vs Xamarin",
+                    "What is XAML?",
+                    "MVC vs MVVM"
+                },
+                ResourcesIntro = "Each video in the tutorial has many links in the description area. Here are some resources you can read before getting started:",
+                Tips = new List<string>
+                {
+                    "If you've done any full-stack Web Dev, you'll be surprised with how easy the C# code is to develop a basic MAUI App. Your biggest challenge here will be to learn XAML. Make sure you don't rush through that.",
+                    "Make a checklist of steps for the completion of the tutorial, along with a list of issues you encountered. Once you're done, repeat the project going through the lists.",
+                    "Once you went through the project twice, tweak it with slightly different functionality and style."
+                },
+                Challenges = new List<string>
+                {
+                    "Try to implement levels of difficulty.",
+                    "Add a timer to track how long the user takes to finish the game.",
+                    "Add a function that let's the user pick the number of questions.",
+                    "Create a 'Random Game' option where the players will be presented with questions from random operations"
+                }
             },
             new Project
             {
@@ -1683,7 +2587,48 @@ public static class ArticlesHelper
                 Title = "Books to Read",
                 IconUrl = "2022/08/icons8-bookshelf-512.png",
                 Description = "Build an app to keep track of reading activity using the MVVM pattern",
-                Area = Area.MAUI
+                Area = Area.MAUI,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="The objective of our second MAUI project is to get acquainted with the MVVM (Model-View-ViewModel) design pattern. The main purpose of MVVM is separation of concerns. With MVVM we will end up with smaller classes with less code. Using this pattern or not is a matter of personal style, but it’s widely adopted in enterprise because of the complexity of the domain. A large code base without separation of concerns in mind quickly turns into spaghetti: code that is less maintainable and testable. Smaller classes and methods with clear responsibility mean they’re easier to test. "
+                    },
+                     new Paragraph
+                    {
+                        Body="It does take a while to get used to MVVM, though. And it’s perfectly ok to feel lost at first. The learning curve can be steep, especially after doing so many projects using MVC. A mindset shift is needed. However it will pay off. MVVM is also used in Blazor and the previous .NET native solutions (WPF, Xamarin, WinUI), so this knowledge won’t be restricted to MAUI projects."
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "As a preparation for this project, you should complete the Todo List tutorial by James Montemagno (link in the resources area)",
+                    "This is a very simple app where you'll record data about books you want to read.",
+                    "It should be similar to a todo list, but just for books.",
+                    "Users should be able to perform all CRUD operations against the database.",
+                    "To keep things simple and focus on MVVM, you'll have just one \"books\" table.",
+                    "You should use the MVVM pattern.",
+                    "You should use SQLite."
+
+
+                },
+                Resources = new List<string>
+                {
+                    "Dotnet Maui for Beginners.",
+                    "Why Use MVVM?"
+                },
+                ResourcesIntro = "With the Math’s Game project, you learned the basics of MAUI and XAML. Now you’ll need to add a design pattern to that knowledge. For that we will get the help of the most knowledgeable MAUI instructor out there: James Montemagno. Initially, you’ll follow his Beginners MAUI tutorial, where you’ll build a Todo List App with MVVM.",
+                Tips = new List<string>
+                {
+                    "The Books Management app can be almost identical to the Todo List project by James Montemagno, with just a few tweaks.",
+                    "Take your time learning MVVM. Understand every line of the code. Google everything you don't know. Write diagrams, make notes and lists."
+                },
+                Challenges = new List<string>
+                {
+                    "Add a \"photo\" property to the book detail. It will contain an URL to a picture of the book's cover.",
+                    "Expand on the project fetching and using data from a books API.",
+                    "Create a search functionality where I can query for titles or dates of books previously read (and whatever other filters you can think of).",
+                    "Create a \"Reading now\" functionality where you can track your progress in a book you're currently reading"
+                }
             },
             new Project
             {
@@ -1691,7 +2636,27 @@ public static class ArticlesHelper
                 Title = "Monkeys Data",
                 IconUrl = "2022/08/icons8-see-no-evil-monkey-256.png",
                 Description = "Build an advanced Mobile UI to present data about Monkeys, using Geolocation to show which monkey is closest to you",
-                Area = Area.MAUI
+                Area = Area.MAUI,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="Learning the MVVM pattern can be quite overwhelming, especially if you’re new to XAML and MAUI, so in this project we will get more MVVM practice while practicing our XAML skills and using native features for mobile apps. We will get help from James Montemagno, the amazing Microsoft Instructor focused on all things XAML. It’s a long tutorial but as always James makes it really easy to follow and enjoy. So let’s not waste any time!"
+                    },
+                     new Paragraph
+                    {
+                        Body="In this project you’ll log data about your sleep, either manually inputting your time in bed or using a timer to automatically log it. Dealing with time is always a challenge and great practice. Also, you’ll be using Angular Material, a powerful UI component library ubiquitous in enterprise Angular projects. This is a massive library that does take some time to learn, but once you master it, it becomes extremely easy to build interesting and great-looking UI components. You’ll be saying goodbye to Bootstrap! "
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This project has only one requirement: Follow and complete James Montemagno's Monkeys App Tutorial"
+                },
+                Challenges = new List<string>
+                {
+                    "Implement a function to add new Monkeys.",
+                    "Create another app based on this tutorial but a different business case and styling."
+                }
             },
             new Project
             {
@@ -1699,7 +2664,40 @@ public static class ArticlesHelper
                 Title = "Warehouse Admin",
                 IconUrl = "2022/08/icons8-warehouse-512.png",
                 Description = "Track warehouse operations using a complex data model with Maui",
-                Area = Area.MAUI
+                Area = Area.MAUI,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="In this project you’ll be using the knowledge from the three previous MAUI projects to create a Warehouse Management System, a common business case in enterprise applications, where it’s critical to maintain accurate data about logistical operations. We will aim to give the user interface a clean “corporate” look and generate various types of reports using a complex data system."
+                    }
+                },
+                Requirements = new List<string>
+                {
+                    "This is an app that will manage warehouse data about a multi-store retail business of your choice.",
+                    "Your data schema will contain the following tables: Products, Stores, Employees, WarehouseSlot, Items, ItemMovements.",
+                    "Users need to know where a product is at any given time.",
+                    "Products can be in transit from store to warehouse and vice-versa.",
+                    "Every time a product is in movement, a new record needs to be added in the \"ItemMovement\" table. Every itemMovement needs to have two employess associated with it. One in the shipping end and one in the receiving end.",
+                    "An Item is an instance of a product. Products are unique, but there can be multiple items of the same product.",
+                    "A warehouse slot needs to contain at least an \"Isle\" and a \"Slot Number\" columns.",
+                    "Users should be able to see a history of item movements."
+                },
+                Tips = new List<string>
+                {
+                    "Layer the creation of your project: Start with showing a list products showing how many items are available in the inventory.",
+                    "Then add the stores and show how many items are available per store. Start with only two stores to keep things simple.",
+                    "Then add the item movements and so on.",
+                    "This is a project that require some level of planning, especially in regards to data schema, but don't overdo it, you'll only understand some of the requirements as you start coding"
+                },
+                Challenges = new List<string>
+                {
+                    "Add authentication and authorization so that only logged in users are able to use the app",
+                    "Add role-base authentication, with super users that are able to add products, stores, items and employees.",
+                    "Create a detail page for each entity (i.e. click on an employee will show all its details and history of item movements",
+                    "Expand the data schema with Customers and Orders table where you'll track sales(Warning: this adds tremendous complexity)",
+                    "Feeling adventurous? Implement your app in a mobile device and use a barcode scanner to make handling of items faster."
+                }
             },
             new Project
             {
@@ -1707,7 +2705,59 @@ public static class ArticlesHelper
                 Title = "Deploying a Simple App",
                 IconUrl = "2022/09/icons8-web-392.png",
                 Description = "Start with Azure creating an account and deploying a simple app without a database",
-                Area = Area.Azure
+                Area = Area.Azure,
+                Introduction = new List<Paragraph>
+                {
+                    new Paragraph
+                    {
+                        Body="In this day and age it’s absolutely essential to have experience with cloud-computing. The “cloud” allows us to access software and data from anywhere at any time, powered by the internet. These technologies have spread very fast amongst big companies since the mid-2000s and now they’re ubiquitous in organizations of all sizes. That means experience with cloud-computing is a requirement in the majority of programming jobs ads. The biggest player in cloud-computing is AWS (from Amazon), with 32% of market share (as of 2020), against Azure’s 20%. And it’s totally ok to choose AWS as your cloud-provider, but we’re sticking to Azure since it’s Microsoft’s solution and it integrates seamlessly with .NET’s tools."
+                    },
+                     new Paragraph
+                    {
+                        Body="The amount of services offered by cloud companies is enormous and ever-growing. It’s easy to get lost. The good news is that we don’t need to know too much to declare we “have experience with it”. Basically we need to be able to deploy static websites and full stack apps connected to a database and handle authentication. "
+                    }, 
+                     new Paragraph
+                     {
+                         Body="In the C# Academy, the cloud area is initially split in four projects. In the first we will learn how to deploy a simple app with no database back-end, just to get familiar with Azure Dashboard and integration with VS2022. In the second, we will expand on this knowledge by adding a SQL Server, which can be slightly more complexity. And on the third we will deploy a .NET Web API along with a React front-end, a very common stack in enterprise. As a bonus, we will learn the basics of Azure Functions, “a serverless solution that allows you to write less code, maintain less infrastructure, and save on costs”. So let’s jump into it!"
+                     }
+                },
+                Requirements = new List<string>
+                {
+                    "This project has only one requirement: To publish a .NET Web App To Azure.",
+                    "You can choose any type of .NET app: Razor Pages, MVC or Blazor.",
+                    "You can use an existing app, provided it doesn't need a database connection.",
+                    "You won't need authentication or authorization.",
+                    "You should publish your app to an 'Azure App Service'."
+                },
+                Resources = new List<string>
+                {
+                    "Cloud Computing Overview",
+                    "Microsoft Azure Fundamentals",
+                    "Creating a Microsoft Account",
+                    "Creating an Azure Account",
+                    "Azure Deployment"
+
+                },
+                ResourcesIntro = "There’s a lot to learn in Azure and it’s easy to get lost. At this stage we suggest you read about Azure to get some context and then get into the specifics of how to deploy an app:",
+                Blocks = new List<Block>
+                {
+                    new Block
+                    {
+                        Title = "Video Tutorial",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "Provided you have a Microsoft and and Azure accounts (see links above in case you don’t), you can follow this super quick tutorial where you’ll learn how to deploy to Azure using Visual Studio 2022: "
+                            },
+                            new Paragraph
+                            {
+                                IsVideo = true,
+                                VideoUrl = "https://www.youtube.com/embed/TcghUb1NPCw"
+                            }
+                        }
+                    }
+                }
             },
             new Project
             {
@@ -1715,7 +2765,8 @@ public static class ArticlesHelper
                 Title = "Deploying a full-stack .NET app",
                 IconUrl = "2022/09/icons8-full-stack-512.png",
                 Description = "Deploy a crud app from the .NET ecosystem along with a database server",
-                Area = Area.Azure
+                Area = Area.Azure,
+
             },
             new Project
             {

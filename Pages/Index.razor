@@ -5,21 +5,31 @@
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <h1 class="display-4">The C# Academy</h1>
-                <p class="lead">Where You Learn By Making</p>
-                <p>Last Updated: Oct-22-2022</p>
+            <div class="col d-flex align-items-center">
+                <div>
+                    <h1 class="main-title">THE C# <br />ACADEMY</h1>
+                    <p class="lead">Learn with Projects!</p>
+                    <p class="last-updated">Last Updated: Oct-22-2022</p>
+                </div>
             </div>
             <div class="col">
-                <img src="@(baseUrl)/2022/05/clip-online-education-4.gif" />
+                <img width="500px" src="@(baseUrl)/2022/05/clip-online-education-4.gif" />
             </div>
         </div>
     </div>
 </div>
+<div class="jumbotron jumbotron-fluid latest-updates">
+    <div class="container latest-updates-container">
+        <p class="latest-updates-title">Latest Updates</p>
+        <p class="latest-updates-list">2022-Oct-22 : Updated Phone Book Entity Framework project</p>
+        <p class="latest-updates-list">2022-Oct-14 : Updated 'Shift Tracker' .NET Core Web API project</p>
+    </div>
+</div>
 <div class="jumbotron jumbotron-fluid">
-    <div class="container justify-content-center">
-        <h1 class="display-4">Roadmap</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <div class="container text-center justify-content-center">
+        <h1 class="display-4 justify-content-center area-title">.NET Full-Stack Developer Roadmap</h1>
+        <img src="https://www.thecsharpacademy.com/wp-content/uploads/2022/07/Screen-Shot-2022-07-11-at-10.55.20-am-1024x317.png" />
+        <a href="https://www.thecsharpacademy.com/2021/09/10/road-map/"><button type="button" class="btn btn-primary btn-lg">Roadmap Explained</button></a>
     </div>
 </div>
 
@@ -30,7 +40,10 @@
         {
             <div class="col">
                 <div class="card text-center w-75" style="width: 18rem;">
-                    <a href="@($"article/{article.Id}")"><img class="card-img-top" src="@(baseUrl)/@article.IconUrl" alt="Card image cap"></a>
+                    <div class="text-center">
+                        <img class="card-img-top" mx-auto d-block src="@(baseUrl)/@article.IconUrl" />
+                    </div>
+
                     <div class="card-body">
                         <h5 class="card-title">@article.Title</h5>
                         <p class="card-text">@article.Description</p>
@@ -66,6 +79,16 @@
 <div class="container">
     <div class="row d-flex justify-content-center">
         <h1 class="display-4 area-title">Console Apps</h1>
+
+        <div class="col-3 my-3">
+            <div class="card shadow rounded-lg text-center" style="width: 18rem;">
+                <a href="@($"article/{consoleArticle.Id}")"><img class="card-img-top" src="@(baseUrl)/@consoleArticle.IconUrl)" alt="Card image cap"></a>
+                <div class="card-body">
+                    <h5 class="card-title">@consoleArticle.Title</h5>
+                    <p class="card-text">@consoleArticle.Description</p>
+                </div>
+            </div>
+        </div>
         @foreach (var project in projects.Where(x => x.Area == Area.Console))
         {
             <div class="col-3 my-3">
@@ -78,6 +101,16 @@
                 </div>
             </div>
         }
+
+        <div class="col-3 my-3">
+            <div class="card shadow rounded-lg text-center" style="width: 18rem;">
+                <a href="@($"article/{graduationArticle.Id}")"><img class="card-img-top" src="@(baseUrl)/@graduationArticle.IconUrl)" alt="Card image cap"></a>
+                <div class="card-body">
+                    <h5 class="card-title">@graduationArticle.Title</h5>
+                    <p class="card-text">@graduationArticle.Description</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -212,16 +245,67 @@
 @code {
     protected List<Article> articles = new();
     protected List<Project> projects = new();
+    protected Article consoleArticle = new();
+    protected Article graduationArticle = new();
+
     protected string baseUrl = "https://www.thecsharpacademy.com/wp-content/uploads";
 
     protected override async Task OnInitializedAsync()
     {
         articles = ArticlesHelper.GetArticles();
         projects = ArticlesHelper.GetProjects();
+        consoleArticle = articles.Single(x => x.Id == 9);
+        graduationArticle = articles.Single(x => x.Id == 10);
     }
 }
 
 <style>
+    .main-title {
+        font-family: Roboto;
+        font-size: 65px;
+        font-weight: 900;
+        letter-spacing: 0px;
+    }
+
+    .lead {
+        font-family: Roboto;
+        font-size: 30px;
+        font-weight: 600;
+        color: #1D256E
+    }
+
+    .last-updated {
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 600;
+        color: #D62A2A
+    }
+
+    .latest-updates {
+        background-color: #D62A2A;
+        color: white;
+        font-weight: 500;
+    }
+
+    .latest-updates-container {
+        padding: 10px 0 5px 0;
+    }
+
+    .latest-updates-title {
+        font-family: Roboto;
+        font-size: 20px;
+    }
+
+    .latest-updates-list {
+        margin-top: -15px;
+        font-family: Roboto;
+        font-size: 15px;
+    }
+    
+    .btn-primary {
+        background-color: #1C236D;
+    }
+
     .area-first-steps {
         background-color: #1C236D;
         padding-bottom: 50px;
