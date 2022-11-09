@@ -63,14 +63,31 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
-    .container {
-        max-width: 70%;
-        margin-top: 50px !important;
-        margin-bottom: 50px !important;
-    }
+.container {
+    max-width: 70%;
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+.roadmap-mobile {
+    display: none;
+}
 
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf');
 }
 
+@media (max-width: 800px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .jumbotron {
+        max-width: 100%;
+    }
+
+    .roadmap-desktop {
+        display: none;
+    }
+}
