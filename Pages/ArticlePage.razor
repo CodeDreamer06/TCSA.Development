@@ -11,42 +11,80 @@
     </div>
 </div>
 
-        <div class="container w-50">
-            @foreach (var block in Article.Blocks)
+<div class="container w-50 article-blocks-desktop">
+    @foreach (var block in Article.Blocks)
+    {
+        <div class="row pb-4">
+            @if (!String.IsNullOrEmpty(block.ImgUrl))
             {
-                <div class="row pb-4">
-                    @if (!String.IsNullOrEmpty(block.ImgUrl))
-                    {
-                        <div class="col-2 icon-div">
-                            <img src="@(baseUrl)/@block.ImgUrl" width="70" alt="" class="align-middle">
-                        </div>
-                    }
-                    <div class="@GridStyle(!String.IsNullOrEmpty(block.ImgUrl))">
-                        <h1 class="article-section-title">@block.Title</h1>
-
-                        @foreach (var paragraph in block.Paragraphs)
-                        {
-                            if (paragraph.IsPicture)
-                            {
-                                <img src="@(baseUrl)/@paragraph.PictureUrl" width="500">
-                            }
-
-                            if (paragraph.IsVideo)
-                            {
-                                <div class="video-paragraph d-flex justify-content-center embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" width="500" height="350" src="@paragraph.VideoUrl" allowfullscreen></iframe>
-                                </div>
-                            }
-
-                            if (!String.IsNullOrEmpty(paragraph.Body))
-                            {
-                                <p>@((MarkupString)(paragraph.Body))</p>
-                            }
-                        }
-                    </div>
+                <div class="col-2 icon-div">
+                    <img src="@(baseUrl)/@block.ImgUrl" width="70" alt="" class="align-middle">
                 </div>
             }
+            <div class="@GridStyle(!String.IsNullOrEmpty(block.ImgUrl))">
+                <h1 class="article-section-title">@block.Title</h1>
+
+                @foreach (var paragraph in block.Paragraphs)
+                {
+                    if (paragraph.IsPicture)
+                    {
+                        <img src="@(baseUrl)/@paragraph.PictureUrl" width="500">
+                    }
+
+                    if (paragraph.IsVideo)
+                    {
+                        <div class="video-paragraph d-flex justify-content-center embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" width="500" height="350" src="@paragraph.VideoUrl" allowfullscreen></iframe>
+                        </div>
+                    }
+
+                    if (!String.IsNullOrEmpty(paragraph.Body))
+                    {
+                        <p>@((MarkupString)(paragraph.Body))</p>
+                    }
+                }
+            </div>
         </div>
+    }
+</div>
+
+<div class="container article-blocks-mobile">
+    @foreach (var block in Article.Blocks)
+    {
+        <div class="row pb-4">
+            <div class="col d-flex justify-content-center">
+                <img src="@(baseUrl)/@block.ImgUrl" width="70" alt="" class="align-middle">
+            </div>
+        </div>
+        <div class="row pb-4">
+            <div class="col">
+                <div class="col d-flex justify-content-center">
+                    <h1 class="article-section-title">@block.Title</h1>
+                </div>
+
+                @foreach (var paragraph in block.Paragraphs)
+                {
+                    if (paragraph.IsPicture)
+                    {
+                        <img src="@(baseUrl)/@paragraph.PictureUrl" width="500">
+                    }
+
+                    if (paragraph.IsVideo)
+                    {
+                        <div class="video-paragraph d-flex justify-content-center embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" width="500" height="350" src="@paragraph.VideoUrl" allowfullscreen></iframe>
+                        </div>
+                    }
+
+                    if (!String.IsNullOrEmpty(paragraph.Body))
+                    {
+                        <p>@((MarkupString)(paragraph.Body))</p>
+                    }
+                }
+            </div>
+        </div>
+    }
+</div>
 
 
 @code {

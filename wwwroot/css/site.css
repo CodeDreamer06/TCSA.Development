@@ -73,6 +73,10 @@ a, .btn-link {
     display: none;
 }
 
+.article-blocks-mobile {
+    display: none;
+}
+
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf');
@@ -80,14 +84,22 @@ a, .btn-link {
 
 @media (max-width: 800px) {
     .container {
-        max-width: 100%;
+        width: 100% !important;
     }
 
     .jumbotron {
         max-width: 100%;
     }
 
-    .roadmap-desktop {
+    .roadmap-desktop{
         display: none;
+    }
+
+    .article-blocks-desktop {
+        display: none;
+    }
+
+    .article-blocks-mobile {
+        display: contents;
     }
 }
