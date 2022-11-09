@@ -33,7 +33,7 @@
 
                             if (paragraph.IsVideo)
                             {
-                                <div class="embed-responsive embed-responsive-16by9">
+                                <div class="video-paragraph d-flex justify-content-center embed-responsive embed-responsive-16by9">
                                     <iframe class="embed-responsive-item" width="500" height="350" src="@paragraph.VideoUrl" allowfullscreen></iframe>
                                 </div>
                             }
@@ -83,5 +83,9 @@
 
     img {
         align-self: center;
+    }
+
+    .video-paragraph {
+        padding: 20px 0;
     }
 </style>

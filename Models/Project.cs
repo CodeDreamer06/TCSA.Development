@@ -13,5 +13,6 @@ public class Project: Article
     public List<string> Challenges { get; set; }
     public string LearningIntro { get; set; }
     public List<string> LearningItems { get; set; }
+    public List<string> Screenshots { get; set; }
 }
 

@@ -1,5 +1,4 @@
-﻿using System.Web;
-using TCSA.Models;
+﻿using TCSA.Models;
 
 namespace TCSA.Data;
 
@@ -365,11 +364,11 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "1 – Quitting is not an option.\r\n2 – “We have a drone on Mars”. If we are able to control a drone on Mars, THERE IS a solution for whatever programming problem I’m having."
+                                Body = "1 – Quitting is not an option.<br>2 – “We have a drone on Mars”. If we are able to control a drone on Mars, <b><i><u>THERE IS A SOLUTION</u></i></b> for whatever programming problem I’m having."
                             },
                             new Paragraph
                             {
-                                Body="Remember this: THERE IS A SOLUTION. It will take many years of programming to run into problems that haven’t been solved before. So if you stick to it, no matter how long it takes, you will solve it. So let’s see how we solve problems in software development."
+                                Body="Remember this: <b><i><u>THERE IS A SOLUTION</u></i></b>. It will take many years of programming to run into problems that haven’t been solved before. So if you stick to it, no matter how long it takes, you will solve it. So let’s see how we solve problems in software development."
                             }
                         }
                     },
@@ -425,7 +424,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "If you google the problem using your own words or copying and pasting the error, you’ll quickly find out that most of these questions have been answered on stackoverflow.com."
+                                Body = "If you google the problem using your own words or copying and pasting the error, you’ll quickly find out that most of these questions have been answered on <a href='http://stackoverflow.com/'>Stackoverflow.com</a>."
                             },
                             new Paragraph
                             {
@@ -433,11 +432,11 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "Have a look at my account on stack overflow and you’ll see that I asked tons of questions throughout my journey. Most of these questions weren’t unique. They were problems that have already been solved but I couldn’t translate them into my code. With experience you’ll be able to adapt someone else’s answers to your code, but sometimes you’ll have to post your own for someone else to have a look."
+                                Body = "<a href='https://stackoverflow.com/users/11659311/pablo-aguirre-de-souza?tab=answers&sort=votes'>Have a look at my account on stack overflow</a> and you’ll see that I asked tons of questions throughout my journey. Most of these questions weren’t unique. They were problems that have already been solved but I couldn’t translate them into my code. With experience you’ll be able to adapt someone else’s answers to your code, but sometimes you’ll have to post your own for someone else to have a look."
                             },
                             new Paragraph
                             {
-                                Body = "Remember. THERE IS A SOLUTION."
+                                Body = "Remember. <b><i><u>THERE IS A SOLUTION</u></i></b>."
                             }
                         }
                     },
@@ -540,7 +539,11 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "Visual Studio for Windows\r\n\r\nVisual Studio for Mac\r\n\r\nVisual Studio Code for Windows\r\n\r\nVisual Studio Code for Mac\r\n\r\nVisual Studio Code for Linux"
+                                Body = @"<a href='https://www.youtube.com/watch?v=nvTwDirvwIw&t=4s'>Visual Studio for Windows</a><br>
+                                         <a href='https://www.youtube.com/watch?v=KMXm43LVNeY&t=36s'>Visual Studio for Mac</a><br>
+                                         <a href='https://www.youtube.com/watch?v=r5dtl9Uq9V0'>Visual Studio Code for Windows</a><br>
+                                         <a href='https://www.youtube.com/watch?v=LXxjCNfd5b4'>Visual Studio Code for Mac</a><br>
+                                         <a href='https://www.youtube.com/watch?v=3YIADWbQFzE'>Visual Studio Code for Linux</a><br>"
                             }
                         }
                     },
@@ -552,7 +555,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "Ok, almost good to go. Now you need a source control system. This is where you’ll back up your work and share it with other people. It’s an absolute must for developers and I recommend you start looking into it straight away. The most common source control system is Git. One of the tools invented by the genius Linus Torvalds, the creator of Linux. The most common platform is Github. Here a quick tutorial on how to create a Github account."
+                                Body = "Ok, almost good to go. Now you need a source control system. This is where you’ll back up your work and share it with other people. It’s an absolute must for developers and I recommend you start looking into it straight away. The most common source control system is Git. One of the tools invented by the genius Linus Torvalds, the creator of Linux. The most common platform is Github. <a href='https://www.youtube.com/watch?v=QUtk-Uuq9nE'>Here's a quick tutorial on how to create a Github account</a>."
                             },
                             new Paragraph
                             {
@@ -585,7 +588,7 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "If you want to go fancy, try Evernote or the one I use on a daily basis: Roamresearch.com. It’s paid but it’s the best I’ve seen so far. Whatever you do, keep your notes simple and organised. Back them up and protect them with your life. "
+                                Body = "If you want to go fancy, try Evernote or the one I use on a daily basis: <a href='http://roamresearch.com/'>Roamresearch.com</a>. It’s paid but it’s the best I’ve seen so far. Whatever you do, keep your notes simple and organised. Back them up and protect them with your life. "
                             }
                         }
                     }
@@ -607,11 +610,11 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "It’s time to start coding! Welcome to fantastic world of C#! If you haven’t yet, checkout the C# Setup article. You’ll need to set up your C# developer environment before starting."
+                                Body = "It’s time to start coding! Welcome to fantastic world of C#! If you haven’t yet, checkout the <a href='https://www.thecsharpacademy.com/setup/'>C# Setup</a> article. You’ll need to set up your C# developer environment before starting."
                             },
                             new Paragraph
                             {
-                                Body = "Now it’s time to learn the basic C# syntax. You need to be familiar with a few concepts and techniques before jumping into your first real project. The way you’ll attack this first contact with the language will depend on your learning style, but here’s my advice: Don’t try to understand EVERYTHING before starting to build."
+                                Body = "Now it’s time to learn the basic C# syntax. You need to be familiar with a few concepts and techniques before jumping into your first real project. The way you’ll attack this first contact with the language will depend on your learning style, but here’s my advice: Don’t try to understand <b>EVERYTHING</b> before starting to build."
                             }
                         }
                     },
@@ -623,15 +626,15 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "One of the biggest mistakes people make when starting to code is assuming they need to know A LOT before building interesting things. You’ll be surprised about what you can create with basic concepts you can learn within a few hours."
+                                Body = "One of the biggest mistakes people make when starting to code is assuming they need to know <b>A LOT</b> before building interesting things. You’ll be surprised about what you can create with basic concepts you can learn within a few hours."
                             },
                             new Paragraph
                             {
-                                Body = "By all means, make lots of notes when you’re first learning to code. Go through the entire material once or twice. But that’s it! The basic syntax hasn’t and won’t change significantly across the years. You’ll have to get back to the basics many times during your journey. Everything you initially have contact with will only be internalised with PRACTICE. So make sure you don’t spend more than a few hours learning the basic theory."
+                                Body = "By all means, make lots of notes when you’re first learning to code. Go through the entire material once or twice. But that’s it! The basic syntax hasn’t and won’t change significantly across the years. You’ll have to get back to the basics many times during your journey. Everything you initially have contact with will only be internalised with <b>PRACTICE</b>. So make sure you don’t spend more than a few hours learning the basic theory."
                             },
                             new Paragraph
                             {
-                                Body = "Here’s an example of your self-talk when you start your first project: 'Oh, what do I need to do here? I think an if-else statement will be good to get the user input. How do I write it again? I remember I saw it in the documentation, but I’m not quite sure'. Then you’ll go back to your notes or the documentation, get what you need and apply in your code. You won’t know exactly how to do it, or even how it works yet, but you’ll know where to look and learn how it’s applied once you use it. "
+                                Body = "Here’s an example of your self-talk when you start your first project: '<i>Oh, what do I need to do here? I think an if-else statement will be good to get the user input. How do I write it again? I remember I saw it in the documentation, but I’m not quite sure</i>'. Then you’ll go back to your notes or the documentation, get what you need and apply in your code. You won’t know exactly how to do it, or even how it works yet, but you’ll know where to look and learn how it’s applied once you use it. "
                             }
                         }
                     },
@@ -642,7 +645,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "Here’s a video course by the C# Academy with the aim of providing the foundation you need for the upcoming projects. It differs from most beginners tutorials because we don’t just teach concepts that you have no idea how to apply in a real program. We will create a desktop game so that you see how each concept is applied in the context of a real world application."
+                                Body = "Here’s a playlist of videos with an intro course by the C# Academy with the aim of providing the foundation you need for the upcoming projects. It differs from most beginners tutorials because we don’t just teach concepts that you have no idea how to apply in a real program. We will create a desktop game so that you see how each concept is applied in the context of a real world application."
                             },
                             new Paragraph
                             {
@@ -659,7 +662,7 @@ public static class ArticlesHelper
                             new Paragraph
                             {
                                 IsVideo = true,
-                                VideoUrl = "https://www.youtube.com/watch?v=iLByqqLGYEc&list=PL4G0MUH8YWiD1p5ySamqNWAaWlnwp1Vip"
+                                VideoUrl = "https://www.youtube.com/embed/iLByqqLGYEc"
                             },
                             new Paragraph
                             {
@@ -680,7 +683,7 @@ public static class ArticlesHelper
 
                             new Paragraph
                             {
-                                Body = "Their documentation is very comprehensive and you can learn all of the basics just going through their beginners course. However be careful not to get lost. They offer so much material you could just use their academy forever. At this stage, stick to their Learn C# session. If you really need to, go through everything one more time, and that’s it! Time to jump into your first project."
+                                Body = "Their documentation is very comprehensive and you can learn all of the basics just going through their beginners course. However be careful not to get lost. They offer so much material you could just use their academy forever. At this stage, stick to their <a href='https://docs.microsoft.com/en-gb/users/dotnet/collections/yz26f8y64n7k07?WT.mc_id=dotnet-35129-website'>Learn C#</a> session. If you really need to, go through everything one more time, and that’s it! Time to jump into your first project."
                             }
                         }
                     },
@@ -692,7 +695,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "In the Setup article , you learned you have to create your source control repository. This will be your ultimate reference book. Every piece of code you ever write should be saved there. And guess what? That will also become your tool box. You’ll constantly grab pieces of code you’ve written before to reuse in your projects. "
+                                Body = "In the <a href='https://www.thecsharpacademy.com/setup/'>C# Setup</a> article , you learned you have to create your source control repository. This will be your ultimate reference book. Every piece of code you ever write should be saved there. And guess what? That will also become your tool box. You’ll constantly grab pieces of code you’ve written before to reuse in your projects. "
                             },
                             new Paragraph
                             {
@@ -708,11 +711,11 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "It’s great to learn from different sources. While we’re biased towards C# Academy’s beginner’s tutorial above, since it’s unique in that you learn concepts by applying them, we strongly encourage you to learn from different instructors throughout your journey. Here’s my favourite Beginners Tutorial. Mosh touches on everything you need to get started and after this video you can jump straight into the projects. Tim Corey is another excellent instructor to get started with."
+                                Body = "It’s great to learn from different sources. While we’re biased towards C# Academy’s beginner’s tutorial above, since it’s unique in that you learn concepts by applying them, we strongly encourage you to learn from different instructors throughout your journey. Here’s my favourite <a href='https://www.youtube.com/watch?v=gfkTfcpWqAY'>Beginners tutorial</a>. Mosh touches on everything you need to get started and after this video you can jump straight into the projects. <a href='https://www.youtube.com/playlist?list=PLLWMQd6PeGY2GVsQZ-u3DPXqwwKW8MkiP'>Tim Corey</a> is another excellent instructor to get started with."
                             },
                             new Paragraph
                             {
-                                Body = "The most watched C# course on Youtube is excellent but it’s 4 hours long. It might take you weeks to watch it. I suggest you don’t go through the whole thing before jumping into projects. That’s exactly the type of behaviour that makes people quit. Initially stay away from super long, comprehensive tutorials, unless you break them in pieces and mix theory with practice. "
+                                Body = "The <a href='https://www.youtube.com/watch?v=GhQdlIFylQ8&t=8242s'> most watched C# course</a> on Youtube is excellent but it’s 4 hours long. It might take you weeks to watch it. I suggest you don’t go through the whole thing before jumping into projects. That’s exactly the type of behaviour that makes people quit. Initially stay away from super long, comprehensive tutorials, unless you break them in pieces and mix theory with practice. "
                             },
                             new Paragraph
                             {
@@ -728,7 +731,19 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "Just for reference, here’s a list of things you need to be familiar with before your first project:\r\n\r\n1. How to run a C# program\r\n\r\n2. Basic syntax\r\n\r\n3. Dealing with strings\r\n\r\n4. Data Types\r\n\r\n5. Variables\r\n\r\n6. Getting input from an user\r\n\r\n7. Basic maths operations\r\n\r\n8. C# helper methods\r\n\r\n9. How methods work\r\n\r\n10. Control-flow\r\n\r\n11. Arrays and Lists\r\n\r\n12. Loops"
+                                Body = @"Just for reference, here’s a list of things you need to be familiar with before your first project:<br><br>
+1. How to run a C# program<br>
+2. Basic syntax<br>
+3. Dealing with strings<br>
+4. Data Types<br>
+5. Variables<br>
+6. Getting input from an user<br>
+7. Basic maths operations<br>
+8. C# helper methods<br>
+9. How methods work<br>
+10. Control-flow<br>
+11. Arrays and Lists<br>
+12. Loops"
                             }
                         }
                     }
@@ -879,7 +894,7 @@ public static class ArticlesHelper
                 {
                     new Paragraph
                     {
-                        Body="In your first project you’ll build a Console Calculator App with the help of Microsoft’s Documentation. If this is your first time building a project on your own, I suggest you first watch this series from our C# Foundation area, where we walk you through how to create a console app from scratch, while explaining important concepts in C#. If you have already watched it, or created applications before, this will be a breeze. But it’s still helpful to reinforce your knowledge. "
+                        Body="In your first project you’ll build a Console Calculator App with the help of Microsoft’s Documentation. If this is your first time building a project on your own, I suggest you first watch <a href='https://www.youtube.com/watch?v=YUc5NZZVtjA&list=PL4G0MUH8YWiD1p5ySamqNWAaWlnwp1Vip'> this series from our C# Foundation area</a>, where we walk you through how to create a console app from scratch, while explaining important concepts in C#. If you have already watched it, or created applications before, this will be a breeze. But it’s still helpful to reinforce your knowledge. "
                     },
                     new Paragraph
                     {
@@ -888,13 +903,13 @@ public static class ArticlesHelper
                 },
                 Requirements = new List<string>
                 {
-                    "Complete the following tutorial: Create a Calculator App (Microsoft Docs)"
+                    @"Complete the following tutorial: <a href='https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-console?view=vs-2022'>Create a Calculator App (Microsoft Docs)</a>"
                 },
                 RequirementsIntro = "This project has only one requirement:",
                 Resources = new List<string>
                 {
-                    "Visual Studio for Mac",
-                    "Visual Studio Code"
+                    "<a href='https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-mac'>Visual Studio For Mac</a>",
+                    "<a href='https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-6-0'>Visual Studio Code</a>"
                 },
                 ResourcesIntro = "The instructions for this project are based on Visual Studio for Windows. The code you will write will be the same regardless of the code editor, but the process of creating a new project will differ. Here are links about how to create a console app with different editors: ",
                 Tips = new List<string>
@@ -930,7 +945,7 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body="1. In Visual Studio, go to Git > Create Git Repository\r\n2. Enter your Login Details\r\n3. Click on Create and Push. "
+                                Body="1. In Visual Studio, go to Git > Create Git Repository<br>2. Enter your Login Details<br>3. Click on Create and Push. "
                             },
                             new Paragraph
                             {
@@ -954,7 +969,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "If you want your code to be reviewed by a member of the C# Academy, instead of creating your own repository,  follow this article, where you’ll learn how to create a fork from our base review repository."
+                                Body = "If you want your code to be reviewed by a member of the C# Academy, instead of creating your own repository, <a href='https://www.thecsharpacademy.com/code-reviews'>follow this article</a>, where you’ll learn how to create a fork from our base review repository."
                             }
                         }
                     },
@@ -966,7 +981,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "If you have watched the entire C# Foundation course, you have already created a Math Game Desktop app using the amazing .NET MAUI. It will be great practice to build a desktop Calculator App with the same functionality you’ve created for this console app. There will be some challenges, but you’ve already got all the skills necessary. And remember, if you get stuck, reach out on Discord and we will help!"
+                                Body = "If you have watched the <a href='https://www.thecsharpacademy.com/code-reviews'>entire C# Foundation course</a>, you have already created a <a href='https://www.thecsharpacademy.com/code-reviews'>Math Game Desktop app using the amazing .NET MAUI</a>. It will be great practice to build a desktop Calculator App with the same functionality you’ve created for this console app. There will be some challenges, but you’ve already got all the skills necessary. And remember, if you get stuck, reach out on Discord and we will help!"
                             }
                         }
                     }
@@ -984,15 +999,15 @@ public static class ArticlesHelper
                 {
                     new Paragraph
                     {
-                        Body="This is a very simple app that will teach you how to perform CRUD operations against a real database. These operations are the base of web-development and you’ll be using them throughout your career in any most applications. We think it’s very important to do it from the start of your journey, since everything that will happen from here is just adding complexity to CRUD operations. No matter how complex and fancy the app you’re building is, in the end it all comes down to executing CRUD calls to a database."
+                        Body="This is a very simple app that will teach you how to perform <a href='https://en.wikipedia.org/wiki/Create,_read,_update_and_delete'>CRUD operations</a> against a real database. These operations are the base of web-development and you’ll be using them throughout your career in any most applications. We think it’s very important to do it from the start of your journey, since everything that will happen from here is just adding complexity to CRUD operations. No matter how complex and fancy the app you’re building is, in the end it all comes down to executing CRUD calls to a database."
                     },
                     new Paragraph
                     {
-                        Body="For that you’ll have to learn very simple SQL commands. I know it sounds scary, but you’ll be amazed about how little SQL knowledge you need to build a full-stack app. Don’t worry, we will take you by the hand and by the end you’ll have completed your first fully functioning CRUD app. The most common ways of calling a SQL database with C# are through ADO.NET, Dapper and Entity Framework. We will start by using ADO.NET, because it’s the closest to raw SQL."
+                        Body="For that you’ll have to learn very simple <a href='https://en.wikipedia.org/wiki/SQL'>SQL commands</a>. I know it sounds scary, but you’ll be amazed about how little SQL knowledge you need to build a full-stack app. Don’t worry, we will take you by the hand and by the end you’ll have completed your first fully functioning CRUD app. The most common ways of calling a SQL database with C# are through <a href='https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/'>ADO.NET</a>, Dapper and Entity Framework. We will start by using ADO.NET, because it’s the closest to raw SQL."
                     },
                     new Paragraph
                     {
-                        Body="If you think this project is too hard for you and you have no idea where to even start, you’re probably right. You might need an extra hand to build a real application on your own. If that’s the case, watch the video tutorial for this project and then come back and try it again on your own. It’s perfectly ok to feel lost, since most beginner courses don’t actually teach you how to build something. "
+                        Body="If you think this project is too hard for you and you have no idea where to even start, you’re probably right. You might need an extra hand to build a real application on your own. If that’s the case, <a href='https://youtu.be/d1JIJdDVFjs'>watch the video tutorial for this project</a> and then come back and try it again on your own. It’s perfectly ok to feel lost, since most beginner courses don’t actually teach you how to build something. "
                     },
                     new Paragraph
                     {
@@ -1011,10 +1026,9 @@ public static class ArticlesHelper
                     "You should handle all possible errors so that the application never crashes.",
                     "The application should only be terminated when the user inserts 0.",
                     "You can only interact with the database using raw SQL. You can’t use mappers such as Entity Framework.",
-                    "Your project needs to contain a Read Me file where you'll explain how your app works. Here's a nice example:",
-
+                    "Your project needs to contain a Read Me file where you'll explain how your app works. Here's a nice example:"
                 },
-                RequirementsConclusion = "Github project with an example of a tidy Read Me file.\r\n\r\nDon't panic! I'll help! 😁",
+                RequirementsConclusion = "<a href='https://github.com/thags/ConsoleTimeLogger'>Github project with an example of a tidy Read Me file.</a><br>Don't panic! I'll help! 😁",
 
                 Tips = new List<string>
                 {
@@ -1028,7 +1042,7 @@ public static class ArticlesHelper
                     "Let the users create their own habits to track. That will require that you let them choose the unit of measurement of each habit.",
                     "Create a report functionality where the users can view specific information (i.e. how many times the user ran in a year? how many kms?) SQL allows you to ask very interesting things from your database."
                 },
-                 LearningIntro = "If you have learned the basics of C# following the C# Foundations article, you should know all the basic techniques needed to complete this project. Here’s a list of the things you’ll need to fulfil the requirements:",
+                 LearningIntro = "If you have learned the basics of C# following the <a href='https://www.thecsharpacademy.com/foundations/'>C# Foundations</a> article, you should know all the basic techniques needed to complete this project. Here’s a list of the things you’ll need to fulfil the requirements:",
                  LearningItems = new List<string>
                  {
                      "Taking user input from the console.",
@@ -1036,7 +1050,7 @@ public static class ArticlesHelper
                      "Installing nuget packages (ASP.NET libraries that will help you write your program).",
                      "Basic control flow with 'if-else' and 'switch statements'",
                      "Connecting to a Sqlite database.",
-                     "Basics of SQL(the language you use to communicate with the database). If you want to train some SQL before getting started, here’s an excellent place."
+                     "Basics of SQL(the language you use to communicate with the database). If you want to train some SQL before getting started, <a href='https://www.w3schools.com/sql/sql_exercises.asp'>here's an excellent place</a>."
                  },
                  Blocks = new List<Block>
                 {
@@ -1048,11 +1062,11 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "This tutorial requires that you already have set up your .NET environment. If you haven’t yet, check this article out with the first steps. If you absolutely want to use another IDE, let me know."
+                                Body = "This tutorial requires that you already have set up your .NET environment. If you haven’t yet, check <a href='https://www.thecsharpacademy.com/setup/'>this article</a> out with the first steps. If you absolutely want to use another IDE, let me know."
                             },
                             new Paragraph
                             {
-                                Body = "1. In Visual Studio, choose Create new project. If you’re using Visual Studio Code, let me know if you have difficulties creating the project.\r\n2. Search for Console Application and click Next.\r\n3. Choose a Project Name and a Location and click Next.\r\n3. Choose the latest framework (Net 6 at the time of this tutorial) and click Create.\r\n4. Run your application by clicking on the green play button on the top of the screen."
+                                Body = "1. In Visual Studio, choose Create new project. If you’re using Visual Studio Code, let me know if you have difficulties creating the project.<br>2. Search for Console Application and click Next.<br>3. Choose a Project Name and a Location and click Next.<br>3. Choose the latest framework (Net 6 at the time of this tutorial) and click Create.<br>4. Run your application by clicking on the green play button on the top of the screen."
                             },
                             new Paragraph
                             {
@@ -1068,11 +1082,11 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "This way .NET will build your project in your main folder. By default it builds your project in a bin folder and just to keep things simple we want to avoid that. That will create a Properties folder with a launchsettings.json file containing your configuration information. This is an important step only for applications that use Sqlite because you want the database to be created in the same folder of the application to avoid confusion."
+                                Body = "This way .NET will build your project in your main folder. By default it builds your project in a bin folder and just to keep things simple we want to avoid that. That will create a Properties folder with a <b>launchsettings.json</b> file containing your configuration information. This is an important step only for applications that use Sqlite because you want the database to be created in the same folder of the application to avoid confusion."
                             },
                             new Paragraph
                             {
-                                Body = "For that, click on the chevron next to the name of your app on the top menu, click on {nameoftheapp} Debug Properties and copy the path of your directory to the “Working Directory” field. To find out what your path is, you can right click on your project in the Solution Explorer and on “Copy Full Path” or look it up in your Files Explorer. If you’re using Mac/Visual Studio Code, reach out and I’ll tell you how to do it. "
+                                Body = "For that, click on the chevron next to the name of your app on the top menu, click on {nameoftheapp} Debug Properties and copy the path of your directory to the 'Working Directory' field. To find out what your path is, you can right click on your project in the Solution Explorer and on “Copy Full Path” or look it up in your Files Explorer. If you’re using Mac/Visual Studio Code, reach out and I’ll tell you how to do it. "
                             },
                             new Paragraph
                             {
@@ -1099,7 +1113,7 @@ public static class ArticlesHelper
                             new Paragraph
                             {
                                 IsPicture = true,
-                                PictureUrl = "2021/11/Screen-Shot-2021-11-26-at-8.29.52-pm-300x198.png"
+                                PictureUrl = "2022/11/Copy-of-Copy-of-ASP.NET-MVC-PROJECT-768x432.png"
                             },
                             new Paragraph
                             {
@@ -1107,12 +1121,73 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "You’ll need to tell your program to create a sqlite file. You’ll be able to visualise that file externally with the help of a small application. Here’s a link with a basic sqlite tutorial."
+                                Body = "You’ll need to tell your program to create a sqlite file. You’ll be able to visualise that file externally with the help of a small application. <a href='https://www.youtube.com/watch?v=oeuTw00F1as&t=725s'>Here's a link to a basic sqlite tutorial</a>."
                             },
                             new Paragraph
                             {
-                                Body = "That’s where your actual code begins! You’re on your own for a while. If you get stuck, keep trying, remember the steps to debug your app. And if you ultimately can’t do it, reach out to our Discord community or myself and we will help!"
+                                Body = "That’s where your actual code begins! You’re on your own for a while. If you get stuck, keep trying, <a href='https://www.thecsharpacademy.com/get-help/'>remember the steps to debug your app</a>. And if you ultimately can’t do it, reach out to our <a href='https://discord.com/channels/925901888203935744/925901888203935747'>Discord Community</a> or myself and we will help!"
                             },
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Video Tutorial",
+                        ImgUrl = "2021/12/external-video-tutorial-online-learning-photo3ideastudio-flat-photo3ideastudio-300x300.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "If you’re feeling totally lost, it’s perfectly ok to watch a video tutorial to get you going. Here you’ll learn to connect all the pieces to build a real application. Once you finish it, make sure you try it again on your own without the help of the video so you internalise the newly acquired knowledge. "
+                            },
+                            new Paragraph
+                            {
+                                IsVideo = true,
+                                VideoUrl = "https://www.youtube.com/embed/d1JIJdDVFjs"
+                            },
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Source Control",
+                        ImgUrl = "2021/12/icons8-git-96.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "If this is your first tutorial, you might be tempted to skip this step and start coding. Don’t do it or you’ll learn the hard way. One day after working for many hours on a difficult problem you won’t save your work on a source control repository and for whatever reason all of your work will be lost."
+                            },
+                            new Paragraph
+                            {
+                                Body = "Get into the habit of saving every line of code you ever write. I promise it will save you from many headaches. All serious developers save their work on a backup repository. The most commonly used is Github. Create an account if you haven’t yet. "
+                            },
+                            new Paragraph
+                            {
+                                Body="1. In Visual Studio, go to Git > Create Git Repository<br>2. Enter your Login Details<br>3. Click on Create and Push. "
+                            },
+                            new Paragraph
+                            {
+                                Body="✅ Done! Your repository is good to go. Don’t forget to commit and push your changes after every step!"
+                            }, new Paragraph
+                            {
+                                Body="You can take further step and learn how to integrate Github with Visual Studio watching this tutorial:"
+                            },
+                            new Paragraph
+                            {
+                                IsVideo = true,
+                                VideoUrl = "https://www.youtube.com/embed/oCvb-Q5lXb8"
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Code Review",
+                        ImgUrl= "2022/10/icons8-code-review-64.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "If you want your code to be reviewed by a member of the C# Academy, instead of creating your own repository, <a href='https://www.thecsharpacademy.com/code-reviews'>follow this article</a>, where you’ll learn how to create a fork from our base review repository."
+                            }
                         }
                     },
                     new Block
@@ -1123,7 +1198,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "If you have watched the entire C# Foundation course, you have already created a Math Game Desktop app using the amazing .NET MAUI. It will be great practice to build a desktop Habit Tracker App with the same functionality you’ve created for this console app. There will be some challenges, but you’ve already got all the skills necessary. And remember, if you get stuck, reach out on Discord and we will help!"
+                                Body = "If you have watched the <a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE'>entire C# Foundation course</a>, you have already created a Math Game Desktop app using the amazing .NET MAUI. It will be great practice to build a desktop Habit Tracker App with the same functionality you’ve created for this console app. There will be some challenges, but you’ve already got all the skills necessary. And remember, if you get stuck, reach out on Discord and we will help!"
                             }
                         }
                     },
@@ -1140,7 +1215,7 @@ public static class ArticlesHelper
                 {
                     new Paragraph
                     {
-                        Body="This app should be very similar to the Habit Tracker you’ve previously completed. It will serve the purpose of reinforcing what you’ve learned with a bit of repetition and building on that knowledge with slightly more challenging requirements. "
+                        Body="This app should be very similar to the <a href='https://www.thecsharpacademy.com/habit-tracker'>Habit Tracker</a> you’ve previously completed. It will serve the purpose of reinforcing what you’ve learned with a bit of repetition and building on that knowledge with slightly more challenging requirements. "
                     },
                     new Paragraph
                     {
@@ -1148,7 +1223,7 @@ public static class ArticlesHelper
                     },
                     new Paragraph
                     {
-                        Body="In the first app we also didn’t have requirements for coding organization. This time you’ll have to use separation of concerns, one of the most important principles in modern programming. This is where you’ll start applying concepts of Object Oriented Programming. You’ll also need to use a “Model”  or “Entity”, to to represent the data you are dealing with. In this case, your coding sessions. So let’s get started!"
+                        Body="In the first app we also didn’t have requirements for coding organization. This time you’ll have to use <a href='https://en.wikipedia.org/wiki/Separation_of_concerns'>separation of concerns</a>, one of the most important principles in modern programming. This is where you’ll start applying concepts of Object Oriented Programming. You’ll also need to use a “Model”  or “Entity”, to to represent the data you are dealing with. In this case, your coding sessions. So let’s get started!"
                     }
                 },
                 Requirements = new List<string>
@@ -1165,11 +1240,11 @@ public static class ArticlesHelper
                 },
                 Resources = new List<string>
                 {
-                    "Installing ConsoleTableExt using Nugget Packages.",
-                    "Using a Configuration Manager.",
-                    "Parsing DateTime in C#."
+                    "Installing <a href='https://github.com/minhhungit/ConsoleTableExt'>ConsoleTableExt</a> using <a href='https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio'>Nugget Packages</a>.",
+                    "<a href='https://docs.microsoft.com/en-us/troubleshoot/dotnet/csharp/store-custom-information-config-file'>Using Configuration Manager</a>",
+                    "<a href='https://stackoverflow.com/questions/371987/how-to-validate-a-datetime-in-c'>Parsing DateTime in C#</a>"
                 },
-                ResourcesIntro = "If you have learned the basics of C# following the C# Foundations article, and completed the Habit Tracker project, you should know all the basic techniques needed to complete this project. Here’s a list of extra resources you might need:",
+                ResourcesIntro = "If you have learned the basics of C# following the <a href='https://www.thecsharpacademy.com/foundations/'>C# Foundations</a> article, and completed the <a href='https://www.thecsharpacademy.com/habit-tracker/'>Habit Tracker</a> project, you should know all the basic techniques needed to complete this project. Here’s a list of extra resources you might need:",
                 Tips = new List<string>
                 {
                     "It's up to you the order in which you'll build, but we recommend you do it in this order: configuration file, model, database/table creation, CRUD controller (where the operations will happen), TableVisualisationEngine (where the consoleTableExt code will be run) and finally: validation of data.",
@@ -1194,7 +1269,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "In advanced applications, configuration properties are stored in an xml file. This practice makes it easier to configure your application in production. It’s not absolutely necessary now, but it’s not hard to learn and you should get used to it from the beginning of your coding journey. It makes your code cleaner and more organised. Check out the documentation and if necessary search for “configuration file C#” on Youtube. "
+                                Body = "In advanced applications, configuration properties are stored in an xml file. This practice makes it easier to configure your application in production. It’s not absolutely necessary now, but it’s not hard to learn and you should get used to it from the beginning of your coding journey. It makes your code cleaner and more organised. <a href='https://docs.microsoft.com/en-us/troubleshoot/dotnet/csharp/store-custom-information-config-file'>Check out the documentation</a> and if necessary search for “configuration file C#” on Youtube. "
                             }
                         }
                     },
@@ -1206,7 +1281,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "If you have watched the entire C# Foundation course, you have already created a Math Game Desktop app using the amazing .NET MAUI. It will be great practice to build a desktop Coding Tracker App with the same functionality you’ve created for this console app. There will be some challenges, especially if you want to create a timer, but you’ve already got all the skills necessary. And remember, if you get stuck, reach out on Discord and we will help!"
+                                Body = "If you have watched the <a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE'>entire C# Foundation course</a>, you have already created a Math Game Desktop app using the amazing .NET MAUI. It will be great practice to build a desktop Coding Tracker App with the same functionality you’ve created for this console app. There will be some challenges, especially if you want to create a timer, but you’ve already got all the skills necessary. And remember, if you get stuck, reach out on Discord and we will help!"
                             }
                         }
                     }
@@ -1223,11 +1298,11 @@ public static class ArticlesHelper
                 {
                     new Paragraph
                     {
-                        Body="After the first two projects, you should be somewhat comfortable with how things work in C#. It’s time to make things slightly more complex. You’ll be using SQL Server for the first time. We could continue using SQLite, as it does everything needed for most small applications, but SQL Server is heavily used in the industry and the sooner we get familiar with it, the better."
+                        Body="After the first two projects, you should be somewhat comfortable with how things work in C#. It’s time to make things slightly more complex. You’ll be using  <a href='SQL Server'>entire C# Foundation course</a> for the first time. We could continue using SQLite, as it does everything needed for most small applications, but SQL Server is heavily used in the industry and the sooner we get familiar with it, the better."
                     },
                     new Paragraph
                     {
-                        Body="This time the database will be a little more complex as well. We will have two tables linked by a foreign key. And for the first time we will be working with DTOs (Data Transfer Objects), which will help us use the same object in different ways."
+                        Body="This time the database will be a little more complex as well. We will have two tables linked by a foreign key. And for the first time we will be working with  <a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE'>DTOs (Data Transfer Objects)</a>, which will help us use the same object in different ways."
                     },
                     new Paragraph
                     {
@@ -1259,13 +1334,13 @@ public static class ArticlesHelper
                     "Create reports where the users can see their total and average coding session per period.",
                     "Create the ability to set coding goals and show how far the users are from reaching their goal, along with how many hours a day they would have to code to reach their goal. You can do it via SQL queries or with C#.",
                 },
-                LearningIntro = "If you have learned the basics of C# following the C# Foundations article, you should know all the basic techniques needed to complete this project. Here’s a list of the things you’ll need to fulfil the requirements:",
+                LearningIntro = "If you have learned the basics of C# following the  <a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE'>C# Foundations </a> article, you should know all the basic techniques needed to complete this project. Here’s a list of the things you’ll need to fulfil the requirements:",
                 LearningItems = new List<string>
                  {
                      "Using SQL Server.",
                      "Creating linked tables with SQL.",
                      "Using DTOs to create different versions of classes.",
-                     "Pivoting Tables in SQL."
+                     "<a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE'>Pivoting Tables in SQL</a>"
                  },
                 Blocks = new List<Block>
                 {
@@ -1277,7 +1352,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "\r\nInstalling SQL Server\r\nThis is the first project in the academy where we’ll be using SQL Server. You can work with SQL Server using Visual Studio. But I recommend you start using Microsoft SQL Server Management Studio. For this app, don’t use SQL Server EXPRESS, but only LOCAL DB. Here’s a tutorial on how to install the studio. And here’s a tutorial on how to connect to your localdb using the studio.  "
+                                Body = "This is the first project in the academy where we’ll be using SQL Server. <a href='https://docs.microsoft.com/en-us/sql/tools/visual-studio-code/sql-server-develop-use-vscode?view=sql-server-ver15'> You can work with SQL Server using Visual Studio.</a>. But I recommend you start using Microsoft SQL Server Management Studio. For this app, don’t use SQL Server EXPRESS, but only LOCAL DB. <a href='https://www.youtube.com/watch?v=QsXWszvjMBM'> Here’s a tutorial on how to install the studio</a>. And here’s a tutorial on <a href='https://www.youtube.com/watch?v=M5DhHYQlnq8'> how to connect to your localdb</a> "
                             }
                         }
                     },
@@ -1302,6 +1377,16 @@ public static class ArticlesHelper
                             }
                         }
                     }
+                },
+                Screenshots = new List<string>
+                {
+                    "2022/04/Screen-Shot-2022-04-04-at-6.42.37-am.png",
+                    "2022/04/Screen-Shot-2022-04-04-at-6.44.38-am.png",
+                    "2022/04/Screen-Shot-2022-04-04-at-6.45.08-am.png",
+                    "2022/04/Screen-Shot-2022-04-04-at-6.45.19-am.png",
+                    "2022/04/Screen-Shot-2022-04-04-at-6.46.40-am.png",
+                    "2022/04/Screen-Shot-2022-04-04-at-6.47.43-am-150x150.png",
+                    "2022/04/Screen-Shot-2022-04-04-at-6.48.09-am-150x150.png"
                 }
             },
             new Project

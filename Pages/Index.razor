@@ -64,7 +64,9 @@
             {
                 <div class="col">
                     <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-                        <a href="@($"article/{article.Id}")"><img class="card-img-top" src="@(baseUrl)/@article.IconUrl)" alt="Card image cap"></a>
+                        <a href="@($"article/{article.Id}")" target="_blank">
+                            <img class="card-img-top" src="@(baseUrl)/@article.IconUrl)" alt="Card image cap">
+                        </a>
                         <div class="card-body">
                             <h5 class="card-title">@article.Title</h5>
                             <p class="card-text">@article.Description</p>
@@ -301,7 +303,7 @@
         font-family: Roboto;
         font-size: 15px;
     }
-    
+
     .btn-primary {
         background-color: #1C236D;
     }
