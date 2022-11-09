@@ -34,13 +34,13 @@
                             if (paragraph.IsVideo)
                             {
                                 <div class="embed-responsive embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="@paragraph.VideoUrl" allowfullscreen></iframe>
+                                    <iframe class="embed-responsive-item" width="500" height="350" src="@paragraph.VideoUrl" allowfullscreen></iframe>
                                 </div>
                             }
 
                             if (!String.IsNullOrEmpty(paragraph.Body))
                             {
-                                <p>@paragraph.Body</p>
+                                <p>@((MarkupString)(paragraph.Body))</p>
                             }
                         }
                     </div>

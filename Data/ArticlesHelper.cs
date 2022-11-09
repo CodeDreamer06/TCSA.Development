@@ -1,4 +1,5 @@
-﻿using TCSA.Models;
+﻿using System.Web;
+using TCSA.Models;
 
 namespace TCSA.Data;
 
@@ -77,7 +78,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "<u>We won’t teach you how to code</u>. We’ll teach you how to teach yourself and nudge you in the right direction. You have to do it yourself if you want to have any chance of succeeding in a real job. Even if you pay us a lot of money to be your full time code teacher, if you don’t learn how to learn on your own you don’t have a chance in this industry."
+                                Body = "<b><i><u>We won’t teach you how to code</u></i></b>. We’ll teach you how to teach yourself and nudge you in the right direction. You have to do it yourself if you want to have any chance of succeeding in a real job. Even if you pay us a lot of money to be your full time code teacher, if you don’t learn how to learn on your own you don’t have a chance in this industry."
                             },
                             new Paragraph
                             {
@@ -93,7 +94,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "Learning how to code, you’ll spend hour upon hour by yourself, in front of your computer, banging your head against the wall, solving problems. Chances are you’ll feel lonely and isolated at times. It makes a difference connecting with people that are going through the same. You’re not alone! We’re here to help. Join us on Discord and if the link isn’t working add me and send me a personal message at pablocappuccino#4729. No message will be left unanswered."
+                                Body = "Learning how to code, you’ll spend hour upon hour by yourself, in front of your computer, banging your head against the wall, solving problems. Chances are you’ll feel lonely and isolated at times. It makes a difference connecting with people that are going through the same. You’re not alone! We’re here to help. <a href='https://discord.gg/JVnwYdM79C'>Join us on Discord</a> and if the link isn’t working add me and send me a personal message at <b><i><u>pablocappuccino#4729</u></i></b>. No message will be left unanswered."
                             }
                         }
                     },
@@ -105,11 +106,11 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "It’s very important to have clear stepping stones and benchmarks as references for your work. It’s easy to feel lost in the sea of information and possibilities the web gives us. You need to give your brain a rest by laying out a pathway that will be in the back of your mind throughout your journey. Decision fatigue is exhausting and frustrating. It can undermine your progress and ultimately lead to failure."
+                                Body = "It’s very important to have <b><i><u>clear stepping stones</u></i></b> and benchmarks as references for your work. It’s easy to feel lost in the sea of information and possibilities the web gives us. You need to give your brain a rest by laying out a pathway that will be in the back of your mind throughout your journey. Decision fatigue is exhausting and frustrating. It can undermine your progress and ultimately lead to failure."
                             },
                             new Paragraph
                             {
-                                Body = "At the C# Academy you can find a roadmap with all the steps necessary to become a full stack web developer. It’s not necessarily linear and the lines between the stages are blurry. You’ll be constantly revisiting the previous items on the checklist, at any given time during your progress. Here’s the roadmap."
+                                Body = "At the C# Academy you can find a roadmap with all the steps necessary to become a full stack web developer. It’s not necessarily linear and the lines between the stages are blurry. You’ll be constantly revisiting the previous items on the checklist, at any given time during your progress. <a href='https://www.thecsharpacademy.com/2021/09/10/road-map/'>Here's the roadmap</a>."
                             },
                             new Paragraph
                             {
@@ -129,7 +130,7 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "We have a list of projects to get you started and new projects will be added constantly. If you want to know our view on what to build, please check this blog post. It will give you ideas to think of your own projects, and some perspective on what types of projects are effective for a portfolio."
+                                Body = "We have a list of projects to get you started and new projects will be added constantly. If you want to know our view on what to build, <a href='https://cappuccinocoding.com/2021/09/15/what-projects-should-you-work-on/'>please check this blog post</a>. It will give you ideas to think of your own projects, and some perspective on what types of projects are effective for a portfolio."
                             }
                         }
                     },
@@ -141,7 +142,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "You need to do some housekeeping before starting.  I’m sure there are messy disorganised high achievers in this world. But in my experience, creating the right environment, organising your life and your priorities and removing the clutter (mental and physical) of your life will improve your chances of success. Here are some things to consider:"
+                                Body = "<b><i><u>You need to do some housekeeping before starting</u></i></b>.  I’m sure there are messy disorganised high achievers in this world. But in my experience, creating the right environment, organising your life and your priorities and removing the clutter (mental and physical) of your life will improve your chances of success. Here are some things to consider:"
                             }
                         }
                     },
@@ -153,7 +154,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "Get a good machine. I started with an old 2014 Dell. I quickly realised I needed something better and bought a 128GB 2019 Mac. About a year later I realised having Windows made things way easier for .Net development and I bought a 500GB 2020 Mac to have more space for a virtual machine. Two years later a bought a powerful HP/Windows machine so I could use the full potential of Microsoft’s tools for .NET developers.  I’m not rich, I just worked hard and saved the money to buy it. It’s part of my “I’ll do whatever it takes” mentality."
+                                Body = "<b><i><u>Get a good machine</u></i></b>. I started with an old 2014 Dell. I quickly realised I needed something better and bought a 128GB 2019 Mac. About a year later I realised having Windows made things way easier for .Net development and I bought a 500GB 2020 Mac to have more space for a virtual machine. Two years later a bought a powerful HP/Windows machine so I could use the full potential of Microsoft’s tools for .NET developers.  I’m not rich, I just worked hard and saved the money to buy it. It’s part of my “I’ll do whatever it takes” mentality."
                             },
                             new Paragraph
                             {
@@ -178,7 +179,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "You have to carve out time in your life if you want to learn how to code. I admit it was easier for me because I worked from 11am so I would just wake up at 4am every day and code as much as I could."
+                                Body = "<b><i><u>You have to carve out time in your life if you want to learn how to code</u></i></b>. I admit it was easier for me because I worked from 11am so I would just wake up at 4am every day and code as much as I could."
                             },
                             new Paragraph
                             {
@@ -186,11 +187,11 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "You will have to say NO to requests for your time. I sacrificed relationships because I wasn’t willing to give up my morning to spend time with them. My morning is sacred, it’s coding time and unless a family member was dying (which never happened), I would be coding. Protect your time."
+                                Body = "<b><i><u>You will have to say NO to requests for your time</u></i></b>. I sacrificed relationships because I wasn’t willing to give up my morning to spend time with them. My morning is sacred, it’s coding time and unless a family member was dying (which never happened), I would be coding. Protect your time."
                             },
                             new Paragraph
                             {
-                                Body = "Also, track your time. I’m a geek, so I track every hour of my day. You don’t need to go that far, but I suggest you track at least your coding hours. I always aimed for 28hs of programming per week. Even though I almost never achieved it, I never coded less than 20hs a week, in part due to the big goal. Start recording your results today and lay them out on a spreadsheet. Try to beat your daily, weekly and monthly records."
+                                Body = "<b><i><u>Also, track your time</u></i></b>. I’m a geek, so I track every hour of my day. You don’t need to go that far, but I suggest you track at least your coding hours. I always aimed for 28hs of programming per week. Even though I almost never achieved it, I never coded less than 20hs a week, in part due to the big goal. Start recording your results today and lay them out on a spreadsheet. Try to beat your daily, weekly and monthly records."
                             }
                         }
                     },
@@ -206,7 +207,7 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "A combination of my notes and previous projects saves me many hours of head-banging. I use Roamresearch. I think it’s superior to anything I’ve ever used, but Evernote, Google Docs and even your computer’s notepad will do. Keep your notes organized."
+                                Body = "A combination of my notes and previous projects saves me many hours of head-banging. I use <a href='https://roamresearch.com/'>RoamResearch</a>. I think it’s superior to anything I’ve ever used, but Evernote, Google Docs and even your computer’s notepad will do. Keep your notes organized."
                             }
                         }
                     },
@@ -222,7 +223,7 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "Don’t work on 10 projects. One at a time! Actually, to be honest, I always work on two things, so If I get bored or stuck I can always jump to the other to make me feel better. But still, one of them has to be your main goal. "
+                                Body = "Don’t work on 10 projects. <b><i><u>One at a time!</u></i></b> Actually, to be honest, I always work on two things, so If I get bored or stuck I can always jump to the other to make me feel better. But still, one of them has to be your main goal. "
                             },
                             new Paragraph
                             {
@@ -230,7 +231,7 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "The same applies to your daily life. Don’t cram 20 tasks into your daily schedule. Do one or two big things a day and consider yourself successful for that day. My thing was always coding. If I did my four hours, I won the day. You can have a study goal and parallel goal such as running an important errand or something. But keep it achievable. You want to win your days."
+                                Body = "The same applies to your daily life. Don’t cram 20 tasks into your daily schedule. Do one or two big things a day and consider yourself successful for that day. My thing was always coding. If I did my four hours, I won the day. You can have a study goal and parallel goal such as running an important errand or something. But keep it achievable. <b><i><u>You want to win your days</u></i></b>."
                             }
                         }
                     },
@@ -242,7 +243,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "I read a lot. I attribute a lot of my success in my programming journey to the scope and depth that reading has given me. Actually, I don’t read, I listen. Books and podcasts. They are absolutely life-changing."
+                                Body = "<b><i><u>I read a lot</u></i></b>. I attribute a lot of my success in my programming journey to the scope and depth that reading has given me. Actually, I don’t read, I listen. Books and podcasts. They are absolutely life-changing."
                             },
                             new Paragraph
                             {
@@ -250,7 +251,7 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "There are a few exceptions out there, but the vast majority of high achievers, the people who run things in this world, are avid readers. If you don’t like it, start liking it. It will pay off. I promise."
+                                Body = "There are a few exceptions out there, but the vast majority of high achievers, the people who run things in this world, are avid readers. If you don’t like it, start liking it. It will pay off. <b><i><u>I promise</u></i></b>."
                             },
                             new Paragraph
                             {
@@ -265,7 +266,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "Atomic Habits by James Clear – It will help you to get your habits in order. Backed by many amazing anecdotes and scientific studies, if you listen to it over and over, trust me, you’ll be a better person."
+                                Body = "<b><i><u>Atomic Habits</u></i></b> by James Clear – It will help you to get your habits in order. Backed by many amazing anecdotes and scientific studies, if you listen to it over and over, trust me, you’ll be a better person."
                             }
                         }
                     },
@@ -276,7 +277,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "Atomic Habits by James Clear – It will help you to get your habits in order. Backed by many amazing anecdotes and scientific studies, if you listen to it over and over, trust me, you’ll be a better person."
+                                Body = "<b><i><u>Grit</u></i></b> by Angela Duckworth – This book will demonstrate, also with science and anecdotes, that you should forget about the word talent. Most folks who achieve great success are the ones that <b>SHOW UP CONSISTENTLY</b> and do the hard work."
                             }
                         }
                     },
@@ -288,7 +289,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "Once you finish reading this page, join our Discord Community and introduce yourself.  If the link doesn’t work, add me via my nickname: pablocappuccino#4729. We can either work closely together with constant feedback and a clear plan, or you can roam free and get back to us whenever you need. "
+                                Body = "Once you finish reading this page, <a href='https://discord.gg/JVnwYdM79C'>join us on Discord</a> and introduce yourself.  If the link doesn’t work, add me via my nickname: <b><i><u>pablocappuccino#4729</u></i></b>. We can either work closely together with constant feedback and a clear plan, or you can roam free and get back to us whenever you need. "
                             },
                             new Paragraph
                             {
@@ -312,7 +313,7 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "Most people who start learning to code quit in less than 6 months. If you stick to it, imagine that in 2 years it’s highly likely you’ve got many interviews and got at least close to a job. Five years training consistently? You’ll probably not only be employed but also making very good money. Now imagine ten years consistently building stuff. I would say it’s impossible you’re not hired and earning great money."
+                                Body = "<b><i><u>Most people who start learning to code quit in less than 6 months</u></i></b>. If you stick to it, imagine that in 2 years it’s highly likely you’ve got many interviews and got at least close to a job. Five years training consistently? You’ll probably not only be employed but also making very good money. Now imagine ten years consistently building stuff. I would say it’s impossible you’re not hired and earning great money."
                             },
                             new Paragraph
                             {
