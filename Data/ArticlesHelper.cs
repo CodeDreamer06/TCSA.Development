@@ -802,7 +802,7 @@ public static class ArticlesHelper
             {
                 Id = 10,
                 Title = "Graduation!",
-                IconUrl = "2021/12/icons8-baby-app-96.png",
+                IconUrl = "2022/02/icons8-graduate-96.png",
                 Description = "This is your graduation from Console Apps! Find out how to start applying for jobs and what are the next steps in your coding journey.",
                 Area = Area.Console,
                 Blocks = new List<Block>
@@ -827,7 +827,17 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "\r\nBasic C# Syntax and Control Flow\r\nConsole Application Techniques: User Input and Validation\r\nBasic SQL Syntax and Crud Commands\r\nPrinciples of MVC Design: Models, Controllers, UI, Services, Validators\r\nInteraction with files in your file system.\r\nCalling an External Api with Http Requests.\r\nEntity Framework\r\nCreating and calling Web APIs.\r\nWebscrapping\r\nSending e-mails with code\r\nFundamentals of Unit Testing\r\nThat's a lot!! Again... Well done!!!"
+                                Body = @"✅ Basic C# Syntax and Control Flow<br>
+✅ Console Application Techniques: User Input and Validation<br>
+✅ Basic SQL Syntax and Crud Commands\r\nPrinciples of MVC Design: Models, Controllers, UI, Services, Validators<br>
+✅ Interaction with files in your file system.<br>
+✅ Calling an External Api with Http Requests.<br>
+✅ Entity Framework<br>
+✅ Creating and calling Web APIs.<br>
+✅ Webscrapping <br>
+✅ Sending e-mails with code<br>
+✅ Fundamentals of Unit Testing<br><br>
+That's a lot!! Again... Well done!!!"
                             }
                         }
                     },
@@ -840,14 +850,22 @@ public static class ArticlesHelper
                             new Paragraph
                             {
                                 Body = "Now that you have a good understanding of the basic principles of back-end web development with C#, what’s the next step? Well, there’s a lot to do! ASP.NET is endless, but as I said before, most of what you’ll do from now on is a variation of what you’ve already done. Calling databases, getting the user input and processing data in between."
-                            }, 
+                            },
                             new Paragraph
                             {
                                 Body = "The next steps in this program involve building full-stack applications with the following:"
                             },
                             new Paragraph
                             {
-                                Body = "ASP.NET MVC With Razor Syntax\r\nSecuring Your App With Authorisation and Authentication With Asp.NET Identity.\r\nDeploying your full-stack app with Azure, Firebase\r\nDesktop Applications With WPF and XAML\r\nSingle Page Applications with Blazor\r\nMobile Applications With Xamarin Forms (and hopefully with .NET MAUI)\r\nCRUD Applications With React\r\nCRUD Applications With Angular\r\nBut I'll be surprised if you get to the end of this list and you don't have a job yet."
+                                Body = @"➡️ ASP.NET MVC With Razor Syntax<br>
+➡️ Securing Your App With Authorisation and Authentication With Asp.NET Identity<br>
+➡️ Deploying your full-stack app with Azure, Firebase<br>
+➡️ Desktop Applications With WPF and XAML<br>
+➡️ Single Page Applications with Blazor<br>
+➡️ Mobile Applications With Xamarin Forms (and hopefully with .NET MAUI)<br>
+➡️ CRUD Applications With React<br>
+➡️ CRUD Applications With Angular<br><br>
+But I'll be surprised if you get to the end of this list and you don't have a job yet."
                             }
                         }
                     },
@@ -867,7 +885,10 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "While a portfolio isn’t absolutely necessary to land you a job, it does increase your chances. You’ll read more about it in the Portfolio Area. So let’s get ready for our next three steps:"
+                                Body = @"While a portfolio isn’t absolutely necessary to land you a job, it does increase your chances. You’ll read more about it in the Portfolio Area. So let’s get ready for our next three steps:<br><br>
+✔️ Creating a Portfolio<br>
+✔️ Creating a Resume<br>
+✔️ Applying for Jobs<br>"
                             },
                             new Paragraph
                             {
@@ -1400,11 +1421,11 @@ public static class ArticlesHelper
                 {
                     new Paragraph
                     {
-                        Body="Often times developers work with third-party data. A very common way of accessing external vendor’s data is to make requests to their APIs (Application Programming Interface). Once we have access to their data, we can process in our application to suit our needs. Another common scenario is when an organisation has multiple independent applications that communicate amongst themselves. The so-called microservices."
+                        Body="Often times developers work with third-party data. A very common way of accessing external vendor’s data is to make requests to their APIs (Application Programming Interface). Once we have access to their data, we can process in our application to suit our needs. Another common scenario is when an organisation has multiple independent applications that communicate amongst themselves. <a href='https://en.wikipedia.org/wiki/Microservices'>The so called microservices</a>."
                     },
                     new Paragraph
                     {
-                        Body="In this application we will learn how to connect to an external API through HTTP requests using .NET’s class library. It‘s easier than you imagine! Luckily there are many public APIs out there. Here’s a great list of public APIs for practice."
+                        Body="In this application we will learn how to connect to an external API through HTTP requests using .NET’s class library. It‘s easier than you imagine! Luckily there are many public APIs out there. <a href='https://github.com/public-apis/public-apis'> Here’s a great list of public APIs for practice.</a>"
                     }
                 },
                 Requirements = new List<string>
@@ -1420,8 +1441,12 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are the links for using HTTP calls with C# and to the Drinks API documentation:",
                 Resources = new List<string>
                 {
-                    "Cocktail Database",
-                    "Microsoft Docs: HTTP Requests"
+                    "<a href='https://www.thecocktaildb.com/api.php'>Cocktail Database</a>",
+                    "<a href='https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient'>Microsoft Docs: Http Requests</a>"
+                },
+                Screenshots = new List<string>
+                {
+                    "2022/02/Screen-Shot-2021-12-12-at-11.09.56-am.png"
                 }
             },
             new Project
@@ -1435,7 +1460,7 @@ public static class ArticlesHelper
                 {
                     new Paragraph
                     {
-                        Body="In the .NET ecosystem you’ll come across ORMs (Object-Relational Mapping), which helps you to deal with databases using objects. If you have searched for C# tutorials you’ve probably encountered technologies such as Dapper and Entity Framework. You’ll definitely be using one when you start working as a developer."
+                        Body="In the .NET ecosystem you’ll come across <a href='https://stackoverflow.com/questions/1279613/what-is-an-orm-how-does-it-work-and-how-should-i-use-one'>ORMs (Object-Relational Mappers)</a>, which helps you to deal with databases using objects. If you have searched for C# tutorials you’ve probably encountered technologies such as Dapper and Entity Framework. You’ll definitely be using one when you start working as a developer."
                     },
                     new Paragraph
                     {
@@ -1454,8 +1479,8 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "Entity Framework Docs",
-                    "CRUD Console APP with EF on Youtube"
+                    "<a href='https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli'>Entity Framework Docs</a>",
+                    "<a href='https://www.youtube.com/watch?v=Jnv7hNNuTqs'>CRUD Console APP with EF on Youtube</a>"
                 },
                 ResourcesConclusion = "There are many other Youtube videos and blog articles about Entity Framework everything else you need. Don’t be ashamed to use Google!",
                 Tips = new List<string>
@@ -1482,11 +1507,11 @@ public static class ArticlesHelper
                 {
                     new Paragraph
                     {
-                        Body="If you’ve been learning to code for more than five minutes, you probably heard about “APIs“. They’re at the core of back-end programming. In web development, their main job will be to communicate with databases using “endpoints”. From now on you’ll be creating APIs all the time and this acronym will forever be part of your vocabulary. "
+                        Body="If you’ve been learning to code for more than five minutes, you probably heard about <a href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction'>'APIs'</a>. They’re at the core of back-end programming. In web development, their main job will be to communicate with databases using “endpoints”. From now on you’ll be creating APIs all the time and this acronym will forever be part of your vocabulary. "
                     },
                     new Paragraph
                     {
-                        Body="In the Drinks Info App we have created a program that consumed an external API. This time we will track a worker’s “shifts”. We’ll create an API and the console app that will consume it. When using Microsoft’s Documentation, often times you’ll come across Web APIs being developed with Entity Framework, which acts as layer between the “endpoints” and the actual database. "
+                        Body="In the <a href='https://www.thecsharpacademy.com/drinks-info/'>Drinks Info App</a> we have created a program that consumed an external API. This time we will track a worker’s “shifts”. We’ll create an API and the console app that will consume it. When using Microsoft’s Documentation, often times you’ll come across Web APIs being developed with Entity Framework, which acts as layer between the “endpoints” and the actual database. "
                     },
                     new Paragraph
                     {
@@ -1509,10 +1534,10 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "What are APIs?",
-                    "Web API Docs",
-                    "Testing Web APIs with Swagger.",
-                    "Postman Youtube Tutorial"
+                    "<a href='https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction'>What are APIs?</a>",
+                    "<a href='https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio'>Web API Docs</a>",
+                    "<a href='https://www.youtube.com/watch?v=IYWOWxw7dys'>Testing Web APIs with Swagger</a>",
+                    "<a href='https://www.youtube.com/watch?v=FjgYtQK_zLE'>Postman Youtube Tutorial</a>"
 
                 },
                 Tips = new List<string>
@@ -1522,6 +1547,10 @@ public static class ArticlesHelper
                     "First, create the Web API project, then use Swagger and Postman to test it. Only then create the UI project.",
                     "You might be tempted to skip testing with Swagger and Postman. Don't make that mistake. These tools are essential for working with web apis in enterprise and your hiring managers will be unimpressed if you are not familiar with them.",
                     "Calculate the duration of the shift based on its start and end.",
+                },
+                Screenshots = new List<string>
+                {
+                    "2022/02/Screen-Shot-2022-02-11-at-7.17.46-am-768x444.png"
                 }
             },
             new Project
@@ -1535,11 +1564,11 @@ public static class ArticlesHelper
                 {
                     new Paragraph
                     {
-                        Body="So far we have been developing our applications without thinking too much about their design. In software development, we’ll often use “general repeatable solutions to commonly occurring problems”,  the so called design patterns."
+                        Body="So far we have been developing our applications without thinking too much about their design. In software development, we’ll often use “general repeatable solutions to commonly occurring problems”, <a href='https://en.wikipedia.org/wiki/Software_design_pattern'>the so called design patterns</a>."
                     },
                     new Paragraph
                     {
-                        Body="We will build an exercise tracker using the “Repository Pattern”, an almost universally used solution for data persistence. It creates a layer between business logic and data access, which helps us create more loosely-coupled, testable and maintainable applications. You’ll be dealing with repositories on a daily-basis when you get your C# job!"
+                        Body="We will build an exercise tracker using the “Repository Pattern”, an almost universally used solution for data persistence. It creates a layer between business logic and data access, which helps us create more loosely-coupled, testable and maintainable applications. <b>You’ll be dealing with repositories on a daily-basis when you get your C# job!</b>"
                     }
                 },
                 Requirements = new List<string>
@@ -1555,9 +1584,9 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "Repository Patterns Docs",
-                    "Repository Pattern Tutorial",
-                    "Repository Pattern with EF on Youtube"
+                    "<a href='https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli'>Repository Pattern Docs</a>",
+                    "<a href='https://www.programmingwithwolfgang.com/repository-pattern-net-core/'>Repository Pattern Tutorial</a>",
+                    "<a href='https://www.youtube.com/watch?v=Jnv7hNNuTqs'>Repository Pattern with EF on Youtube</a>"
                 },
                 ResourcesConclusion = "There are many other Youtube videos and blog articles about the Repository Pattern. Google is your best friend!",
                 Tips = new List<string>
@@ -1598,10 +1627,10 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "Agility Pack Docs",
-                    "Send An Email Using Gmail SMTP and C#",
-                    "Agility Pack Tutorial",
-                    "Basketball Reference"
+                    "<a href='https://html-agility-pack.net/'>Agility Pack Docs</a>",
+                    "<a href='https://www.c-sharpcorner.com/blogs/send-email-using-gmail-smtp'>Send An Email Using Gmail SMTP and C#</a>",
+                    "<a href='https://www.youtube.com/watch?v=L6OybsujX1Y'>Agility Pack Tutorial</a>",
+                    "<a href='https://www.basketball-reference.com/boxscores/'>Basketball Reference</a>"
                 },
                 ResourcesConclusion = "There are many other Youtube videos and blog articles about scrapping and sending an e-mail with C#. Google is your best friend! 🙂",
                 Tips = new List<string>
@@ -1643,7 +1672,7 @@ public static class ArticlesHelper
                     "You should print messages to the console letting the user know what the app is doing at that moment (i.e. reading from excel; creating tables, etc)",
                     "The application will be written for a known table, you don't need to make it dynamic."
                 },
-                ResourcesIntro = "The knowledge you gained from the previous three projects will be enough to complete this project.\r\n\r\nYou’ll only need to find out how EPPlus Package works. Here’s a good Youtube Tutorial. If it’s not enough search for further videos on Youtube and/or specific questions in StackOverflow 😁",
+                ResourcesIntro = "The knowledge you gained from the previous three projects will be enough to complete this project.You’ll only need to find out how EPPlus Package works. <a href='https://www.youtube.com/watch?v=kBwmP-kLEEE'>Here's a good Youtube tutorial</a>. If it’s not enough search for further videos on Youtube and/or specific questions in StackOverflow 😁",
                 Tips = new List<string>
                 {
                     "Before anything else you’ll have to create an Excel table that will be stored in your main project folder. The more organised the easier it will be for your program to read it. The first row of your columns need to be the property names of your model class",
@@ -1688,9 +1717,9 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "The importance of unit testing",
-                    "MSTest Docs",
-                    "Unit Testing C# Code  on Youtube"
+                    "<a href='https://fortegrp.com/the-importance-of-unit-testing/'>The Importance of Unit Testing</a>",
+                    "<a href='https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-mstest'>MSTest Docs</a>",
+                    "<a href='https://www.youtube.com/watch?v=HYrXogLj7vg'>Unit Testing C# Code on Youtube</a>"
                 },
                 Tips = new List<string>
                 {
@@ -1714,19 +1743,19 @@ public static class ArticlesHelper
                     },
                     new Paragraph
                     {
-                        Body="You want to stand out. It’s a highly competitive world out there. The fight to get through the tech industry job without any experience is tough. So you want to stack the deck in your favour by doing all you can to stand out. Your portfolio will convey an image of you. It will show that you care, that you’re organised, that you have a plan for your learning. It will show your design skills. Either you want it or not, you have a brand, everyone does. And a portfolio will make your brand stronger."
+                        Body="<b><i><u>You want to stand out</u></i></b>. It’s a highly competitive world out there. The fight to get through the tech industry job without any experience is tough. So you want to stack the deck in your favour by doing all you can to stand out. Your portfolio will convey an image of you. It will show that you care, that you’re organised, that you have a plan for your learning. It will show your design skills. Either you want it or not, you have a brand, everyone does. And a portfolio will make your brand stronger."
                     },
                      new Paragraph
                     {
-                        Body="It pushes you. I’d even go as far as saying that you should build a portfolio before building any projects. That’s because it sets your vision. The vision of a full portfolio in a year time prevents you from procrastinating. It makes you get out of bed to code and put in the work. It keeps bugging you in the back of your mind: “My portfolio is empty, I have to keep going”. "
+                        Body="<b><i><u>It pushes you</u></i></b>. I’d even go as far as saying that you should build a portfolio before building any projects. That’s because it sets your vision. The vision of a full portfolio in a year time prevents you from procrastinating. It makes you get out of bed to code and put in the work. It keeps bugging you in the back of your mind: “<i>My portfolio is empty, I have to keep going</i>”. "
                     },
                      new Paragraph
                      {
-                         Body = "It will also prevent you from quitting. No matter how many rejections you get, you know that if you keep building, eventually your portfolio will be so impressive that YOU WILL GET NOTICED. Imagine your prospective employer looking at your portfolio with projects covering dozens of different technologies? “We gotta check her out!”, they’ll think. "
+                         Body = "It will also prevent you from quitting. No matter how many rejections you get, you know that if you keep building, eventually your portfolio will be so impressive that <b>YOU WILL GET NOTICED</b>. Imagine your prospective employer looking at your portfolio with projects covering dozens of different technologies? “<i>We gotta check her out!</i>”, they’ll think. "
                      },
                      new Paragraph
                      {
-                         Body = "It's a project in itself: Building a portfolio is … PART OF YOUR PORTFOLIO! It will be part of your practice as a developer. You’ll have to choose a model, design it, look after the front-end details, put yourself in the viewer’s shoes, think of what to have in it, it’s great practice all-around."
+                         Body = "<b><i><u>It's a project in itself</u></i></b>: Building a portfolio is … <b>PART OF YOUR PORTFOLIO</b>! It will be part of your practice as a developer. You’ll have to choose a model, design it, look after the front-end details, put yourself in the viewer’s shoes, think of what to have in it, it’s great practice all-around."
                      },
                      new Paragraph
                      {
@@ -1745,9 +1774,9 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "10 Full Stack Web Developer Portfolio to Inspire You",
-                    "10 Web Developer Portfolio Tips",
-                    "Portfolio So Good I Hired Him (Youtube)"
+                    "<a href='https://tamuk.quickstart.com/blog/10-full-stack-web-developer-portfolio-to-inspire-you/'>10 Full Stack Web Developer Portfolio to Inspire You</a>",
+                    "<a href='https://medium.com/@traversymedia/10-web-developer-portfolio-tips-384491d408a8'>10 Web Developer Portfolio Tips</a>",
+                    "<a href='https://www.youtube.com/watch?v=X6PwyH0thU0'>Portfolio So Good I Hired Him (Youtube)</a>"
                 },
                 Tips = new List<string>
                 {
@@ -1781,11 +1810,11 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "The Odin Project: Build your Resume",
-                    "Free Code Camp: How to Write a Resume",
-                    "Entry Level Resume Examples",
-                    "Resume Builder",
-                    "Resume Tips (Youtube)"
+                    "<a href='https://www.theodinproject.com/lessons/node-path-getting-hired-building-your-resume'>The Odin Project: Build your Resume</a>",
+                    "<a href='https://www.freecodecamp.org/news/how-to-write-a-resume-with-example/'>Free Code Camp: How to Write a Resume</a>",
+                    "<a href='https://enhancv.com/resume-examples/entry-level-software-engineer/'>Entry Level Resume Examples</a>",
+                     "<a href='https://resumegenius.com/resume-samples/entry-level-software-engineer-resume'>Resume Builder</a>",
+                    "<a href='https://www.youtube.com/watch?v=17YZBH_qtmg'>Resume Tips (Youtube)</a>"
                 },
                 ResourcesConclusion = "These should suffice, but you can always do your own research, there’s plenty of material online on how to build a nice entry level software engineering resume.  😁 Below is the resume that I landed me my first tech job. Bear in mind the project links might be broken since hosting full stack apps on Azure isn’t free and I might have removed them. ",
                 Tips = new List<string>
@@ -1794,6 +1823,10 @@ public static class ArticlesHelper
                     "Your resume has to look professional. Get a template, even if you need to buy one (it's cheap). There are infinite resume template services online. Remember, you're selling your brand, your resume has to look nice.",
                     "Include mostly relevant experience. I included my experience as a Salsa teacher not because I thought my moves would help the company, but because I wanted to let them know I had experience leading and communicating with large groups of people.",
                     "Track your applications. You can build an MVC app for this (in fact, we will have a project for that soon), but it can be as simple as an excel spreadsheet with a few columns: Date, Name Of the Company, Outcome. And whatever else you think is relevant."
+                },
+                Screenshots = new List<string>
+                {
+                    "2022/04/Resume_PabloSouza.jpg"
                 }
             },
             new Project
@@ -1823,12 +1856,13 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "Razor Syntax Docs",
-                    "Razor Pages Docs",
-                    "Learn Razor Pages",
-                    "Bootstrap Crash Course",
-                    "Microsoft: Razor Pages vs MVC",
-                    "Stack Overflow: Razor Pages vs MVC"
+                    "<a href='https://bit.ly/3uVRjfM'>Razor Syntax Docs</a>",
+                    "<a href='https://bit.ly/3MeGF9V'>Razor Pages Docs</a>",
+                    "<a href='https://bit.ly/36uivZR'>Learn Razor Pages</a>",
+                     "<a href='https://bit.ly/393KNLD'>Javascript Crash Course</a>",
+                    "<a href='https://bit.ly/3rD1Bj7'>Bootstrap Crash Course</a>",
+                    "<a href='https://docs.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/comparing-razor-pages-aspnet-mvc'>Microsoft: Razor Pages vs MVC</a>",
+                    "<a href='https://stackoverflow.com/questions/48121928/asp-net-core-razor-pages-vs-full-mvc-core'>Stack Overflow: Razor Pages vs MVC</a>"
                 },
                 Tips = new List<string>
                 {
@@ -1840,6 +1874,22 @@ public static class ArticlesHelper
                     "What if you want to allow split numbers? I.e. 2.25 cups of water, how would you change your data types?",
                     "How about letting the user decide between standard measures (big bottle, bottle, glass)",
                     "What if you want to have another habit being tracked in the same project? The limit to what you can create is the limit of your imagination."
+                },
+                Blocks = new List<Block>
+                {
+                    new Block
+                    {
+                        Title = "Video Tutorial",
+                        ImgUrl= "2022/04/icons8-video-tutorial-64.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                IsVideo = true,
+                                VideoUrl = "https://www.youtube.com/embed/iIFAKW21d-4"
+                            }
+                        }
+                    }
                 }
             },
             new Project
@@ -1861,7 +1911,7 @@ public static class ArticlesHelper
                     },
                     new Paragraph
                     {
-                        Body="For this initial tutorial we’ll be using the official documentation. Its MVC tutorial does a very good job at explaining the basic concepts. There will be a bit of hand-holding at first. You’ll be using .NET’s “scaffolding” (Scaffolding in ASP.NET Core is a technique used to generate code at design time to support a number of common application scenarios when working with Entity Framework Core), which is necessary given the slight complexity of the project, but if you pay attention to each line of code, by the end of this project you’ll have a good grasp of MVC basics."
+                        Body="For this initial tutorial we’ll be using the official documentation. Its MVC tutorial does a very good job at explaining the basic concepts. There will be a bit of hand-holding at first. You’ll be using .NET’s “scaffolding” <b><i><u>(Scaffolding in ASP.NET Core is a technique used to generate code at design time to support a number of common application scenarios when working with Entity Framework Core)</u></i></b>, which is necessary given the slight complexity of the project, but if you pay attention to each line of code, by the end of this project you’ll have a good grasp of MVC basics."
                     }
                 },
                 Requirements = new List<string>
@@ -1875,10 +1925,10 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "Microsoft Docs MVC Tutorial",
-                    "Microsoft Docs MVC vs Razor Pages",
-                    "Stack Overflow: MVC vs Razor Pages",
-                    "MVC vs MVVM Article"
+                    "<a href='https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-6.0&tabs=visual-studio'>Microsoft Docs MVC Tutorial</a>",
+                    "<a href='https://docs.microsoft.com/en-us/dotnet/architecture/porting-existing-aspnet-apps/comparing-razor-pages-aspnet-mvc'>Microsoft Docs MVC vs Razor Pages</a>",
+                    "<a href='https://stackoverflow.com/questions/48121928/asp-net-core-razor-pages-vs-full-mvc-core'>Stack Overflow: MVC vs Razor Pages</a>",
+                     "<a href='https://www.guru99.com/mvc-vs-mvvm.html'>MVC vs MVVM Article</a>"
                 },
                 ResourcesConclusion = "Notice that there’s a lot of talk about Razor Pages, MVVM, MVC. Those topics can be confusing. Give these texts a good read and reach out on Discord if it doesn’t make sense. And remember, Google is your best friend! 😁",
                 Tips = new List<string>
@@ -1929,10 +1979,10 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "MVC + Fetch API + Minimal API Tutorial",
-                    "Fetch API Docs",
-                    "Javascript crash course on Youtube",
-                    "Fetch API crash course on Youtube"
+                    "<a href='https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio'>MVC + Fetch API + Minimal API Tutorial</a>",
+                    "<a href='https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch'>Fetch API Docs</a>",
+                    "<a href='https://www.youtube.com/watch?v=hdI2bqOjy3c'>Javascript crash course on Youtube</a>",
+                    "<a href='https://www.youtube.com/watch?v=Oive66jrwBs'>Fetch API crash course on Youtube</a>"
                 },
                 Tips = new List<string>
                 {
@@ -1971,11 +2021,12 @@ public static class ArticlesHelper
                     "You need to use modals to insert, delete and update transactions and categories. These operations shouldn't be done in a different page."
                 },
                 ResourcesIntro = "Here are a few resources that might be helpful.",
+
                 Resources = new List<string>
                 {
-                    "Relationships in EF Core",
-                    "One-To-Many Relationship in EF Core",
-                    "One-To-Many Relationship in EF Core on Youtube"
+                    "<a href='https://docs.microsoft.com/en-us/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key'>Relationships in EF Core</a>",
+                    "<a href='https://www.learnentityframeworkcore.com/configuration/one-to-many-relationship-configuration'>One-To-Many Relationship in EF Core</a>",
+                    "<a href='https://www.youtube.com/watch?v=eHT6G912po0'>One-To-Many Relationship in EF Core on Youtube</a>"
                 },
                 Tips = new List<string>
                 {
@@ -2015,8 +2066,8 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "Introduction to Identity",
-                    "Scaffolding Identity into Existing App"
+                    "<a href='https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-6.0&tabs=visual-studio'>Introduction to Identity</a>",
+                    "<a href='https://docs.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-6.0&tabs=visual-studio'>Scaffolding Identity into Existing App</a>"
                 },
                 Tips = new List<string>
                 {
@@ -2059,8 +2110,8 @@ public static class ArticlesHelper
                 ResourcesIntro = "Here are a few resources that might be helpful.",
                 Resources = new List<string>
                 {
-                    "Intro to Identity",
-                    "Dapper Tutorial"
+                    "<a href='https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-6.0&tabs=visual-studio'>Intro to Identity</a>",
+                    "<a href='https://www.learndapper.com/'>Dapper Tutorial</a>"
                 },
                 Tips = new List<string>
                 {
@@ -2100,12 +2151,13 @@ public static class ArticlesHelper
                     "When an user tries to access a forbidden area, present a clear error message"
                 },
                 ResourcesIntro = "Here are a few resources that might be helpful.",
+
                 Resources = new List<string>
                 {
-                    "Microsoft Docs – Role-Based Authorisation in .NET",
-                    "Article: How to work with Roles in ASP.NET Core Identity",
-                    "Article: ASP.NET Core Identity Roles based Authorization"
-                }
+                    "<a href='https://docs.microsoft.com/en-us/aspnet/core/security/authorization/roles?view=aspnetcore-6.0'>Microsoft Docs – Role-Based Authorisation in .NET</a>",
+                    "<a href='https://www.yogihosting.com/aspnet-core-identity-roles/'>Article: How to work with Roles in ASP.NET Core Identityl</a>",
+                    "<a href='https://procodeguide.com/programming/aspnet-core-identity-roles-authorization/'>Article: ASP.NET Core Identity Roles based Authorization</a>"
+                },
             },
             new Project
             {
@@ -2129,15 +2181,16 @@ public static class ArticlesHelper
                         Body="Make no mistake, Angular and React are massive. There’s a fair amount of complexity and the learning curve is definitely steep. So be patient, you won’t become an expert overnight. However, these frameworks are very welcoming to beginners. Building simple apps with them is somewhat straightforward, so be careful not to get caught into unnecessary complexities early on. Let’s build a few simple apps first. And what better way to start than building a Coffee app? ☕🤩"
                     }
                 },
-                RequirementsIntro="From Angular’s documentation page: 'The Tour of Heroes application that you build helps a staffing agency manage its stable of heroes. The application has many of the features you’d expect to find in any data-driven application. The finished application acquires and displays a list of heroes, edits a selected hero’s detail, and navigates among different views of heroic data.'",
+                RequirementsIntro="From Angular’s documentation page: 'The <i>Tour of Heroes</i> application that you build helps a staffing agency manage its stable of heroes. The application has many of the features you’d expect to find in any data-driven application. The finished application acquires and displays a list of heroes, edits a selected hero’s detail, and navigates among different views of heroic data.'",
                 Requirements = new List<string>
                 {
                     "This project has only one requirement: You should complete the \"Tour of Heroes\" app in Angular's documentation page."
                 },
-                ResourcesIntro = "Here are a few resources that might be helpful.",
+                ResourcesIntro = "All you need for this project is the beginners tutorial provided by the Angular team:",
+
                 Resources = new List<string>
                 {
-                    "Angular Docs: Tour of Heroes Beginner’s Tutorial"
+                    "<a href='https://angular.io/tutorial'>Angular Docs: Tour of Heroes Beginner’s Tutorial</a>"
                 },
                 ResourcesConclusion = "Since this is your first Angular project, we will keep it very simple. There won’t be any .NET or C# this time, you’ll focus on Angular only. And the documentation will provide everything you need for your first app.",
                 Tips = new List<string>
@@ -2175,11 +2228,11 @@ public static class ArticlesHelper
                 },
                 Resources = new List<string>
                 {
-                    "Microsoft Docs: Web Api",
-                    "Angular Docs: Tour of Heroes Beginner’s Tutorial",
-                    "Angular CRUD Tutorial",
-                    "Angular + C# Web Api Youtube Tutorial",
-                    "Dealing With CORS (Cross Origin Resource Sharing)"
+                    "<a href='https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio'>Microsoft Docs: Web Api</a>",
+                    "<a href='https://angular.io/tutorial'>Angular Docs: Tour of Heroes Beginner’s Tutorial</a>",
+                    "<a href='https://www.itsolutionstuff.com/post/angular-12-crud-application-tutorial-exampleexample.html'>Angular CRUD Tutorial</a>",
+                    "<a href='https://www.youtube.com/watch?v=S5dzfuh3t8U'>Angular + C# Web Api Youtube Tutorial</a>",
+                    "<a href='https://stackoverflow.com/questions/65082452/cors-is-not-working-with-net-core-api-and-angular-frontend'>Dealing With CORS (Cross Origin Resource Sharing)</a>"
                 },
                 ResourcesConclusion = "Since this is your first full-stack Angular project, make sure you look up everything you don’t know. Try not to let any keyword, method or concept left-behind. This is the moment to build your foundation. And don’t forget to reach out on Discord if you have questions!",
                 Tips = new List<string>
@@ -2224,9 +2277,9 @@ public static class ArticlesHelper
                 },
                 Resources = new List<string>
                 {
-                    "Angular Material Docs",
-                    "Getting Started With Angular Material",
-                    "Angular Material CRUD Tutorial"
+                    "<a href='https://material.angular.io/'>Angular Material Docs</a>",
+                    "<a href='https://material.angular.io/guide/getting-started'>Getting Started With Angular Material</a>",
+                    "<a href='https://www.youtube.com/watch?v=jGbP620NahE'>Angular Material CRUD Tutorial</a>"
                 },
                 ResourcesConclusion = "Angular Material can be tricky at first, but trust us, you’ll learn to love it and once you master it, you will never look back. But as always, reach out in our Discord Community if you get stuck!",
                 Tips = new List<string>
@@ -2265,9 +2318,9 @@ public static class ArticlesHelper
                 },
                 Resources = new List<string>
                 {
-                    "Relationships in SQL",
-                    "One-to-man relationship Entity Framework",
-                    "Tables and Pagination in Angular Material"
+                    "<a href='https://blog.devart.com/types-of-relationships-in-sql-server-database.html#:~:text=So%2C%20what%20is%20one%2Dto,one%20record%20in%20table%201.'>Relationships in SQL</a>",
+                    "<a href='https://www.entityframeworktutorial.net/code-first/configure-one-to-many-relationship-in-code-first.aspx'>One-to-many relationship Entity Framework</a>",
+                    "<a href='https://material.angular.io/components/table/overview'>Tables and Pagination in Angular Material</a>"
                 },
                 ResourcesIntro = "The resourced from the previous Angular projects can be used for the completion of this project, plus these: ",
                 Tips = new List<string>
@@ -2306,11 +2359,12 @@ public static class ArticlesHelper
                     }
                 },
                 RequirementsIntro = "This project has only one requirement. You’ll build a Tic-Tac-Toe game following React’s documentation. The objective at this stage isn’t to modify it or do anything fancy with it. Right now all you need to do is learn the basics. And there’s a lot to learn. So stick to the tutorial and take your time studying each line of code.",
+
                 Resources = new List<string>
                 {
-                    "React Tic-Tac-Toe Tutorial",
-                    "React Documentation",
-                    "Article: Why Learn React in 2022?"
+                    "<a href='https://reactjs.org/tutorial/tutorial.html'>React Tic-Tac-Toe Tutorial</a>",
+                    "<a href='https://reactjs.org/docs/getting-started.html'>React Documentation</a>",
+                    "<a href='https://codersera.com/blog/why-learning-reactjs-makes-sense-in-2020/'>Article: Why Learn React in 2022?</a>"
                 },
                 ResourcesConclusion = "Since this is your first React project, make sure you look up everything you don’t know. Try not to let any keyword, method or concept left-behind. This is the moment to build your foundation. And don’t forget to reach out on Discord if you have questions!\r\n\r\nHere’s my github repository for this project, where you can find branches for each stage of the development of this game. To navigate through the branches, choose from the dropdown as per the picture below: ",
                 Tips = new List<string>
@@ -2353,11 +2407,10 @@ public static class ArticlesHelper
                 },
                 Resources = new List<string>
                 {
-                    "How to fetch data with React",
-                    "Enabling CORS (Cross Origin Resource Sharing) in .NET Web API",
-                    "Dealing With CORS errors (Stack Overflow)",
-                    "Handling Fetch API errors in React"
-
+                    "<a href='https://www.freecodecamp.org/news/fetch-data-react/'>How to fetch data with React</a>",
+                    "<a href='https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-6.0'>Enabling CORS (Cross Origin Resource Sharing) in .NET Web API</a>",
+                    "<a href='https://stackoverflow.com/questions/65082452/cors-is-not-working-with-net-core-api-and-angular-frontend'>Dealing With CORS errors (Stack Overflow)</a>",
+                    "<a href='https://www.youtube.com/watch?v=DTBta08fXGU'>Handling Fetch API errors in React</a>",
                 },
                 ResourcesConclusion = "Connecting to an API using Fetch JS is incredibly easy. But chances are you’ll find a cross-origin error. Don’t forget to visit these links to solve it. ",
                 Tips = new List<string>
@@ -2365,7 +2418,7 @@ public static class ArticlesHelper
                     "This app should be relatively easy to build. Try not to over complicate it.",
                     "If you want to add extra features, think of: pagination, filters and the ability to create a list of 'favourite' records.",
                     "Think of a project that has plenty of good images online and keep it simple. Examples: Dogs, Cats, Movies, Cars, Athletes, Singers, Bands, Drinks.",
-                    "Another variation of this project would be to call a public api. Click to view a massive list."
+                    "<a href='https://github.com/public-apis/public-apis'>Another variation of this project would be to call a public api. Click to view a massive list.</a>"
                 }
             },
             new Project
@@ -2396,9 +2449,10 @@ public static class ArticlesHelper
 
                 },
                 ResourcesIntro = "The resources from the previous projects will be helpful in the completion of this project, plus this tutorial:",
+
                 Resources = new List<string>
                 {
-                    "Crud React Tutorial Example"
+                    "<a href='https://www.freecodecamp.org/news/fetch-data-react/'>Crud React Tutorial Example</a>"
                 },
                 ResourcesConclusion = "This is just an example of a tutorial where a React app uses it’s inbuilt Http client to call an api. However React is one of the most popular libraries out there, so feel free to search for other examples. ",
                 Tips = new List<string>
@@ -2438,9 +2492,9 @@ public static class ArticlesHelper
                 ResourcesIntro = "Adding onto the resources of our previous React projects, you’ll need to find out how to use Redux:",
                 Resources = new List<string>
                 {
-                    "React-Redux Quick Guide",
-                    "Beginners Redux: Complete Guide",
-                    "React Redux Crud App (Youtube)."
+                    "<a href='https://react-redux.js.org/tutorials/quick-start'>React-Redux Quick Guide</a>",
+                    "<a href='https://www.valentinog.com/blog/redux/'>Beginners Redux: Complete Guide</a>",
+                    "<a href='https://www.youtube.com/watch?v=hXpYQqykORU'>React Redux Crud App (Youtube).</a>"
                 },
                 ResourcesConclusion = "Angular Material can be tricky at first, but trust us, you’ll learn to love it and once you master it, you will never look back. But as always, reach out in our Discord Community if you get stuck!",
                 Tips = new List<string>
@@ -2470,7 +2524,7 @@ public static class ArticlesHelper
                     },
                      new Paragraph
                     {
-                        Body="Blazor let’s you build user interfaces without using Javascript. Both client and server code is written in C#, allowing you to share code and libraries. It’s just a joy to work with. Up to 2022, there were two types of Blazor projects: Blazor Web Assembly, and Blazor Server. But recently Microsoft creates Blazor Hybrid, which allows you to use Blazor components to build the UI for apps with WPF and most importantly, MAUI. Wow!! Let’s get started??"
+                        Body="Blazor lets you build user interfaces without using Javascript. Both client and server code is written in C#, allowing you to share code and libraries. It’s just a joy to work with. Up to 2022, there were two types of Blazor projects: Blazor Web Assembly, and Blazor Server. But recently Microsoft creates Blazor Hybrid, which allows you to use Blazor components to build the UI for apps with WPF and most importantly, MAUI. Wow!! Let’s get started??"
                     }
                 },
                 Requirements = new List<string>
@@ -2485,15 +2539,15 @@ public static class ArticlesHelper
                 },
                 Resources = new List<string>
                 {
-                    "Microsoft Docs: Blazors",
-                    "Why use Blazor?",
-                    "Blazor CRUD Tutorial"
+                    "<a href='https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio'>Microsoft Docs: Blazor</a>",
+                    "<a href='https://www.c-sharpcorner.com/article/blazor-what-it-is-why-should-we-use-it/'>Why use Blazor?</a>",
+                    "<a href='https://www.c-sharpcorner.com/blogs/create-a-net-6-app-on-blazor-wasm-for-crud-operations-with-ef-core'>Blazor CRUD Tutorial</a>"
                 },
                 ResourcesConclusion = "Since this is your first Blazor  project, I recommend you first complete the Blazor Todo App from Microsoft Learn. It’s a very simple project that will give you a basic understanding of how Blazor works. And don’t forget to reach out on Discord if you have questions!",
                 Tips = new List<string>
                 {
                     "You only need a single project. Contrary to using Angular and React, you don't need to create two separate projects, since the front-end end and the back-end will be covered by Blazor.",
-                    "In this project, you're not allowed to use Javascript Interop. But a nice challenge after the completion of the project would be to integrate it to your project:"
+                    "In this project, you're not allowed to use Javascript Interop. But a nice challenge after the completion of the project would be to integrate it to your project: <a href='https://docs.microsoft.com/en-us/aspnet/core/blazor/javascript-interoperability/?view=aspnetcore-6.0'>Javascript Interop Explained</a>, <a href='https://www.youtube.com/watch?v=p4MD6ycpQpY'>Javascript Interop Youtube Tutorial</a>"
                 }
             },
             new Project
@@ -2524,7 +2578,7 @@ public static class ArticlesHelper
                     "You shouldn't need a database for the game functionality. All the information about the cards can be in lists in the code base.",
                     "Since it only requires basic operations, use Entity Framework for recording game history."
                 },
-                ResourcesConclusion = "\r\nResources\r\nYou should be able to complete this project with the same resources found in the Blazor Wardrobe Inventory project.",
+                ResourcesConclusion = "You should be able to complete this project with the same resources found in the <a href='https://www.thecsharpacademy.com/wardrobe/'>Blazor Wardrobe Inventory</a> project.",
                 Tips = new List<string>
                 {
                     "Split the development in three phases: game functionality, games history, styling.",
@@ -2573,7 +2627,7 @@ public static class ArticlesHelper
                     "Add macronutrients categorization.",
                     "Add a \"cheat meal\" feature to record how many times the user ate junk food or candies.",
                     "Add goals such as: drinking 20 liters of water in a week, or avoiding chocolate for 7 days.",
-                    "To enrich your app, try to fetch food data from a free Api: 6 Free Food Apis"
+                    "To enrich your app, try to fetch food data from a free Api: <a href='https://apilist.fun/category/food'>6 Free Food APIs</a> project."
                 }
             },
             new Project
@@ -2602,9 +2656,9 @@ public static class ArticlesHelper
                 ResourcesIntro="You should have all skills necessary to complete this project, except for adding charts . Here are a couple of resources to get you started.",
                 Resources = new List<string>
                 {
-                    "Simple Bar Chart in Blazor ",
-                    "High chart in Blazor",
-                    "Blazor JS Interop (Youtube)"
+                    "<a href='https://www.c-sharpcorner.com/article/learn-to-draw-simple-asp-net-core-blazor-bar-chart-using-canvas-extensions/'>Simple Bar Chart in Blazor</a>",
+                    "<a href='https://www.youtube.com/watch?v=ft9t3P1riOM'>High chart in Blazor</a>",
+                    "<a href='https://www.youtube.com/watch?v=p4MD6ycpQpY'>Blazor JS Interop (Youtube)</a>"
                 },
                 Tips = new List<string>
                 {
@@ -2647,10 +2701,10 @@ public static class ArticlesHelper
                 },
                 Resources = new List<string>
                 {
-                    "What is .NET MAUI?",
-                    "Maui vs Xamarin",
-                    "What is XAML?",
-                    "MVC vs MVVM"
+                    "<a href='https://docs.microsoft.com/en-us/dotnet/maui/what-is-maui'>What is .NET MAUI?</a>",
+                    "<a href='https://stackoverflow.com/questions/62729794/what-is-maui-and-what-are-differences-between-maui-and-xamarin'>Maui vs Xamarin</a>",
+                    "<a href='https://docs.microsoft.com/en-us/dotnet/maui/xaml/'>What is XAML?</a>",
+                    "<a href='https://www.guru99.com/mvc-vs-mvvm.html'>MVC vs MVVM</a>"
                 },
                 ResourcesIntro = "Each video in the tutorial has many links in the description area. Here are some resources you can read before getting started:",
                 Tips = new List<string>
@@ -2699,8 +2753,8 @@ public static class ArticlesHelper
                 },
                 Resources = new List<string>
                 {
-                    "Dotnet Maui for Beginners.",
-                    "Why Use MVVM?"
+                    "<a href='https://www.youtube.com/watch?v=Hh279ES_FNQ&list=PLdo4fOcmZ0oUBAdL2NwBpDs32zwGqb9DY'>Dotnet Maui for Beginners.</a>",
+                    "<a href='https://stackoverflow.com/questions/2653096/why-use-mvvm'>Why Use MVVM?</a>"
                 },
                 ResourcesIntro = "With the Math’s Game project, you learned the basics of MAUI and XAML. Now you’ll need to add a design pattern to that knowledge. For that we will get the help of the most knowledgeable MAUI instructor out there: James Montemagno. Initially, you’ll follow his Beginners MAUI tutorial, where you’ll build a Todo List App with MVVM.",
                 Tips = new List<string>
@@ -2736,7 +2790,7 @@ public static class ArticlesHelper
                 },
                 Requirements = new List<string>
                 {
-                    "This project has only one requirement: Follow and complete James Montemagno's Monkeys App Tutorial"
+                    "This project has only one requirement: Follow and complete <a href='https://www.youtube.com/watch?v=DuNLR_NJv8U'>James Montemagno's Monkeys App Tutorial.</a>"
                 },
                 Challenges = new List<string>
                 {
@@ -2801,7 +2855,7 @@ public static class ArticlesHelper
                      new Paragraph
                     {
                         Body="The amount of services offered by cloud companies is enormous and ever-growing. It’s easy to get lost. The good news is that we don’t need to know too much to declare we “have experience with it”. Basically we need to be able to deploy static websites and full stack apps connected to a database and handle authentication. "
-                    }, 
+                    },
                      new Paragraph
                      {
                          Body="In the C# Academy, the cloud area is initially split in four projects. In the first we will learn how to deploy a simple app with no database back-end, just to get familiar with Azure Dashboard and integration with VS2022. In the second, we will expand on this knowledge by adding a SQL Server, which can be slightly more complexity. And on the third we will deploy a .NET Web API along with a React front-end, a very common stack in enterprise. As a bonus, we will learn the basics of Azure Functions, “a serverless solution that allows you to write less code, maintain less infrastructure, and save on costs”. So let’s jump into it!"
@@ -2817,12 +2871,11 @@ public static class ArticlesHelper
                 },
                 Resources = new List<string>
                 {
-                    "Cloud Computing Overview",
-                    "Microsoft Azure Fundamentals",
-                    "Creating a Microsoft Account",
-                    "Creating an Azure Account",
-                    "Azure Deployment"
-
+                    "<a href='https://www.investopedia.com/terms/c/cloud-computing.asp'>Cloud Computing Overview</a>",
+                    "<a href='https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/'>Microsoft Azure Fundamentals</a>",
+                    "<a href='https://account.microsoft.com/account?lang=en-hk'>Creating a Microsoft Account</a>",
+                    "<a href='https://azure.microsoft.com/en-us/free/'>Creating an Azure Account</a>",
+                    "<a href='http://shorturl.at/blo34'>Azure Deployment</a>"
                 },
                 ResourcesIntro = "There’s a lot to learn in Azure and it’s easy to get lost. At this stage we suggest you read about Azure to get some context and then get into the specifics of how to deploy an app:",
                 Blocks = new List<Block>
