@@ -34,7 +34,7 @@
 </div>
 <div class="jumbotron jumbotron-fluid">
     <div class="container text-center justify-content-center">
-        <h1 class="display-4 justify-content-center area-title">.NET Full-Stack Developer Roadmap</h1>
+        <h1 class="display-4 justify-content-center area-title-text">.NET Full-Stack Developer Roadmap</h1>
         <img src="img/roadmap-desktop.png" class=" img-fluid roadmap-desktop" />
         <img src="img/roadmap-mobile.png" class=" img-fluid roadmap-mobile" />
         <a href="https://www.thecsharpacademy.com/2021/09/10/road-map/"><button type="button" class="btn btn-primary btn-lg button-roadmap">Roadmap Explained</button></a>
@@ -43,7 +43,7 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <h1 class="display-4 justify-content-center area-title">How it Works</h1>
+        <h1 class="display-4 justify-content-center area-title-text">How it Works</h1>
         @foreach (var article in articles.Where(x => x.Area == Area.HowItWorks))
         {
             <div class="col-lg col-sm-1 col-xs-1">
@@ -65,7 +65,7 @@
 <div class="area-first-steps">
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <h1 class="display-4 area-title first-steps-area-title">First Steps</h1>
+            <h1 class="display-4 area-title-text first-steps-area-title">First Steps</h1>
             <p class="text-center area-description area-description-dark">Get started with our program reading and following the instructions in these articles. If possible, follow them in order. They cover everything you need to prepare for your C# journey.</p>
 
             @foreach (var article in articles.Where(x => x.Area == Area.StartHere))
@@ -81,16 +81,10 @@
 </div>
 
 <div class="container">
-    <div class="row d-flex justify-content-center">
-        <div class="row">
-            <div class="col-6 d-flex justify-content-end">
-                <h1 class="display-4 area-title">Blah</h1>
-            </div>
-            <div class="col-6 d-flex justify-content-start">
-                <h1 class="display-4 area-title">Console Apps</h1>
-            </div>
+    <div class="row d-flex justify-content-center title">
+            <img class="area-title" src="img/console-title.png" />
         </div>
-
+    <div class="row d-flex justify-content-center">
         <div class="col-lg-3 col-sm-1 my-3">
             <div class="card shadow rounded-lg text-center" style="width: 18rem;">
                 <a href="@($"article/{consoleArticle.Id}")" class="stretched-link" target="_blank">
@@ -125,10 +119,12 @@
     </div>
 </div>
 
-<div class="area-first-steps">
+<div class="area-first-steps start-applying">
     <div class="container">
+        <div class="row d-flex justify-content-center title">
+            <img class="area-title" src="img/apply-title.png" />
+        </div>
         <div class="row d-flex justify-content-center">
-            <h1 class="display-4 area-title first-steps-area-title">Apply for Jobs</h1>
             @foreach (var project in projects.Where(x => x.Area == Area.StartApplying))
             {
                <Card Type="Project"
@@ -142,8 +138,10 @@
 </div>
 
 <div class="container">
+    <div class="row d-flex justify-content-center title">
+        <img class="area-title" src="img/mvc-title.png" />
+        </div>
     <div class="row d-flex justify-content-center">
-        <h1 class="display-4 area-title">MVC</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.MVC))
         {
             <Card Type="Project"
@@ -156,8 +154,10 @@
 </div>
 
 <div class="container">
+    <div class="row d-flex justify-content-center title">
+        <img class="area-title" src="img/angular-title.png" />
+    </div>
     <div class="row d-flex justify-content-center">
-        <h1 class="display-4 area-title">Angular</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.Angular))
         {
             <Card Type="Project"
@@ -170,8 +170,10 @@
 </div>
 
 <div class="container">
+    <div class="row d-flex justify-content-center title">
+        <img class="area-title" src="img/react-title.png" />
+    </div>
     <div class="row d-flex justify-content-center">
-        <h1 class="display-4 area-title">React</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.React))
         {
             <Card Type="Project"
@@ -184,8 +186,10 @@
 </div>
 
 <div class="container">
+    <div class="row d-flex justify-content-center title">
+        <img class="area-title" src="img/blazor-title.png" />
+    </div>
     <div class="row d-flex justify-content-center">
-        <h1 class="display-4 area-title">Blazor</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.Blazor))
         {
             <Card Type="Project"
@@ -198,8 +202,10 @@
 </div>
 
 <div class="container">
+    <div class="row d-flex justify-content-center title">
+        <img class="area-title" src="img/maui-title.png" />
+    </div>
     <div class="row d-flex justify-content-center">
-        <h1 class="display-4 area-title">MAUI</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.MAUI))
         {
             <Card Type="Project"
@@ -212,8 +218,10 @@
 </div>
 
 <div class="container">
+    <div class="row d-flex justify-content-center title">
+        <img class="area-title" src="img/azure-title.png" />
+    </div>
     <div class="row d-flex justify-content-center">
-        <h1 class="display-4 area-title">Azure</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.Azure))
         {
             <Card Type="Project"
@@ -297,6 +305,11 @@
     }
 
     .area-title {
+        max-width: 250px;
+        padding-bottom: 10px;
+    }
+
+    .area-title-text {
         padding-top: 50px;
         padding-bottom: 20px;
         text-align: center;
@@ -322,6 +335,10 @@
     .button-roadmap {
         margin-top: 20px;
         padding: 15px 30px;
+    }
+
+    .start-applying {
+        padding-top: 1px;
     }
 
 </style>
