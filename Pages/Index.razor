@@ -59,11 +59,11 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <h1 class="display-4 area-title first-steps-area-title">First Steps</h1>
-            <p class="area-description area-description-dark">Get started with our program reading and following the instructions in these articles. If possible, follow them in order. They cover everything you need to prepare for your C# journey.</p>
+            <p class="text-center area-description area-description-dark">Get started with our program reading and following the instructions in these articles. If possible, follow them in order. They cover everything you need to prepare for your C# journey.</p>
 
             @foreach (var article in articles.Where(x => x.Area == Area.StartHere))
             {
-                <div class="col-lg col-sm-1">
+                <div class="card-slot col-lg-3 col-sm-1">
                     <div class="card shadow rounded-lg text-center" style="width: 18rem;">
                         <a href="@($"article/{article.Id}")" target="_blank">
                             <img class="card-img-top" src="@(baseUrl)/@article.IconUrl)" alt="Card image cap">
@@ -142,7 +142,7 @@
         <h1 class="display-4 area-title">MVC</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.MVC))
         {
-            <div class="col-lg-3 col-sm-1 my-3">
+            <div class="card-slot col-lg-3 col-sm-1 my-3">
                 <div class="card shadow rounded-lg text-center" style="width: 18rem;">
                     <a href="@($"project/{project.Id}")"><img class="card-img-top" src="@(baseUrl)/@project.IconUrl)" alt="Card image cap"></a>
                     <div class="card-body">

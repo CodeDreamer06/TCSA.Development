@@ -51,14 +51,14 @@
 <div class="container article-blocks-mobile">
     @foreach (var block in Article.Blocks)
     {
-        <div class="row pb-4">
-            <div class="col d-flex justify-content-center">
+        <div class="row">
+            <div class="col d-flex justify-content-center icon-div">
                 <img src="@(baseUrl)/@block.ImgUrl" width="70" alt="" class="align-middle">
             </div>
         </div>
         <div class="row pb-4">
             <div class="col">
-                <div class="col d-flex justify-content-center">
+                <div class="col d-flex justify-content-center pb-3">
                     <h1 class="article-section-title">@block.Title</h1>
                 </div>
 

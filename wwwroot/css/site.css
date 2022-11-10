@@ -64,7 +64,7 @@ a, .btn-link {
     }
 
 .container {
-    max-width: 70%;
+    width: 70%;
     margin-top: 50px !important;
     margin-bottom: 50px !important;
 }
@@ -101,5 +101,13 @@ a, .btn-link {
 
     .article-blocks-mobile {
         display: contents;
+    }
+
+    .card-slot {
+        margin-bottom: 10px;
+    }
+
+    .icon-div {
+        margin-bottom: 10px;
     }
 }
