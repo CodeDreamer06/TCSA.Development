@@ -93,7 +93,6 @@
     public Article Article { get; set; }
     protected string baseUrl = "https://www.thecsharpacademy.com/wp-content/uploads";
 
-
     protected async override Task OnParametersSetAsync()
     {
         Article = ArticlesHelper.GetArticles().Single(x => x.Id == int.Parse(ArticleId));

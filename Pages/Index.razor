@@ -2,14 +2,21 @@
 @using TCSA.Models;
 @using TCSA.Data;
 
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid main-jumbotron">
     <div class="container">
         <div class="row">
-            <div class="col-xl-6 col-lg-6 col-sm-1 d-flex align-items-center">
+            <div class="title-desktop col-xl-6 col-lg-6 col-sm-1 d-flex align-items-center justify-content-center">
                 <div>
-                    <h1 class="display-1">THE C# <br />ACADEMY</h1>
-                    <p class="lead">Learn with Projects!</p>
-                    <p class="last-updated">Last Updated: Oct-22-2022</p>
+                    <h1 class="display-1 text-center">THE C# <br />ACADEMY</h1>
+                    <p class="lead text-center">Learn with Projects!</p>
+                    <p class="last-updated text-center">Last Updated: Oct-22-2022</p>
+                </div>
+            </div>
+            <div class="title-mobile col-xl-6 col-lg-6 col-sm-1 d-flex align-items-center justify-content-center">
+                <div>
+                    <h1 class="display-1 text-center">THE C# <br />ACADEMY</h1>
+                    <p class="lead text-center">Learn with Projects!</p>
+                    <p class="last-updated text-center">Last Updated: Oct-22-2022</p>
                 </div>
             </div>
             <div class="col">
@@ -263,6 +270,10 @@
 }
 
 <style>
+    .main-jumbotron {
+        margin-top: 100px;
+    }
+
     .display-1 {
         font-family: Roboto;
         font-weight: 900;
@@ -321,10 +332,6 @@
         padding: 30px 0;
         min-height: 100%;
         width: 100% !important;
-    }
-
-    .article-card {
-        background-color: red;
     }
 
     .card-title {

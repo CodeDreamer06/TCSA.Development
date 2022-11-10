@@ -77,9 +77,19 @@ a, .btn-link {
     display: none;
 }
 
+.container-nav {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@media (min-width: 800px) {
+    .title-mobile {
+        display: none !important;
+    }
 }
 
 @media (max-width: 800px) {
@@ -100,6 +110,10 @@ a, .btn-link {
     }
 
     .article-blocks-mobile {
+        display: contents !important;
+    }
+
+    .title-mobile {
         display: contents;
     }
 
@@ -109,5 +123,19 @@ a, .btn-link {
 
     .icon-div {
         margin-bottom: 10px;
+    }
+
+    .title-desktop {
+        display: none !important;
+    }
+
+    .latest-updates-container {
+        padding: 20px 10px !important;
+        font-size: 5px;
+    }
+
+    .latest-updates-list {
+        font-size: 12px;
+        text-shadow: 1px 1px #000000;
     }
 }
