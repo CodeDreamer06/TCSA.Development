@@ -81,6 +81,7 @@ a, .btn-link {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 }
+
 @font-face {
     font-family: 'Roboto';
     src: url('../fonts/Roboto-Regular.ttf');
@@ -101,8 +102,12 @@ a, .btn-link {
         max-width: 100%;
     }
 
-    .roadmap-desktop{
+    .roadmap-desktop {
         display: none;
+    }
+
+    .roadmap-mobile {
+        display: block !important;
     }
 
     .article-blocks-desktop {
