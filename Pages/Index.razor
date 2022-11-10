@@ -70,17 +70,11 @@
 
             @foreach (var article in articles.Where(x => x.Area == Area.StartHere))
             {
-                <div class="card-slot col-lg-3 col-sm-1">
-                    <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-                        <a href="@($"article/{article.Id}")" class="stretched-link" target="_blank">
-                            <img class="card-img-top" src="img/@article.IconUrl" alt="Card image cap">
-                        </a>
-                        <div class="card-body">
-                            <h5 class="card-title">@article.Title</h5>
-                            <p class="card-text">@article.Description</p>
-                        </div>
-                    </div>
-                </div>
+                <Card Type="Article"
+                      Id =@article.Id.ToString()
+                      Title=@article.Title
+                      Description=@article.Description
+                      IconUrl=@article.IconUrl />
             }
         </div>
     </div>
@@ -88,13 +82,20 @@
 
 <div class="container">
     <div class="row d-flex justify-content-center">
-        <h1 class="display-4 area-title">Console Apps</h1>
+        <div class="row">
+            <div class="col-6 d-flex justify-content-end">
+                <h1 class="display-4 area-title">Blah</h1>
+            </div>
+            <div class="col-6 d-flex justify-content-start">
+                <h1 class="display-4 area-title">Console Apps</h1>
+            </div>
+        </div>
 
         <div class="col-lg-3 col-sm-1 my-3">
             <div class="card shadow rounded-lg text-center" style="width: 18rem;">
                 <a href="@($"article/{consoleArticle.Id}")" class="stretched-link" target="_blank">
                     <img class="card-img-top" src="img/@consoleArticle.IconUrl" alt="Card image cap">
-                    </a>
+                </a>
                 <div class="card-body">
                     <h5 class="card-title">@consoleArticle.Title</h5>
                     <p class="card-text">@consoleArticle.Description</p>
@@ -103,24 +104,18 @@
         </div>
         @foreach (var project in projects.Where(x => x.Area == Area.Console))
         {
-            <div class="col-lg-3 col-sm-1 my-3">
-                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-                    <a href="@($"project/{project.Id}")" class="stretched-link" target="_blank">
-                        <img class="card-img-top" src="img/@project.IconUrl" alt="Card image cap">
-                        </a>
-                    <div class="card-body">
-                        <h5 class="card-title">@project.Title</h5>
-                        <p class="card-text">@project.Description</p>
-                    </div>
-                </div>
-            </div>
+            <Card Type="Project"
+              Id=@project.Id.ToString()
+              Title=@project.Title
+              Description=@project.Description
+              IconUrl=@project.IconUrl />
         }
 
         <div class="col-lg-3 my-3">
             <div class="card shadow rounded-lg text-center" style="width: 18rem;">
                 <a href="@($"article/{graduationArticle.Id}")">
                     <img class="card-img-top" src="img/@graduationArticle.IconUrl" alt="Card image cap">
-                    </a>
+                </a>
                 <div class="card-body">
                     <h5 class="card-title">@graduationArticle.Title</h5>
                     <p class="card-text">@graduationArticle.Description</p>
@@ -136,17 +131,11 @@
             <h1 class="display-4 area-title first-steps-area-title">Apply for Jobs</h1>
             @foreach (var project in projects.Where(x => x.Area == Area.StartApplying))
             {
-                <div class="col-lg-3 col-sm-1 my-3">
-                    <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-                        <a href="@($"project/{project.Id}")" class="stretched-link" target="_blank">
-                            <img class="card-img-top" src="img/@project.IconUrl" alt="Card image cap">
-                            </a>
-                        <div class="card-body">
-                            <h5 class="card-title">@project.Title</h5>
-                            <p class="card-text">@project.Description</p>
-                        </div>
-                    </div>
-                </div>
+               <Card Type="Project"
+              Id=@project.Id.ToString()
+              Title=@project.Title
+              Description=@project.Description
+              IconUrl=@project.IconUrl />
             }
         </div>
     </div>
@@ -157,17 +146,11 @@
         <h1 class="display-4 area-title">MVC</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.MVC))
         {
-            <div class="card-slot col-lg-3 col-sm-1 my-3">
-                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-                    <a href="@($"project/{project.Id}")" class="stretched-link">
-                        <img class="card-img-top" src="img/@project.IconUrl" alt="Card image cap">
-                        </a>
-                    <div class="card-body">
-                        <h5 class="card-title">@project.Title</h5>
-                        <p class="card-text">@project.Description</p>
-                    </div>
-                </div>
-            </div>
+            <Card Type="Project"
+              Id=@project.Id.ToString()
+              Title=@project.Title
+              Description=@project.Description
+              IconUrl=@project.IconUrl />
         }
     </div>
 </div>
@@ -177,17 +160,11 @@
         <h1 class="display-4 area-title">Angular</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.Angular))
         {
-            <div class="col-lg-3 col-sm-1 my-3">
-                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-                    <a href="@($"project/{project.Id}")" class="stretched-link" target="_blank">
-                        <img class="card-img-top" src="img/@project.IconUrl" alt="Card image cap">
-                        </a>
-                    <div class="card-body">
-                        <h5 class="card-title">@project.Title</h5>
-                        <p class="card-text">@project.Description</p>
-                    </div>
-                </div>
-            </div>
+            <Card Type="Project"
+              Id=@project.Id.ToString()
+              Title=@project.Title
+              Description=@project.Description
+              IconUrl=@project.IconUrl />
         }
     </div>
 </div>
@@ -197,17 +174,11 @@
         <h1 class="display-4 area-title">React</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.React))
         {
-            <div class="col-lg-3 col-sm-1 my-3">
-                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-                    <a href="@($"project/{project.Id}")" class="stretched-link" target="_blank">
-                        <img class="card-img-top" src="img/@project.IconUrl" alt="Card image cap">
-                        </a>
-                    <div class="card-body">
-                        <h5 class="card-title">@project.Title</h5>
-                        <p class="card-text">@project.Description</p>
-                    </div>
-                </div>
-            </div>
+            <Card Type="Project"
+              Id=@project.Id.ToString()
+              Title=@project.Title
+              Description=@project.Description
+              IconUrl=@project.IconUrl />
         }
     </div>
 </div>
@@ -217,17 +188,11 @@
         <h1 class="display-4 area-title">Blazor</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.Blazor))
         {
-            <div class="col-lg-3 col-sm-1 my-3">
-                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-                    <a href="@($"project/{project.Id}")" class="stretched-link" target="_blank">
-                        <img class="card-img-top" src="img/@project.IconUrl" alt="Card image cap">
-                        </a>
-                    <div class="card-body">
-                        <h5 class="card-title">@project.Title</h5>
-                        <p class="card-text">@project.Description</p>
-                    </div>
-                </div>
-            </div>
+            <Card Type="Project"
+              Id=@project.Id.ToString()
+              Title=@project.Title
+              Description=@project.Description
+              IconUrl=@project.IconUrl />
         }
     </div>
 </div>
@@ -237,17 +202,11 @@
         <h1 class="display-4 area-title">MAUI</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.MAUI))
         {
-            <div class="col-lg-3 col-sm-1 my-3">
-                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-                    <a href="@($"project/{project.Id}")" class="stretched-link" target="_blank">
-                        <img class="card-img-top" src="img/@project.IconUrl" alt="Card image cap">
-                        </a>
-                    <div class="card-body">
-                        <h5 class="card-title">@project.Title</h5>
-                        <p class="card-text">@project.Description</p>
-                    </div>
-                </div>
-            </div>
+            <Card Type="Project"
+              Id=@project.Id.ToString()
+              Title=@project.Title
+              Description=@project.Description
+              IconUrl=@project.IconUrl />
         }
     </div>
 </div>
@@ -257,17 +216,11 @@
         <h1 class="display-4 area-title">Azure</h1>
         @foreach (var project in projects.Where(x => x.Area == Area.Azure))
         {
-            <div class="col-lg-3 col-sm-1 my-3">
-                <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-                    <a href="@($"project/{project.Id}")" class="stretched-link" target="_blank">
-                        <img class="card-img-top" src="img/@project.IconUrl" alt="Card image cap">
-                        </a>
-                    <div class="card-body">
-                        <h5 class="card-title">@project.Title</h5>
-                        <p class="card-text">@project.Description</p>
-                    </div>
-                </div>
-            </div>
+            <Card Type="Project"
+              Id=@project.Id.ToString()
+              Title=@project.Title
+              Description=@project.Description
+              IconUrl=@project.IconUrl />
         }
     </div>
 </div>
@@ -341,24 +294,6 @@
     .area-first-steps {
         background-color: #1C236D;
         padding-bottom: 50px;
-    }
-
-    .card-img-top {
-        max-width: 100px;
-    }
-
-    .card {
-        border: none;
-        padding: 30px 0;
-        min-height: 100%;
-        width: 100% !important;
-    }
-
-    .card-title {
-        font-size: 20px;
-        font-family: Roboto;
-        color: #1C236D;
-        font-weight: 600;
     }
 
     .area-title {
