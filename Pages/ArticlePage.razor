@@ -18,7 +18,7 @@
             @if (!String.IsNullOrEmpty(block.ImgUrl))
             {
                 <div class="col-2 icon-div">
-                    <img src="@(baseUrl)/@block.ImgUrl" width="70" alt="" class="align-middle">
+                    <img src="img/@block.ImgUrl" width="70" alt="" class="align-middle">
                 </div>
             }
             <div class="@GridStyle(!String.IsNullOrEmpty(block.ImgUrl))">
@@ -28,7 +28,7 @@
                 {
                     if (paragraph.IsPicture)
                     {
-                        <img src="@(baseUrl)/@paragraph.PictureUrl" width="500">
+                        <img src="img/@paragraph.PictureUrl" width="500">
                     }
 
                     if (paragraph.IsVideo)
@@ -53,7 +53,7 @@
     {
         <div class="row">
             <div class="col d-flex justify-content-center icon-div">
-                <img src="@(baseUrl)/@block.ImgUrl" width="70" alt="" class="align-middle">
+                <img src="img/@block.ImgUrl" width="70" alt="" class="align-middle">
             </div>
         </div>
         <div class="row pb-4">
@@ -66,7 +66,7 @@
                 {
                     if (paragraph.IsPicture)
                     {
-                        <img src="@(baseUrl)/@paragraph.PictureUrl" width="500">
+                        <img src="img/@paragraph.PictureUrl" width="500">
                     }
 
                     if (paragraph.IsVideo)
@@ -91,7 +91,6 @@
     [Parameter]
     public string ArticleId { get; set; }
     public Article Article { get; set; }
-    protected string baseUrl = "https://www.thecsharpacademy.com/wp-content/uploads";
 
     protected async override Task OnParametersSetAsync()
     {
