@@ -93,8 +93,7 @@ public class RegisterModel : PageModel
                 UserName = userName,
                 Email = Input.Email,
                 FirstName = Input.FirstName,
-                LastName = Input.LastName,
-                CompletedProjects = ""
+                LastName = Input.LastName
             };
           
             await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);

@@ -10,4 +10,6 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
         : base(options)
     {
     }
+
+    public virtual DbSet<DashboardProject> DashboardProjects { get; set; }
 }

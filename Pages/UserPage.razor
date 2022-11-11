@@ -1,19 +1,95 @@
 ﻿@page "/user"
 @using Microsoft.AspNetCore.Identity;
+@using TCSA.Data;
 @using TCSA.Models;
 @inject IHttpContextAccessor httpContextAccessor
 @inject HttpClient Http
 
-<p></p>
+<div class="dashboard-header">
+    @if(user != null)
+    {
+        <h1>@user.FirstName @user.LastName</h1>
+        foreach(var project in user.DashboardProjects)
+        {
+            <p>@project.GithubUrl</p>
+        }
+    }
+</div>
+
+<button class="btn btn-outline-secondary marginn" @onclick="OpenSubmitProjectForm">Submit Project</button>
+
+@if (submitProject) {
+    <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="form-group">
+            <InputSelect shadow rounded @bind-Value="dashboardProject.Id" class="form-select">
+                <option selected>Open this select menu</option>
+                @foreach (var project in projects)
+                {
+                    <option value="@project.Id">@project.Area - @project.Title</option>
+                }
+            </InputSelect>
+            <p>
+                <label>
+                    Github Url
+                    <InputText class="form-control" @bind-Value="dashboardProject.GithubUrl" />
+                </label>
+            </p>
+            <button class="btn btn-outline-secondary" type="submit">Submit</button>
+        </div>
+    </EditForm>
+    <button class="btn btn-outline-secondary" @onclick="CloseSubmitProjectForm">Cancel</button>
+}
 
 @code {
-    public string FirstName;
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+    public DashboardProject dashboardProject = new();
+
     private AppUser user;
+    private List<Project>? projects;
+    private bool submitProject = false;
 
     protected override async Task OnInitializedAsync()
     {
+        projects = ArticlesHelper.GetProjects();
+
         var email = httpContextAccessor.HttpContext.User.Identity.Name;
-        user = await Http.GetFromJsonAsync<AppUser>($"https://localhost:7170/api/user?email={email}");
-        Console.WriteLine(user.CompletedProjects);
+
+        try
+        {
+            user = await Http.GetFromJsonAsync<AppUser>($"https://localhost:7170/api/user/{email}");
+        } catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    protected async void SubmitProject()
+    {
+        var project = new DashboardProject
+            {
+                AppUserId = user.Id,
+                GithubUrl = dashboardProject.GithubUrl,
+                ProjectId = dashboardProject.Id
+    };
+
+        var response = await Http.PostAsJsonAsync<DashboardProject>($"https://localhost:7170/api/user/", project);
+    }
+
+    protected void OpenSubmitProjectForm()
+    {
+        submitProject = true;
+    }
+
+    protected void CloseSubmitProjectForm()
+    {
+        submitProject = false;
     }
 }
+
+<style>
+    .dashboard-header {
+        margin-top: 200px;
+    }
+</style>
