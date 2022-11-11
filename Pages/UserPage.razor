@@ -1,0 +1,19 @@
+﻿@page "/user"
+@using Microsoft.AspNetCore.Identity;
+@using TCSA.Models;
+@inject IHttpContextAccessor httpContextAccessor
+@inject HttpClient Http
+
+<p></p>
+
+@code {
+    public string FirstName;
+    private AppUser user;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var email = httpContextAccessor.HttpContext.User.Identity.Name;
+        user = await Http.GetFromJsonAsync<AppUser>($"https://localhost:7170/api/user?email={email}");
+        Console.WriteLine(user.CompletedProjects);
+    }
+}

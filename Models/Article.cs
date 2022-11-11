@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-
-namespace TCSA.Models;
+﻿namespace TCSA.Models;
 
 public class Article
 {
