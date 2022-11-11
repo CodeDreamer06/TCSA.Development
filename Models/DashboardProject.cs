@@ -16,3 +16,10 @@ public class DashboardProject
     [JsonIgnore]
     public AppUser? AppUser { get; set; }
 }
+
+public class DashboardProjectCard : DashboardProject
+{
+    public string IconUrl { get; set; }
+
+    public string Title { get; set; }
+}

@@ -6,20 +6,24 @@
 @inject HttpClient Http
 
 <div class="dashboard-header">
-    @if(user != null)
+    @if (user != null)
     {
         <h1>@user.FirstName @user.LastName</h1>
-        foreach(var project in user.DashboardProjects)
-        {
-               <img class="rounded-circle img-thumbnail projects" src="img/@projects.FirstOrDefault(x => x.Id ==project.ProjectId).IconUrl" />
-            <p>@project.GithubUrl</p>
-        }
+        <div class="row">
+            <h3>My Completed Projects</h3>
+            @foreach (var project in user.DashboardProjects)
+            {
+                <DashboardProjectCard
+                    Project = "@projects.FirstOrDefault(x => x.Id ==project.ProjectId)"/>
+            }
+        </div>
     }
 </div>
 
 <button class="btn btn-outline-secondary marginn" @onclick="OpenSubmitProjectForm">Submit Project</button>
 
-@if (submitProject) {
+@if (submitProject)
+{
     <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
         <DataAnnotationsValidator />
         <ValidationSummary />
@@ -60,7 +64,8 @@
         try
         {
             user = await Http.GetFromJsonAsync<AppUser>($"https://localhost:7170/api/user/{email}");
-        } catch (Exception ex)
+        }
+        catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }
@@ -73,7 +78,7 @@
                 AppUserId = user.Id,
                 GithubUrl = dashboardProject.GithubUrl,
                 ProjectId = dashboardProject.Id
-    };
+            };
 
         var response = await Http.PostAsJsonAsync<DashboardProject>($"https://localhost:7170/api/user/", project);
     }
@@ -91,10 +96,10 @@
 
 <style>
     .dashboard-header {
-        margin-top: 200px;
+        margin-top: 100px;
     }
 
     .projects {
-        max-width: 100px;
+        max-width: 80px;
     }
 </style>
