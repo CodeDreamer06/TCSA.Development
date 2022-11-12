@@ -23,3 +23,10 @@ public class DashboardProjectCard : DashboardProject
 
     public string Title { get; set; }
 }
+
+public class DashboardArticleCard : DashboardProject
+{
+    public string IconUrl { get; set; }
+
+    public string Title { get; set; }
+}

@@ -1,11 +1,11 @@
 ﻿@using TCSA.Models;
 <div class="col-xl-1 col-lg-1 text-center">
-    <img class="rounded-circle img-thumbnail projects" src="img/@Project.IconUrl" />
-    <p>@Project.Title</p>
+    <img class="rounded-circle img-thumbnail projects" src="img/@Article.IconUrl" />
+    <p>@Article.Title</p>
 </div>
 
 @code {
-    [Parameter] public Project Project { get; set; }
+    [Parameter] public Article Article { get; set; }
 
     protected async override Task OnParametersSetAsync()
     {

@@ -9,14 +9,112 @@
     @if (user != null)
     {
         <h1>@user.FirstName @user.LastName</h1>
+        #region Roadmap
+        <h3>My Roadmap</h3>
         <div class="row">
-            <h3>My Completed Projects</h3>
+            <div class="col-xl-1 col-lg-1 text-center position relative">
+                <a href="" target="_blank" @onclick="@OpenFoundationSteps" @onclick:preventDefault>
+                    <img 
+                        class="rounded-circle img-thumbnail projects-completed" 
+                        src="img/icons8-foundation-100.png" />
+                </a>
+                <p>Foundations</p>
+            </div>
+            <div class="col-xl-1 col-lg-1 text-center">
+                <a href="" target="_blank" @onclick="@OpenConsoleSteps" @onclick:preventDefault>
+                    <img 
+                        class="rounded-circle img-thumbnail projects-completed" 
+                        src="img/console-300x300.png" />
+                </a>
+                <p>Console Apps</p>
+            </div>
+            <div class="col-xl-1 col-lg-1 text-center">
+                <a href="" target="_blank" @onclick="@OpenJobSteps" @onclick:preventDefault>
+                    <img class="rounded-circle img-thumbnail projects-completed"
+                     src="img/icons8-permanent-job-96.png" />
+                </a>
+                <p>Apply for Jobs</p>
+            </div>
+            <div class="col-xl-1 col-lg-1 text-center">
+                <img class="rounded-circle img-thumbnail projects" src="img/icons8-full-stack-512.png" />
+                <p>Full Stack</p>
+            </div>
+            <div class="col-xl-1 col-lg-1 text-center">
+                <a href="" target="_blank" @onclick="@OpenCloudSteps" @onclick:preventDefault>
+                    <img class="rounded-circle img-thumbnail projects-completed"
+                     src="img/icons8-cloud-connection-480.png" />
+                </a>
+                <p>Cloud Development</p>
+            </div>
+        </div>
+        #endregion
+        #region Foundation 
+        if(foundationSteps)
+        {
+            <div class="row">
+                <h3>Foundation Steps</h3>
+                @foreach (var article in articles.Where(x => x.Area == Area.StartHere))
+                {
+                    <DashboardArticleCard Article="article" />
+                }
+                <div class="col-lg-3 col-sm-1">
+                    <button class="btn btn-outline-secondary marginn" @onclick="CloseFoundationSteps">Close</button>
+                </div>
+            </div>
+        }
+        #endregion
+        #region Console 
+        if (consoleSteps)
+        {
+            <div class="row">
+                <h3>Console Apps</h3>
+                @foreach (var project in projects.Where(x => x.Area == Area.Console))
+                {
+                    <DashboardProjectCard Project="project" />
+                }
+                <div class="col-lg-3 col-sm-1">
+                    <button class="btn btn-outline-secondary marginn" @onclick="CloseConsoleSteps">Close</button>
+                </div>
+            </div>
+        }
+        #endregion
+        #region Portfolio
+        if (jobSteps)
+        {
+            <div class="row">
+                <h3>Apply For Jobs</h3>
+                @foreach (var project in projects.Where(x => x.Area == Area.StartApplying))
+                {
+                    <DashboardProjectCard Project="project" />
+                }
+                <div class="col-lg-3 col-sm-1">
+                    <button class="btn btn-outline-secondary marginn" @onclick="CloseJobSteps">Close</button>
+                </div>
+            </div>
+        }
+        #endregion
+        #region Cloud
+        if (cloudSteps)
+        {
+            <div class="row">
+                <h3>Cloud Development</h3>
+                @foreach (var project in projects.Where(x => x.Area == Area.Azure))
+                {
+                    <DashboardProjectCard Project="project" />
+                }
+                <div class="col-lg-3 col-sm-1">
+                    <button class="btn btn-outline-secondary marginn" @onclick="CloseCloudSteps">Close</button>
+                </div>
+            </div>
+        }
+        #endregion
+        @*<div class="row">
+            <h3>Console Apps</h3>
             @foreach (var project in user.DashboardProjects)
             {
-                <DashboardProjectCard
-                    Project = "@projects.FirstOrDefault(x => x.Id ==project.ProjectId)"/>
+                <DashboardProjectCard Project="@projects.FirstOrDefault(x => x.Id ==project.ProjectId)" />
             }
-        </div>
+        </div>*@
     }
 </div>
 
@@ -52,12 +150,18 @@
     public DashboardProject dashboardProject = new();
 
     private AppUser user;
+    private List<Article>? articles;
     private List<Project>? projects;
     private bool submitProject = false;
+    private bool foundationSteps = false;
+    private bool consoleSteps = false;
+    private bool jobSteps = false;
+    private bool cloudSteps = false;
 
     protected override async Task OnInitializedAsync()
     {
         projects = ArticlesHelper.GetProjects();
+        articles = ArticlesHelper.GetArticles();
 
         var email = httpContextAccessor.HttpContext.User.Identity.Name;
 
@@ -83,14 +187,54 @@
         var response = await Http.PostAsJsonAsync<DashboardProject>($"https://localhost:7170/api/user/", project);
     }
 
-    protected void OpenSubmitProjectForm()
+    protected async Task OpenSubmitProjectForm()
     {
         submitProject = true;
     }
 
-    protected void CloseSubmitProjectForm()
+    protected async Task CloseSubmitProjectForm()
     {
         submitProject = false;
+    }
+
+    protected async Task OpenFoundationSteps()
+    {
+        foundationSteps = true;
+    }
+
+    protected async Task CloseFoundationSteps()
+    {
+        foundationSteps = false;
+    }
+
+    protected async Task OpenConsoleSteps()
+    {
+        consoleSteps = true;
+    }
+
+    protected async Task CloseConsoleSteps()
+    {
+        consoleSteps = false;
+    }
+
+    protected async Task OpenJobSteps()
+    {
+        jobSteps = true;
+    }
+
+    protected void CloseJobSteps()
+    {
+        jobSteps = false;
+    }
+
+    protected async Task OpenCloudSteps()
+    {
+        cloudSteps = true;
+    }
+
+    protected void CloseCloudSteps()
+    {
+        cloudSteps = false;
     }
 }
 
@@ -100,6 +244,15 @@
     }
 
     .projects {
+        max-width: 80px;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+
+    .projects-completed {
         max-width: 80px;
     }
 </style>
