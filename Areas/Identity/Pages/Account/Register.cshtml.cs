@@ -93,7 +93,8 @@ public class RegisterModel : PageModel
                 UserName = userName,
                 Email = Input.Email,
                 FirstName = Input.FirstName,
-                LastName = Input.LastName
+                LastName = Input.LastName,
+                FrontEndFrameworks = ""
             };
           
             await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);

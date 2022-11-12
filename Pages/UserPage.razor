@@ -36,7 +36,10 @@
                 <p>Apply for Jobs</p>
             </div>
             <div class="col-xl-1 col-lg-1 text-center">
-                <img class="rounded-circle img-thumbnail projects" src="img/icons8-full-stack-512.png" />
+                <a href="" target="_blank" @onclick="@OpenFullStack" @onclick:preventDefault>
+                    <img class="rounded-circle img-thumbnail projects-completed"
+                     src="img/icons8-permanent-job-96.png" />
+                </a>
                 <p>Full Stack</p>
             </div>
             <div class="col-xl-1 col-lg-1 text-center">
@@ -148,6 +151,7 @@
 @code {
     [Parameter] public EventCallback OnValidSubmit { get; set; }
     public DashboardProject dashboardProject = new();
+    public List<FrontEndFramework> frontEndFrameworks = new();
 
     private AppUser user;
     private List<Article>? articles;
@@ -172,6 +176,18 @@
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
+        }
+
+        frontEndFrameworks = 
+        user.FrontEndFrameworks
+        .Split(',')
+        .Where(m => int.TryParse(m, out _))
+        .Select(m => (FrontEndFramework)int.Parse(m))
+        .ToList();
+
+        foreach(var fef in frontEndFrameworks)
+        {
+            Console.WriteLine(fef);
         }
     }
 

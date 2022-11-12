@@ -12,8 +12,8 @@ using TCSA.Data;
 namespace TCSA.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221111125959_mig")]
-    partial class mig
+    [Migration("20221112021813_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -185,6 +185,10 @@ namespace TCSA.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FrontEndFrameworks")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
