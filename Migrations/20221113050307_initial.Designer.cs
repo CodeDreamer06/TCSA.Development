@@ -12,8 +12,8 @@ using TCSA.Data;
 namespace TCSA.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221112021813_init")]
-    partial class init
+    [Migration("20221113050307_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -257,6 +257,9 @@ namespace TCSA.Migrations
                     b.Property<string>("GithubUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("bit");
 
                     b.Property<int>("ProjectId")
                         .HasColumnType("int");

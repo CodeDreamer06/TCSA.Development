@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace TCSA.Models;
@@ -10,7 +11,14 @@ public class DashboardProject
     [Required]
     public string GithubUrl { get; set; }
 
+    [DefaultValue("Placeholder")]
     public string AppUserId { get; set; }
+
+    [Required]
+    [DefaultValue(false)]
+    public bool IsCompleted { get; set; }
+
+    [Required]
     public int ProjectId { get; set; }
 
     [JsonIgnore]

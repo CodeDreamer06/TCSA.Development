@@ -1,5 +1,7 @@
 ﻿@using TCSA.Models;
 @using TCSA.Data;
+@inject IHttpContextAccessor httpContextAccessor
+@inject HttpClient Http
 
 @page "/article/{ArticleId}"
 
@@ -47,7 +49,6 @@
         </div>
     }
 </div>
-
 <div class="container article-blocks-mobile">
     @foreach (var block in Article.Blocks)
     {
@@ -86,11 +87,25 @@
     }
 </div>
 
+@if (IsLogged) {
+<div class="container user-buttons">
+    <btn>Mark As Complete</btn>
+</div>
+}
 
 @code {
     [Parameter]
     public string ArticleId { get; set; }
     public Article Article { get; set; }
+    public bool IsLogged = false;
+
+    protected async override Task OnInitializedAsync()
+    {
+        if (httpContextAccessor.HttpContext.User.Identity.Name != null)
+        {
+            IsLogged = true;
+        }
+    }
 
     protected async override Task OnParametersSetAsync()
     {
