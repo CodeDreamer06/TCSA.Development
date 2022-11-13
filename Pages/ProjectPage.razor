@@ -1,5 +1,6 @@
 ﻿@using TCSA.Models;
 @using TCSA.Data;
+@using TCSA.Services;
 @inject IHttpContextAccessor httpContextAccessor
 @inject HttpClient Http
 
@@ -218,26 +219,32 @@
 
     @if (IsLogged)
     {
-        <button class="btn btn-outline-secondary marginn" @onclick="OpenSubmitProjectForm">Submit Project</button>
-
-        @if (submitProject)
+        @if(IsCompleted)
         {
-            <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
-                <DataAnnotationsValidator />
-                <ValidationSummary />
-                <div class="form-group">
-                    <InputNumber hidden @bind-Value="dashboardProject.Id"></InputNumber>
-                    <p>
-                        <label>
-                            Github Url
-                            <InputText class="form-control" @bind-Value="dashboardProject.GithubUrl" />
-                            <InputText hidden class="form-control" @bind-Value="dashboardProject.AppUserId" />
-                        </label>
-                    </p>
-                    <button class="btn btn-outline-secondary" type="submit">Submit</button>
-                </div>
-            </EditForm>
-            <button class="btn btn-outline-secondary" @onclick="CloseSubmitProjectForm">Cancel</button>
+            <button class="btn btn-outline-secondary" type="button" @onclick="MarkAsIncomplete">Mark As Unread</button>
+        } else
+        {
+            <button class="btn btn-outline-secondary marginn" @onclick="OpenSubmitProjectForm">Submit Project</button>
+
+            @if (submitProject)
+            {
+                <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="form-group">
+                        <InputNumber hidden @bind-Value="dashboardProject.Id"></InputNumber>
+                        <p>
+                            <label>
+                                Github Url
+                                <InputText class="form-control" @bind-Value="dashboardProject.GithubUrl" />
+                                <InputText hidden class="form-control" @bind-Value="dashboardProject.AppUserId" />
+                            </label>
+                        </p>
+                        <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                    </div>
+                </EditForm>
+                <button class="btn btn-outline-secondary" @onclick="CloseSubmitProjectForm">Cancel</button>
+            }
         }
     }
 </div>
@@ -497,13 +504,17 @@
 
 
 @code {
+    [Inject]
+    protected IUserService UserService { get; set; }
     private bool submitProject = false;
     private AppUser user;
     [Parameter]
     public string ProjectId { get; set; }
     public Project Project { get; set; }
     public bool IsLogged = false;
+    public bool IsCompleted { get; set; }
     public DashboardProject dashboardProject = new();
+    public DashboardProject incomingDashboardProject = new();
 
     protected async override Task OnInitializedAsync()
     {
@@ -518,7 +529,13 @@
 
         try
         {
-            user = await Http.GetFromJsonAsync<AppUser>($"https://localhost:7170/api/user/{email}");
+            user = await UserService.GetUser(email);
+
+            if (user.DashboardProjects.Any(x => x.ProjectId == int.Parse(ProjectId)))
+            {
+                incomingDashboardProject = user.DashboardProjects.Single(x => x.ProjectId == Project.Id);
+                IsCompleted = incomingDashboardProject.IsCompleted;
+            }
         }
         catch (Exception ex)
         {
@@ -536,7 +553,12 @@
                 IsCompleted = true
             };
 
-        var response = await Http.PostAsJsonAsync<DashboardProject>($"https://localhost:7170/api/user/", project);
+        UserService.PostProject(project);
+    }
+
+    protected async Task MarkAsIncomplete()
+    {
+        UserService.MarkAsIncomplete(incomingDashboardProject);
     }
 
     protected void OpenSubmitProjectForm()

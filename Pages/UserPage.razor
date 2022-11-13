@@ -2,8 +2,8 @@
 @using Microsoft.AspNetCore.Identity;
 @using TCSA.Data;
 @using TCSA.Models;
+@using TCSA.Services;
 @inject IHttpContextAccessor httpContextAccessor
-@inject HttpClient Http
 
 <div class="dashboard-header">
     @if (user != null)
@@ -28,7 +28,7 @@
             </div>
             <div class="col-xl-1 col-lg-1 text-center">
                 <a href="" target="_blank" @onclick="@OpenJobSteps" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.StartHere, false))"
+                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.StartApplying, false))"
                      src="img/icons8-permanent-job-96.png" />
                 </a>
                 <p>Apply for Jobs</p>
@@ -56,7 +56,8 @@
                 <h3>Foundation Steps</h3>
                 @foreach (var article in articles.Where(x => x.Area == Area.StartHere))
                 {
-                    <DashboardArticleCard Article="article" />
+                    <DashboardArticleCard Article="article"
+                              IsComplete="@CheckIfProjectIsCompleted(article.Id)" />
                 }
                 <div class="col-lg-3 col-sm-1">
                     <button class="btn btn-outline-secondary marginn" @onclick="CloseFoundationSteps">Close</button>
@@ -204,6 +205,9 @@
 }
 
 @code {
+    [Inject]
+    protected IUserService UserService { get; set; }
+
     [Parameter] public EventCallback OnValidSubmit { get; set; }
     public DashboardProject dashboardProject = new();
     public List<FrontEndFramework> frontEndFrameworks = new();
@@ -229,7 +233,7 @@
 
         try
         {
-            user = await Http.GetFromJsonAsync<AppUser>($"https://localhost:7170/api/user/{email}");
+            user = await UserService.GetUser(email);
         }
         catch (Exception ex)
         {
@@ -259,7 +263,7 @@
                 IsCompleted = true
             };
 
-        var response = await Http.PostAsJsonAsync<DashboardProject>($"https://localhost:7170/api/user/", project);
+        UserService.PostProject(project);
     }
 
     protected bool CheckIfProjectIsCompleted(int projectId)
@@ -339,12 +343,7 @@
 
             foreach (int id in articleIds)
             {
-                if (!user.DashboardProjects.Any(x => x.ProjectId == id))
-                {
-                    return "incomplete-area";
-                }
-
-                if (!user.DashboardProjects.Single(x => x.ProjectId == id).IsCompleted)
+                if (!user.DashboardProjects.Any(x => x.ProjectId == id) || !user.DashboardProjects.Single(x => x.ProjectId == id).IsCompleted)
                 {
                     return "incomplete-area";
                 }

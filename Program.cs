@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using TCSA.Areas.Identity;
 using TCSA.Data;
 using TCSA.Models;
+using TCSA.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,9 @@ builder.Services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireCo
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<AppUser>>();
+builder.Services.AddScoped<IUserService, UserService>(); 
+
+
 builder.Services.AddHttpClient("LocalApi", client => client.BaseAddress = new Uri("https://localhost:44333/"));
 builder.Services.AddHttpContextAccessor();
 

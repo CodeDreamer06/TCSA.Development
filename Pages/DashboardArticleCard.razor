@@ -1,6 +1,8 @@
 ﻿@using TCSA.Models;
 <div class="col-xl-1 col-lg-1 text-center">
-    <img class="rounded-circle img-thumbnail @(IsComplete ? "complete-project" : "incomplete-project")" src="img/@Article.IconUrl" />
+    <a href="article/@Article.Id" target="_blank">
+        <img class="rounded-circle img-thumbnail @(IsComplete ? "complete-project" : "incomplete-project")" src="img/@Article.IconUrl" />
+    </a>
     <p>@Article.Title</p>
 </div>
 

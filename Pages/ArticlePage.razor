@@ -127,7 +127,8 @@
             {
                 AppUserId = user.Id,
                 GithubUrl = "Not required",
-                ProjectId = int.Parse(ArticleId)
+                ProjectId = int.Parse(ArticleId),
+                IsCompleted = true
             };
 
         var response = await Http.PostAsJsonAsync<DashboardProject>($"https://localhost:7170/api/user/", project);

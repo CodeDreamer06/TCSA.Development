@@ -3,7 +3,9 @@
 @inject HttpClient Http
 
 <div class="col-xl-1 col-lg-1 text-center">
-    <img class="rounded-circle img-thumbnail @(IsComplete ? "complete-project" : "incomplete-project")" src="img/@Project.IconUrl" />
+    <a href="project/@Project.Id" target="_blank">
+        <img class="rounded-circle img-thumbnail @(IsComplete ? "complete-project" : "incomplete-project")" src="img/@Project.IconUrl" />
+    </a>
     <p>@Project.Title</p>
 </div>
 
