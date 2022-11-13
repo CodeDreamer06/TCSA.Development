@@ -1,5 +1,7 @@
 ﻿@using TCSA.Models;
 @using TCSA.Data;
+@inject IHttpContextAccessor httpContextAccessor
+@inject HttpClient Http
 
 @page "/project/{ProjectId}"
 
@@ -212,6 +214,31 @@
                 </div>
             </div>
         </div>
+    }
+
+    @if (IsLogged)
+    {
+        <button class="btn btn-outline-secondary marginn" @onclick="OpenSubmitProjectForm">Submit Project</button>
+
+        @if (submitProject)
+        {
+            <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <div class="form-group">
+                    <InputNumber hidden @bind-Value="dashboardProject.Id"></InputNumber>
+                    <p>
+                        <label>
+                            Github Url
+                            <InputText class="form-control" @bind-Value="dashboardProject.GithubUrl" />
+                            <InputText hidden class="form-control" @bind-Value="dashboardProject.AppUserId" />
+                        </label>
+                    </p>
+                    <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                </div>
+            </EditForm>
+            <button class="btn btn-outline-secondary" @onclick="CloseSubmitProjectForm">Cancel</button>
+        }
     }
 </div>
 
@@ -440,16 +467,85 @@
             </div>
         </div>
     }
+
+    @if (IsLogged)
+    {
+        <button class="btn btn-outline-secondary marginn" @onclick="OpenSubmitProjectForm">Submit Project</button>
+
+        @if (submitProject)
+        {
+            <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <div class="form-group">
+                    <InputNumber hidden @bind-Value="dashboardProject.Id"></InputNumber>
+                    <p>
+                        <label>
+                            Github Url
+                            <InputText class="form-control" @bind-Value="dashboardProject.GithubUrl" />
+                            <InputText hidden class="form-control" @bind-Value="dashboardProject.AppUserId" />
+                        </label>
+                    </p>
+                    <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                </div>
+            </EditForm>
+            <button class="btn btn-outline-secondary" @onclick="CloseSubmitProjectForm">Cancel</button>
+        }
+    }
 </div>
 
+
+
 @code {
+    private bool submitProject = false;
+    private AppUser user;
     [Parameter]
     public string ProjectId { get; set; }
     public Project Project { get; set; }
+    public bool IsLogged = false;
+    public DashboardProject dashboardProject = new();
 
-    protected async override Task OnParametersSetAsync()
+    protected async override Task OnInitializedAsync()
     {
         Project = ArticlesHelper.GetProjects().Single(x => x.Id == int.Parse(ProjectId));
+
+        if (httpContextAccessor.HttpContext.User.Identity.Name != null)
+        {
+            IsLogged = true;
+        }
+
+        var email = httpContextAccessor.HttpContext.User.Identity.Name;
+
+        try
+        {
+            user = await Http.GetFromJsonAsync<AppUser>($"https://localhost:7170/api/user/{email}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    protected async Task SubmitProject()
+    {
+        var project = new DashboardProject
+            {
+                AppUserId = user.Id,
+                GithubUrl = dashboardProject.GithubUrl,
+                ProjectId = Project.Id
+            };
+
+        var response = await Http.PostAsJsonAsync<DashboardProject>($"https://localhost:7170/api/user/", project);
+    }
+
+    protected void OpenSubmitProjectForm()
+    {
+        submitProject = true;
+    }
+
+    protected void CloseSubmitProjectForm()
+    {
+        submitProject = false;
     }
 
     private string GridStyle(bool hasIcon)

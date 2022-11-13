@@ -29,6 +29,10 @@ namespace TCSA.Controllers
         [HttpPost]
         public async Task<IActionResult> PostProject(DashboardProject project)
         {
+            if (project.GithubUrl== null)
+            {
+                project.GithubUrl = "Project is article";
+            }
             await _context.DashboardProjects.AddAsync(project);
             var response = await _context.SaveChangesAsync();   
             return Ok(response);

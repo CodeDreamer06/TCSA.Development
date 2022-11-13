@@ -89,11 +89,12 @@
 
 @if (IsLogged) {
 <div class="container user-buttons">
-    <btn>Mark As Complete</btn>
+    <btn class="btn btn-primary "type="button" @onclick="MarkAsComplete">Mark As Complete</btn>
 </div>
 }
 
 @code {
+    private AppUser user;
     [Parameter]
     public string ArticleId { get; set; }
     public Article Article { get; set; }
@@ -101,15 +102,40 @@
 
     protected async override Task OnInitializedAsync()
     {
+        Article = ArticlesHelper.GetArticles().Single(x => x.Id == int.Parse(ArticleId));
+
         if (httpContextAccessor.HttpContext.User.Identity.Name != null)
         {
             IsLogged = true;
         }
+
+        var email = httpContextAccessor.HttpContext.User.Identity.Name;
+
+        try
+        {
+            user = await Http.GetFromJsonAsync<AppUser>($"https://localhost:7170/api/user/{email}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    protected async Task MarkAsComplete()
+    {
+        var project = new DashboardProject
+            {
+                AppUserId = user.Id,
+                GithubUrl = "Not required",
+                ProjectId = int.Parse(ArticleId)
+            };
+
+        var response = await Http.PostAsJsonAsync<DashboardProject>($"https://localhost:7170/api/user/", project);
     }
 
     protected async override Task OnParametersSetAsync()
     {
-        Article = ArticlesHelper.GetArticles().Single(x => x.Id == int.Parse(ArticleId));
+        
     }
 
     private string GridStyle(bool hasIcon)
