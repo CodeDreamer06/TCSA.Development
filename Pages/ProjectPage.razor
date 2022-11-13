@@ -532,7 +532,8 @@
             {
                 AppUserId = user.Id,
                 GithubUrl = dashboardProject.GithubUrl,
-                ProjectId = Project.Id
+                ProjectId = Project.Id,
+                IsCompleted = true
             };
 
         var response = await Http.PostAsJsonAsync<DashboardProject>($"https://localhost:7170/api/user/", project);

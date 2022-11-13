@@ -37,6 +37,7 @@ public enum Area
     React,
     Blazor,
     MAUI,
-    Azure
+    Azure,
+    FullStack
 }
 

@@ -14,35 +14,35 @@
         <div class="row">
             <div class="col-xl-1 col-lg-1 text-center position relative">
                 <a href="" target="_blank" @onclick="@OpenFoundationSteps" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail @isCompleteClass"
+                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.StartHere, false))"
                      src="img/icons8-foundation-100.png" />
                 </a>
                 <p>Foundations</p>
             </div>
             <div class="col-xl-1 col-lg-1 text-center">
                 <a href="" target="_blank" @onclick="@OpenConsoleSteps" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail projects-completed"
+                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.Console, false))"
                      src="img/console-300x300.png" />
                 </a>
                 <p>Console Apps</p>
             </div>
             <div class="col-xl-1 col-lg-1 text-center">
                 <a href="" target="_blank" @onclick="@OpenJobSteps" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail projects-completed"
+                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.StartHere, false))"
                      src="img/icons8-permanent-job-96.png" />
                 </a>
                 <p>Apply for Jobs</p>
             </div>
             <div class="col-xl-1 col-lg-1 text-center">
                 <a href="" target="_blank" @onclick="@OpenFullStack" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail projects-completed"
+                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(null, true))"
                      src="img/icons8-full-stack-512.png" />
                 </a>
                 <p>Full Stack</p>
             </div>
             <div class="col-xl-1 col-lg-1 text-center">
                 <a href="" target="_blank" @onclick="@OpenCloudSteps" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail projects-completed"
+                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.Azure, false))"
                      src="img/icons8-cloud-connection-480.png" />
                 </a>
                 <p>Cloud Development</p>
@@ -71,7 +71,8 @@
                 <h3>Console Apps</h3>
                 @foreach (var project in projects.Where(x => x.Area == Area.Console))
                 {
-                    <DashboardProjectCard Project="project" />
+                    <DashboardProjectCard Project="project"
+                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
                 }
                 <div class="col-lg-3 col-sm-1">
                     <button class="btn btn-outline-secondary marginn" @onclick="CloseConsoleSteps">Close</button>
@@ -86,7 +87,8 @@
                 <h3>Apply For Jobs</h3>
                 @foreach (var project in projects.Where(x => x.Area == Area.StartApplying))
                 {
-                    <DashboardProjectCard Project="project" />
+                    <DashboardProjectCard Project="project"
+                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
                 }
                 <div class="col-lg-3 col-sm-1">
                     <button class="btn btn-outline-secondary marginn" @onclick="CloseJobSteps">Close</button>
@@ -105,35 +107,40 @@
                     {
                         @foreach (var project in projects.Where(x => x.Area == Area.MVC))
                         {
-                            <DashboardProjectCard Project="project" />
+                            <DashboardProjectCard Project="project"
+                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
                         }
                     }
                     else if (frontEndFrameworks.Contains(FrontEndFramework.Blazor))
                     {
                         @foreach (var project in projects.Where(x => x.Area == Area.Blazor))
                         {
-                            <DashboardProjectCard Project="project" />
+                            <DashboardProjectCard Project="project"
+                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
                         }
                     }
                     else if (frontEndFrameworks.Contains(FrontEndFramework.React))
                     {
                         @foreach (var project in projects.Where(x => x.Area == Area.React))
                         {
-                            <DashboardProjectCard Project="project" />
+                            <DashboardProjectCard Project="project"
+                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
                         }
                     }
                     else if (frontEndFrameworks.Contains(FrontEndFramework.Angular))
                     {
                         @foreach (var project in projects.Where(x => x.Area == Area.Angular))
                         {
-                            <DashboardProjectCard Project="project" />
+                            <DashboardProjectCard Project="project"
+                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
                         }
                     }
                     else if (frontEndFrameworks.Contains(FrontEndFramework.MAUI))
                     {
                         @foreach (var project in projects.Where(x => x.Area == Area.MAUI))
                         {
-                            <DashboardProjectCard Project="project" />
+                            <DashboardProjectCard Project="project"
+                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
                         }
                     }
                 }
@@ -248,10 +255,103 @@
             {
                 AppUserId = user.Id,
                 GithubUrl = dashboardProject.GithubUrl,
-                ProjectId = dashboardProject.Id
+                ProjectId = dashboardProject.Id,
+                IsCompleted = true
             };
 
         var response = await Http.PostAsJsonAsync<DashboardProject>($"https://localhost:7170/api/user/", project);
+    }
+
+    protected bool CheckIfProjectIsCompleted(int projectId)
+    {
+        if (!user.DashboardProjects.Any(x => x.ProjectId == projectId))
+        {
+            return false;
+        }
+
+        var project = user.DashboardProjects.Single(x => x.ProjectId == projectId);
+
+        if (project.IsCompleted)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    protected string CheckIfAreaIsCompleted(Area? area, bool isFullStack)
+    {
+        if (area != Area.StartHere)
+        {
+            if (!isFullStack)
+            {
+                var projectIds = projects.Where(x => x.Area == area).Select(x => x.Id);
+
+                foreach (int id in projectIds)
+                {
+                    if (!user.DashboardProjects.Any(x => x.ProjectId == id))
+                    {
+                        return "incomplete-area";
+                    }
+
+                    if (!user.DashboardProjects.Single(x => x.ProjectId == id).IsCompleted)
+                    {
+                        return "incomplete-area";
+                    }
+                }
+            } 
+            else
+            {
+                var fullstackAreas = new List<Area>
+            {
+                Area.React,
+                Area.MVC,
+                Area.Angular,
+                Area.Blazor,
+                Area.MAUI
+            };
+
+                foreach (var a in fullstackAreas)
+                {
+                    var fullStackProjectIds = projects.Where(x => x.Area == a).Select(x => x.Id);
+                    var completedCount = 0;
+
+                    foreach (int id in fullStackProjectIds)
+                    {
+                        if (user.DashboardProjects.Any(x => x.ProjectId == id) && user.DashboardProjects.Single(x => x.ProjectId == id).IsCompleted)
+                        {
+                            completedCount += 1;
+                        }
+                    }
+
+                    if (completedCount == fullStackProjectIds.Count())
+                    {
+                        return "complete-area";
+                    } 
+                }
+
+                return "incomplete-area";
+            }
+        } 
+        else
+        {
+            var articleIds = articles.Where(x => x.Area == Area.StartHere).Select(x => x.Id);
+
+            foreach (int id in articleIds)
+            {
+                if (!user.DashboardProjects.Any(x => x.ProjectId == id))
+                {
+                    return "incomplete-area";
+                }
+
+                if (!user.DashboardProjects.Single(x => x.ProjectId == id).IsCompleted)
+                {
+                    return "incomplete-area";
+                }
+            }
+        }
+
+        return "complete-area";
     }
 
     protected void OpenSubmitProjectForm()
@@ -320,7 +420,7 @@
         margin-top: 100px;
     }
 
-    .projects-incomplete {
+    .incomplete-area {
         max-width: 80px;
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
@@ -329,7 +429,7 @@
         filter: grayscale(100%);
     }
 
-    .projects-completed {
+    .complete-area {
         max-width: 80px;
     }
 </style>

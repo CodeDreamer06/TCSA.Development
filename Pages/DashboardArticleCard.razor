@@ -1,16 +1,12 @@
 ﻿@using TCSA.Models;
 <div class="col-xl-1 col-lg-1 text-center">
-    <img class="rounded-circle img-thumbnail projects" src="img/@Article.IconUrl" />
+    <img class="rounded-circle img-thumbnail @(IsComplete ? "complete-project" : "incomplete-project")" src="img/@Article.IconUrl" />
     <p>@Article.Title</p>
 </div>
 
 @code {
+    [Parameter] public bool IsComplete { get; set; }
     [Parameter] public Article Article { get; set; }
-
-    protected async override Task OnParametersSetAsync()
-    {
-        
-    }
 }
 
 <style>
@@ -34,5 +30,18 @@
         font-family: Roboto;
         color: #1C236D;
         font-weight: 600;
+    }
+
+    .incomplete-project {
+        max-width: 80px;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+
+    .complete-project {
+        max-width: 80px;
     }
 </style>
