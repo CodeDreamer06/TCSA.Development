@@ -227,7 +227,6 @@
                 @if (IsCompleted)
                 {
                     <button class="btn btn-outline-secondary" type="button" @onclick="MarkAsIncomplete">Mark As Incomplete</button>
-                    <p>@ResultMessage</p>
                 }
                 else
                 {
@@ -258,7 +257,7 @@
                         </div>
                     }
                 }
-
+                <p>@ResultMessage</p>
             </div>
         </div>
     }
@@ -534,13 +533,13 @@
 
     protected async override Task OnInitializedAsync()
     {
+        Project = ArticlesHelper.GetProjects().Single(x => x.Id == int.Parse(ProjectId));
+
         await GetUser();
     }
 
     protected async Task GetUser()
     {
-        Project = ArticlesHelper.GetProjects().Single(x => x.Id == int.Parse(ProjectId));
-
         if (httpContextAccessor.HttpContext.User.Identity.Name != null)
         {
             IsLogged = true;

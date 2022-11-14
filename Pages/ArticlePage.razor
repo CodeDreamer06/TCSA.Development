@@ -62,10 +62,11 @@
                 }
                 else
                 {
-                    <div class="container user-buttons">
-                        <btn class="btn btn-primary " type="button" @onclick="MarkAsComplete">Mark As Read</btn>
+                    <div class="user-buttons">
+                        <btn class="btn btn-outline-secondary" type="button" @onclick="MarkAsComplete">Mark As Read</btn>
                     </div>
                 }
+                    <p>@ResultMessage</p>
             </div>
         </div>
 
@@ -75,7 +76,7 @@
     {
         <div class="container user-buttons">
             <a href="article/@(Article.Id + 1)" target="_blank">
-                <btn class="btn btn-primary " type="button" @onclick="MarkAsComplete">Next</btn>
+                <btn class="btn btn-outline-secondary" type="button">Next</btn>
             </a>
         </div>
     }
@@ -130,20 +131,21 @@
     public bool HasNext { get; set; }
     public DashboardProject incomingDashboardProject = new();
     public List<int> GroupArticles = new List<int> { 5, 6, 7, 8 };
+    public string ResultMessage = "";
 
     protected async override Task OnInitializedAsync()
     {
         Article = ArticlesHelper.GetArticles().Single(x => x.Id == int.Parse(ArticleId));
 
-        if (GroupArticles.Contains(Article.Id))
-        {
-            HasNext = true;
-        }
+        await GetUser();
+    }
 
+    protected async Task GetUser()
+    {
         if (httpContextAccessor.HttpContext.User.Identity.Name != null)
         {
             IsLogged = true;
-        };
+        }
 
         var email = httpContextAccessor.HttpContext.User.Identity.Name;
 
@@ -155,6 +157,10 @@
             {
                 incomingDashboardProject = user.DashboardProjects.Single(x => x.ProjectId == Article.Id);
                 IsCompleted = incomingDashboardProject.IsCompleted;
+            }
+            else
+            {
+                IsCompleted = false;
             }
         }
         catch (Exception ex)
@@ -173,12 +179,33 @@
                 IsCompleted = true
             };
 
-        UserService.PostProject(project);
+        var response = await UserService.PostProject(project);
+
+        if (response == 1)
+        {
+            ResultMessage = "Your project was submitted successfuly";
+
+            await InvokeAsync(async () => { await GetUser(); StateHasChanged(); });
+        }
+        else
+        {
+            ResultMessage = "There was an error when submitting your project";
+        }
     }
 
     protected async Task MarkAsIncomplete()
     {
-        UserService.MarkAsIncomplete(incomingDashboardProject);
+        var response = await UserService.MarkAsIncomplete(incomingDashboardProject);
+
+        if (response == 1)
+        {
+            ResultMessage = "Your project was marked as incomplete";
+            await InvokeAsync(async () => { await GetUser(); StateHasChanged(); });
+        }
+        else
+        {
+            ResultMessage = "There was an error when marking your project as incomplete";
+        }
     }
 
     private string GridStyle(bool hasIcon)
