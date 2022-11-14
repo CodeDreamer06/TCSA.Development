@@ -62,6 +62,15 @@
             </div>
         }
     }
+
+    @if (HasNext)
+    {
+        <div class="container user-buttons">
+            <a href="article/@(Article.Id + 1)" target="_blank">
+                <btn class="btn btn-primary " type="button" @onclick="MarkAsComplete">Next</btn>
+            </a>
+        </div>
+    }
 </div>
 <div class="container article-blocks-mobile">
     @foreach (var block in Article.Blocks)
@@ -110,11 +119,18 @@
     public Article Article { get; set; }
     public bool IsLogged = false;
     public bool IsCompleted { get; set; }
+    public bool HasNext { get; set; }
     public DashboardProject incomingDashboardProject = new();
+    public List<int> GroupArticles = new List<int> { 5, 6, 7, 8 };
 
     protected async override Task OnInitializedAsync()
     {
         Article = ArticlesHelper.GetArticles().Single(x => x.Id == int.Parse(ArticleId));
+
+        if (GroupArticles.Contains(Article.Id))
+        {
+            HasNext = true;
+        }
 
         if (httpContextAccessor.HttpContext.User.Identity.Name != null)
         {
