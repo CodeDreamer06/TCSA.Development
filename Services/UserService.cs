@@ -8,8 +8,8 @@ namespace TCSA.Services;
 public interface IUserService
 {
     Task<AppUser> GetUser(string email);
-    Task PostProject(DashboardProject project);
-    Task MarkAsIncomplete(DashboardProject project);
+    Task<int> PostProject(DashboardProject project);
+    Task<int> MarkAsIncomplete(DashboardProject project);
 }
 
 public class UserService : IUserService
@@ -31,23 +31,24 @@ public class UserService : IUserService
     }
 
     [HttpPost]
-    public async Task PostProject(DashboardProject project)
+    public async Task<int> PostProject(DashboardProject project)
     {
         if (project.GithubUrl == null)
         {
             project.GithubUrl = "Project is article";
         }
         await _context.DashboardProjects.AddAsync(project);
-        var response = await _context.SaveChangesAsync();
+
+        return await _context.SaveChangesAsync();
     }
 
     [HttpPost]
-    public async Task MarkAsIncomplete(DashboardProject project)
+    public async Task<int> MarkAsIncomplete(DashboardProject project)
     {
         project.IsCompleted = false;
 
-        _context.DashboardProjects.Update(project);
+        _context.DashboardProjects.Remove(project);
 
-        var response = await _context.SaveChangesAsync();
+        return await _context.SaveChangesAsync();
     }
 }

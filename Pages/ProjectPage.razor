@@ -219,33 +219,48 @@
 
     @if (IsLogged)
     {
-        @if(IsCompleted)
-        {
-            <button class="btn btn-outline-secondary" type="button" @onclick="MarkAsIncomplete">Mark As Unread</button>
-        } else
-        {
-            <button class="btn btn-outline-secondary marginn" @onclick="OpenSubmitProjectForm">Submit Project</button>
+        <div class="row pb-5">
+            <div class="col-2 icon-div">
+                <img src="img/icons8-completed-task-96.png" width="70" alt="" class="align-middle">
+            </div>
+            <div class=col-10>
+                @if (IsCompleted)
+                {
+                    <button class="btn btn-outline-secondary" type="button" @onclick="MarkAsIncomplete">Mark As Incomplete</button>
+                    <p>@ResultMessage</p>
+                }
+                else
+                {
+                    <h1 class="article-section-title">Submit Your Project</h1>
+                    <p>If you want to track your progress it's time to submit your project! Make sure you send a valid link to a repository. Upon submission, the project will automatically be marked as complete.<br><br>However, it might be remarked as incomplete if the the link doesn't work or the project is deemed unsatisfactory upon review by our team.<br><br></p>
 
-            @if (submitProject)
-            {
-                <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
-                    <DataAnnotationsValidator />
-                    <ValidationSummary />
-                    <div class="form-group">
-                        <InputNumber hidden @bind-Value="dashboardProject.Id"></InputNumber>
-                        <p>
-                            <label>
-                                Github Url
-                                <InputText class="form-control" @bind-Value="dashboardProject.GithubUrl" />
-                                <InputText hidden class="form-control" @bind-Value="dashboardProject.AppUserId" />
-                            </label>
-                        </p>
-                        <button class="btn btn-outline-secondary" type="submit">Submit</button>
-                    </div>
-                </EditForm>
-                <button class="btn btn-outline-secondary" @onclick="CloseSubmitProjectForm">Cancel</button>
-            }
-        }
+                    <button class="btn btn-outline-secondary marginn" @onclick="OpenSubmitProjectForm">Submit Project</button>
+
+                    @if (submitProject)
+                    {
+
+                        <div class="form-group">
+                            <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
+                                <DataAnnotationsValidator />
+                                <ValidationSummary />
+                                <InputNumber hidden @bind-Value="dashboardProject.Id"></InputNumber>
+                                <p>
+                                    <label>
+                                        Github Url
+                                        <InputText class="form-control" @bind-Value="dashboardProject.GithubUrl" />
+                                        <InputText hidden class="form-control" @bind-Value="dashboardProject.AppUserId" />
+                                    </label>
+                                </p>
+                                <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                                <p>@ResultMessage</p>
+                            </EditForm>
+                            <button class="btn btn-outline-secondary" @onclick="CloseSubmitProjectForm">Cancel</button>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
     }
 </div>
 
@@ -515,8 +530,14 @@
     public bool IsCompleted { get; set; }
     public DashboardProject dashboardProject = new();
     public DashboardProject incomingDashboardProject = new();
+    public string ResultMessage = "";
 
     protected async override Task OnInitializedAsync()
+    {
+        await GetUser();
+    }
+
+    protected async Task GetUser()
     {
         Project = ArticlesHelper.GetProjects().Single(x => x.Id == int.Parse(ProjectId));
 
@@ -535,6 +556,9 @@
             {
                 incomingDashboardProject = user.DashboardProjects.Single(x => x.ProjectId == Project.Id);
                 IsCompleted = incomingDashboardProject.IsCompleted;
+            } else
+            {
+                IsCompleted = false;
             }
         }
         catch (Exception ex)
@@ -553,12 +577,32 @@
                 IsCompleted = true
             };
 
-        UserService.PostProject(project);
+        var response = await UserService.PostProject(project);
+
+        if (response == 1)
+        {
+            ResultMessage = "Your project was submitted successfuly"; 
+
+            await InvokeAsync(async () => { await GetUser(); StateHasChanged(); submitProject = false; });
+        } else
+        {
+            ResultMessage = "There was an error when submitting your project";
+        }
     }
 
     protected async Task MarkAsIncomplete()
     {
-        UserService.MarkAsIncomplete(incomingDashboardProject);
+        var response = await UserService.MarkAsIncomplete(incomingDashboardProject);
+
+        if (response == 1)
+        {
+            ResultMessage = "Your project was marked as incomplete";
+            await InvokeAsync(async () => { await GetUser(); StateHasChanged(); });
+        }
+        else
+        {
+            ResultMessage = "There was an error when marking your project as incomplete";
+        }
     }
 
     protected void OpenSubmitProjectForm()

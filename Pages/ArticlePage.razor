@@ -51,16 +51,24 @@
 
     @if (IsLogged)
     {
-        @if (IsCompleted)
-        {
-            <button class="btn btn-outline-secondary" type="button" @onclick="MarkAsIncomplete">Mark As Unread</button>
-        }
-        else
-        {
-            <div class="container user-buttons">
-                <btn class="btn btn-primary " type="button" @onclick="MarkAsComplete">Mark As Read</btn>
+        <div class="row pb-5">
+            <div class="col-2 icon-div">
+                <img src="img/icons8-completed-task-96.png" width="70" alt="" class="align-middle">
             </div>
-        }
+            <div class=col-10>
+                @if (IsCompleted)
+                {
+                    <button class="btn btn-outline-secondary" type="button" @onclick="MarkAsIncomplete">Mark As Unread</button>
+                }
+                else
+                {
+                    <div class="container user-buttons">
+                        <btn class="btn btn-primary " type="button" @onclick="MarkAsComplete">Mark As Read</btn>
+                    </div>
+                }
+            </div>
+        </div>
+
     }
 
     @if (HasNext)
