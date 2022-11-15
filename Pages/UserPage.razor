@@ -5,204 +5,194 @@
 @using TCSA.Services;
 @inject IHttpContextAccessor httpContextAccessor
 
-<div class="dashboard-header">
-    @if (user != null)
+<div class="container w-75">
+    <div class="dashboard-header">
+        @if (user != null)
+        {
+            <h1>@user.FirstName @user.LastName</h1>
+            #region Roadmap
+            <h3>My Roadmap</h3>
+            <div class="row">
+                <div class="col-xl-1 col-lg-1 text-center position relative">
+                    <a href="" target="_blank" @onclick="@ToggleFoundationSteps" @onclick:preventDefault>
+                        <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.StartHere, false))"
+                         src="img/icons8-foundation-100.png" />
+                    </a>
+                    <p>Foundations</p>
+                </div>
+                <div class="col-xl-1 col-lg-1 text-center">
+                    <a href="" target="_blank" @onclick="@ToggleConsoleSteps" @onclick:preventDefault>
+                        <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.Console, false))"
+                         src="img/console-300x300.png" />
+                    </a>
+                    <p>Console Apps</p>
+                </div>
+                <div class="col-xl-1 col-lg-1 text-center">
+                    <a href="" target="_blank" @onclick="@ToggleJobSteps" @onclick:preventDefault>
+                        <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.StartApplying, false))"
+                         src="img/icons8-permanent-job-96.png" />
+                    </a>
+                    <p>Apply for Jobs</p>
+                </div>
+                <div class="col-xl-1 col-lg-1 text-center">
+                    <a href="" target="_blank" @onclick="@ToggleFullStackSteps" @onclick:preventDefault>
+                        <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(null, true))"
+                         src="img/icons8-full-stack-512.png" />
+                    </a>
+                    <p>Full Stack</p>
+                </div>
+                <div class="col-xl-1 col-lg-1 text-center">
+                    <a href="" target="_blank" @onclick="@ToggleCloudSteps" @onclick:preventDefault>
+                        <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.Azure, false))"
+                         src="img/icons8-cloud-connection-480.png" />
+                    </a>
+                    <p>Cloud Development</p>
+                </div>
+            </div>
+            #endregion
+            #region Foundation
+            if (foundationSteps)
+            {
+                <div class="row">
+                    <h3>Foundation Steps <button class="btn btn-sm btn-outline-secondary marginn" @onclick="ToggleFoundationSteps">Close</button></h3>
+                    @foreach (var article in articles.Where(x => x.Area == Area.StartHere))
+                    {
+                        <DashboardArticleCard Article="article"
+                                  IsComplete="@CheckIfProjectIsCompleted(article.Id)" />
+                    }
+                </div>
+            }
+            #endregion
+            #region Console
+            if (consoleSteps)
+            {
+                <div class="row">
+                    <h3>Console Apps <button class="btn btn-sm btn-outline-secondary marginn" @onclick="ToggleConsoleSteps">Close</button></h3>
+                    @foreach (var project in projects.Where(x => x.Area == Area.Console))
+                    {
+                        <DashboardProjectCard Project="project"
+                                  IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
+                    }
+                </div>
+            }
+            #endregion
+            #region Portfolio
+            if (jobSteps)
+            {
+                <div class="row">
+                    <h3>Apply For Jobs <button class="btn btn-sm btn-outline-secondary marginn" @onclick="ToggleJobSteps">Close</button></h3>
+                    @foreach (var project in projects.Where(x => x.Area == Area.StartApplying))
+                    {
+                        <DashboardProjectCard Project="project"
+                                  IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
+                    }
+                </div>
+            }
+            #endregion
+            #region FullStack
+            if (fullStackSteps)
+            {
+                <div class="row">
+                    <h3>Full Stack <button class="btn btn-outline-secondary marginn" @onclick="ToggleFullStackSteps">Close</button></h3>
+                    @if (frontEndFrameworks.Any())
+                    {
+                        if (frontEndFrameworks.Contains(FrontEndFramework.MVC))
+                        {
+                            @foreach (var project in projects.Where(x => x.Area == Area.MVC))
+                            {
+                                <DashboardProjectCard Project="project"
+                                  IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
+                            }
+                        }
+                        else if (frontEndFrameworks.Contains(FrontEndFramework.Blazor))
+                        {
+                            @foreach (var project in projects.Where(x => x.Area == Area.Blazor))
+                            {
+                                <DashboardProjectCard Project="project"
+                                  IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
+                            }
+                        }
+                        else if (frontEndFrameworks.Contains(FrontEndFramework.React))
+                        {
+                            @foreach (var project in projects.Where(x => x.Area == Area.React))
+                            {
+                                <DashboardProjectCard Project="project"
+                                  IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
+                            }
+                        }
+                        else if (frontEndFrameworks.Contains(FrontEndFramework.Angular))
+                        {
+                            @foreach (var project in projects.Where(x => x.Area == Area.Angular))
+                            {
+                                <DashboardProjectCard Project="project"
+                                  IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
+                            }
+                        }
+                        else if (frontEndFrameworks.Contains(FrontEndFramework.MAUI))
+                        {
+                            @foreach (var project in projects.Where(x => x.Area == Area.MAUI))
+                            {
+                                <DashboardProjectCard Project="project"
+                                  IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
+                            }
+                        }
+                    }
+                </div>
+            }
+            #endregion
+            #region Cloud
+            if (cloudSteps)
+            {
+                <div class="row">
+                    <h3>Cloud Development</h3>
+                    @foreach (var project in projects.Where(x => x.Area == Area.Azure))
+                    {
+                        <DashboardProjectCard Project="project" />
+                    }
+                    <div class="col-lg-3 col-sm-1">
+                        <button class="btn btn-outline-secondary marginn" @onclick="ToggleCloudSteps">Close</button>
+                    </div>
+                </div>
+            }
+            #endregion
+            @*<div class="row">
+        <h3>Console Apps</h3>
+        @foreach (var project in user.DashboardProjects)
+        {
+        <DashboardProjectCard Project="@projects.FirstOrDefault(x => x.Id ==project.ProjectId)" />
+        }
+        </div>*@
+        }
+    </div>
+
+    <button class="btn btn-outline-secondary marginn" @onclick="ToggleSubmitProjectForm">Submit Project</button>
+
+    @if (submitProject)
     {
-        <h1>@user.FirstName @user.LastName</h1>
-        #region Roadmap
-        <h3>My Roadmap</h3>
-        <div class="row">
-            <div class="col-xl-1 col-lg-1 text-center position relative">
-                <a href="" target="_blank" @onclick="@OpenFoundationSteps" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.StartHere, false))"
-                     src="img/icons8-foundation-100.png" />
-                </a>
-                <p>Foundations</p>
-            </div>
-            <div class="col-xl-1 col-lg-1 text-center">
-                <a href="" target="_blank" @onclick="@OpenConsoleSteps" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.Console, false))"
-                     src="img/console-300x300.png" />
-                </a>
-                <p>Console Apps</p>
-            </div>
-            <div class="col-xl-1 col-lg-1 text-center">
-                <a href="" target="_blank" @onclick="@OpenJobSteps" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.StartApplying, false))"
-                     src="img/icons8-permanent-job-96.png" />
-                </a>
-                <p>Apply for Jobs</p>
-            </div>
-            <div class="col-xl-1 col-lg-1 text-center">
-                <a href="" target="_blank" @onclick="@OpenFullStack" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(null, true))"
-                     src="img/icons8-full-stack-512.png" />
-                </a>
-                <p>Full Stack</p>
-            </div>
-            <div class="col-xl-1 col-lg-1 text-center">
-                <a href="" target="_blank" @onclick="@OpenCloudSteps" @onclick:preventDefault>
-                    <img class="rounded-circle img-thumbnail @(CheckIfAreaIsCompleted(Area.Azure, false))"
-                     src="img/icons8-cloud-connection-480.png" />
-                </a>
-                <p>Cloud Development</p>
-            </div>
-        </div>
-        #endregion
-        #region Foundation
-        if (foundationSteps)
-        {
-            <div class="row">
-                <h3>Foundation Steps</h3>
-                @foreach (var article in articles.Where(x => x.Area == Area.StartHere))
-                {
-                    <DashboardArticleCard Article="article"
-                              IsComplete="@CheckIfProjectIsCompleted(article.Id)" />
-                }
-                <div class="col-lg-3 col-sm-1">
-                    <button class="btn btn-outline-secondary marginn" @onclick="CloseFoundationSteps">Close</button>
-                </div>
-            </div>
-        }
-        #endregion
-        #region Console
-        if (consoleSteps)
-        {
-            <div class="row">
-                <h3>Console Apps</h3>
-                @foreach (var project in projects.Where(x => x.Area == Area.Console))
-                {
-                    <DashboardProjectCard Project="project"
-                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
-                }
-                <div class="col-lg-3 col-sm-1">
-                    <button class="btn btn-outline-secondary marginn" @onclick="CloseConsoleSteps">Close</button>
-                </div>
-            </div>
-        }
-        #endregion
-        #region Portfolio
-        if (jobSteps)
-        {
-            <div class="row">
-                <h3>Apply For Jobs</h3>
-                @foreach (var project in projects.Where(x => x.Area == Area.StartApplying))
-                {
-                    <DashboardProjectCard Project="project"
-                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
-                }
-                <div class="col-lg-3 col-sm-1">
-                    <button class="btn btn-outline-secondary marginn" @onclick="CloseJobSteps">Close</button>
-                </div>
-            </div>
-        }
-        #endregion
-        #region FullStack
-        if (fullStackSteps)
-        {
-            <div class="row">
-                <h3>Full Stack</h3>
-                @if (frontEndFrameworks.Any())
-                {
-                    if (frontEndFrameworks.Contains(FrontEndFramework.MVC))
+        <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="form-group">
+                <InputSelect shadow rounded @bind-Value="dashboardProject.Id" class="form-select">
+                    <option selected>Open this select menu</option>
+                    @foreach (var project in projects)
                     {
-                        @foreach (var project in projects.Where(x => x.Area == Area.MVC))
-                        {
-                            <DashboardProjectCard Project="project"
-                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
-                        }
+                        <option value="@project.Id">@project.Area - @project.Title</option>
                     }
-                    else if (frontEndFrameworks.Contains(FrontEndFramework.Blazor))
-                    {
-                        @foreach (var project in projects.Where(x => x.Area == Area.Blazor))
-                        {
-                            <DashboardProjectCard Project="project"
-                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
-                        }
-                    }
-                    else if (frontEndFrameworks.Contains(FrontEndFramework.React))
-                    {
-                        @foreach (var project in projects.Where(x => x.Area == Area.React))
-                        {
-                            <DashboardProjectCard Project="project"
-                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
-                        }
-                    }
-                    else if (frontEndFrameworks.Contains(FrontEndFramework.Angular))
-                    {
-                        @foreach (var project in projects.Where(x => x.Area == Area.Angular))
-                        {
-                            <DashboardProjectCard Project="project"
-                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
-                        }
-                    }
-                    else if (frontEndFrameworks.Contains(FrontEndFramework.MAUI))
-                    {
-                        @foreach (var project in projects.Where(x => x.Area == Area.MAUI))
-                        {
-                            <DashboardProjectCard Project="project"
-                              IsComplete="@CheckIfProjectIsCompleted(project.Id)" />
-                        }
-                    }
-                }
-                <div class="col-lg-3 col-sm-1">
-                    <button class="btn btn-outline-secondary marginn" @onclick="CloseJobSteps">Close</button>
-                </div>
+                </InputSelect>
+                <p>
+                    <label>
+                        Github Url
+                        <InputText class="form-control" @bind-Value="dashboardProject.GithubUrl" />
+                        <InputText hidden class="form-control" @bind-Value="dashboardProject.AppUserId" />
+                    </label>
+                </p>
+                <button class="btn btn-outline-secondary" type="submit">Submit</button>
             </div>
-        }
-        #endregion
-        #region Cloud
-        if (cloudSteps)
-        {
-            <div class="row">
-                <h3>Cloud Development</h3>
-                @foreach (var project in projects.Where(x => x.Area == Area.Azure))
-                {
-                    <DashboardProjectCard Project="project" />
-                }
-                <div class="col-lg-3 col-sm-1">
-                    <button class="btn btn-outline-secondary marginn" @onclick="CloseCloudSteps">Close</button>
-                </div>
-            </div>
-        }
-        #endregion
-        @*<div class="row">
-    <h3>Console Apps</h3>
-    @foreach (var project in user.DashboardProjects)
-    {
-    <DashboardProjectCard Project="@projects.FirstOrDefault(x => x.Id ==project.ProjectId)" />
-    }
-    </div>*@
+        </EditForm>
+        <button class="btn btn-outline-secondary" @onclick="ToggleSubmitProjectForm">Cancel</button>
     }
 </div>
-
-<button class="btn btn-outline-secondary marginn" @onclick="OpenSubmitProjectForm">Submit Project</button>
-
-@if (submitProject)
-{
-    <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
-        <DataAnnotationsValidator />
-        <ValidationSummary />
-        <div class="form-group">
-            <InputSelect shadow rounded @bind-Value="dashboardProject.Id" class="form-select">
-                <option selected>Open this select menu</option>
-                @foreach (var project in projects)
-                {
-                    <option value="@project.Id">@project.Area - @project.Title</option>
-                }
-            </InputSelect>
-            <p>
-                <label>
-                    Github Url
-                    <InputText class="form-control" @bind-Value="dashboardProject.GithubUrl" />
-                    <InputText hidden class="form-control" @bind-Value="dashboardProject.AppUserId" />
-                </label>
-            </p>
-            <button class="btn btn-outline-secondary" type="submit">Submit</button>
-        </div>
-    </EditForm>
-    <button class="btn btn-outline-secondary" @onclick="CloseSubmitProjectForm">Cancel</button>
-}
 
 @code {
     [Inject]
@@ -353,64 +343,34 @@
         return "complete-area";
     }
 
-    protected void OpenSubmitProjectForm()
+    protected void ToggleSubmitProjectForm()
     {
-        submitProject = true;
+        submitProject = !submitProject;
     }
 
-    protected void CloseSubmitProjectForm()
+    protected void ToggleFoundationSteps()
     {
-        submitProject = false;
+        foundationSteps = !foundationSteps;
     }
 
-    protected void OpenFoundationSteps()
+    protected void ToggleConsoleSteps()
     {
-        foundationSteps = true;
+        consoleSteps = !consoleSteps;
     }
 
-    protected void CloseFoundationSteps()
+    protected void ToggleJobSteps()
     {
-        foundationSteps = false;
+        jobSteps = !jobSteps;
     }
 
-    protected void OpenConsoleSteps()
+    protected void ToggleCloudSteps()
     {
-        consoleSteps = true;
+        cloudSteps = !cloudSteps;
     }
 
-    protected void CloseConsoleSteps()
+    protected void ToggleFullStackSteps()
     {
-        consoleSteps = false;
-    }
-
-    protected void OpenJobSteps()
-    {
-        jobSteps = true;
-    }
-
-    protected void CloseJobSteps()
-    {
-        jobSteps = false;
-    }
-
-    protected void OpenCloudSteps()
-    {
-        cloudSteps = true;
-    }
-
-    protected void CloseCloudSteps()
-    {
-        cloudSteps = false;
-    }
-
-    protected void OpenFullStack()
-    {
-        fullStackSteps = true;
-    }
-
-    protected void CloseFullStack()
-    {
-        fullStackSteps = false;
+        fullStackSteps = !fullStackSteps;
     }
 }
 
@@ -430,5 +390,9 @@
 
     .complete-area {
         max-width: 80px;
+    }
+
+    .row {
+        margin: 20px 0;
     }
 </style>
