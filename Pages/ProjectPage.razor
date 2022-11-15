@@ -15,6 +15,14 @@
 </div>
 
 <div class="container w-50 article-blocks-desktop">
+    @if (IsCompleted)
+    {
+        <div class="card">
+            <div class="card-body">
+                You have completed this roadmap step.
+            </div>
+        </div>
+    }
     <div class="row pb-5">
         <div class="col">
             <h1 class="article-section-title">Introduction</h1>
@@ -641,6 +649,12 @@
     .article-section-title {
         font-size: 24px;
         font-weight: 600;
+    }
+
+    .card {
+        color: white;
+        background-color: darkolivegreen !important;
+        margin-bottom: 20px;
     }
 </style>
 

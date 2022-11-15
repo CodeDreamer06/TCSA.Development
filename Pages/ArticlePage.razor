@@ -14,6 +14,15 @@
 </div>
 
 <div class="container w-50 article-blocks-desktop">
+
+    @if (IsCompleted)
+    {
+        <div class="card">
+            <div class="card-body">
+                You have completed this roadmap step.
+            </div>
+        </div>
+    }
     @foreach (var block in Article.Blocks)
     {
         <div class="row pb-4">
@@ -56,12 +65,13 @@
                 <img src="img/icons8-completed-task-96.png" width="70" alt="" class="align-middle">
             </div>
             <div class=col-10>
-                @if (IsCompleted)
+                @*@if (IsCompleted)
                 {
                     <button class="btn btn-outline-secondary" type="button" @onclick="MarkAsIncomplete">Mark As Unread</button>
-                }
-                else
+                }*@
+                @if (!IsCompleted)
                 {
+                    <p>If you're following the roadmap, mark this article as read before moving to the next.</p>
                     <div class="user-buttons">
                         <btn class="btn btn-outline-secondary" type="button" @onclick="MarkAsComplete">Mark As Read</btn>
                     </div>
@@ -239,5 +249,11 @@
     .article-section-title {
         font-size: 24px;
         font-weight: 600;
+    }
+
+    .card {
+        color: white;
+        background-color: darkolivegreen !important;
+        margin-bottom: 20px;
     }
 </style>
