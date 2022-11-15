@@ -1,25 +1,42 @@
 ﻿<div class="card-slot col-lg-3 col-sm-1">
     <div class="card shadow rounded-lg text-center" style="width: 18rem;">
-        <a href="@Href" class="stretched-link" target="_blank">
-            <img class="card-img-top" src="img/@IconUrl" alt="Card image cap">
-        </a>
+        @if (IsReleased)
+        {
+            <a href="@Href" class="stretched-link" target="_blank">
+                <img class="card-img-top" src="img/@IconUrl" alt="Card image cap">
+            </a>
+        }
+        else
+        {
+            <div>
+                <img class="card-img-top" src="img/@IconUrl" alt="Card image cap">
+            </div>
+        }
+
         <div class="card-body">
             <h5 class="card-title">@Title</h5>
+            @if (!IsReleased)
+            {
+                <span class="release-date">(Release date: @ReleaseDate.ToString("MMM/dd/yy"))</span>
+            }
             <p class="card-text">@Description</p>
         </div>
     </div>
 </div>
 @code {
     [Parameter] public string Type { get; set; }
+    [Parameter] public DateTime ReleaseDate { get; set; }
     [Parameter] public string Href { get; set; }
     [Parameter] public string Id { get; set; }
     [Parameter] public string IconUrl { get; set; }
     [Parameter] public string Title { get; set; }
     [Parameter] public string Description { get; set; }
+    public bool IsReleased { get; set; }
 
     protected async override Task OnParametersSetAsync()
     {
         Href = Type == "Article" ? $"article/{Id}" : $"project/{Id}";
+        IsReleased = ReleaseDate < DateTime.Now;
     }
 }
 
@@ -44,5 +61,14 @@
         font-family: Roboto;
         color: #1C236D;
         font-weight: 600;
+    }
+
+    .release-date {
+        color: red;
+        font-weight: 500;
+    }
+
+    .card-text {
+        margin-top: 10px;
     }
 </style>

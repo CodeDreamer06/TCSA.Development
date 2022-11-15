@@ -12,4 +12,5 @@ public class ApplicationDbContext : IdentityDbContext<AppUser>
     }
 
     public virtual DbSet<DashboardProject> DashboardProjects { get; set; }
+    public virtual DbSet<Roadmap> Roadmap { get; set; }
 }

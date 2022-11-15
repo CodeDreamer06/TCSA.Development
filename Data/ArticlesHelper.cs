@@ -2919,6 +2919,7 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                     new Block
                     {
                         Title = "Video Tutorial",
+                        ImgUrl = "icons8-video-tutorial-512.png",
                         Paragraphs = new List<Paragraph>
                         {
                             new Paragraph
@@ -2942,6 +2943,7 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                 BannerUrl = "",
                 Description = "Deploy a crud app from the .NET ecosystem along with a database server",
                 Area = Area.Azure,
+                ReleaseDate = DateTime.Now.AddDays(14),
             },
             new Project
             {
@@ -2950,7 +2952,8 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                 IconUrl = "icons8-website-468.png",
                 BannerUrl = "",
                 Description = "Deploy a full-stack app using a JS framework along with a .NET Web API",
-                Area = Area.Azure
+                Area = Area.Azure,
+                ReleaseDate = DateTime.Now.AddDays(21)
             },
             new Project
             {
@@ -2959,7 +2962,8 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                 IconUrl = "icons8-cloud-connection-480.png",
                 BannerUrl = "",
                 Description = "Get started with serverless computing creating backend services directly on the cloud",
-                Area = Area.Azure
+                Area = Area.Azure,
+                ReleaseDate = DateTime.Now.AddDays(28)
             }
         };
     }

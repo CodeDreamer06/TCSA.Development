@@ -96,7 +96,7 @@
                 </div>
             </div>
         </div>
-        @foreach (var project in projects.Where(x => x.Area == Area.Console))
+        @foreach (var project in projects.Where(x => x.Area == Area.Console  ))
         {
             <Card Type="Project"
               Id=@project.Id.ToString()
@@ -123,6 +123,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center title">
             <img class="area-title" src="img/apply-title.png" />
+            <p class="lead">With these projects, you'll showcase your work and start applying for jobs.</p>
         </div>
         <div class="row d-flex justify-content-center">
             @foreach (var project in projects.Where(x => x.Area == Area.StartApplying))
@@ -138,8 +139,9 @@
 </div>
 
 <div class="container">
-    <div class="row d-flex justify-content-center title">
+    <div class="row d-flex justify-content-center text-center title">
         <img class="area-title" src="img/mvc-title.png" />
+        <p class="lead">Learn the fundamentals of ASP.NET MVC</p>
         </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.MVC))
@@ -156,6 +158,7 @@
 <div class="container">
     <div class="row d-flex justify-content-center title">
         <img class="area-title" src="img/angular-title.png" />
+        <p class="lead">Learn how .NET works together with this powerful front-end framework</p>
     </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.Angular))
@@ -172,6 +175,7 @@
 <div class="container">
     <div class="row d-flex justify-content-center title">
         <img class="area-title" src="img/react-title.png" />
+        <p class="lead">Learn how .NET works together with this powerful front-end framework</p>
     </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.React))
@@ -188,6 +192,7 @@
 <div class="container">
     <div class="row d-flex justify-content-center title">
         <img class="area-title" src="img/blazor-title.png" />
+        <p class="lead">Learn the latest .NET solution for web development</p>
     </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.Blazor))
@@ -204,6 +209,7 @@
 <div class="container">
     <div class="row d-flex justify-content-center title">
         <img class="area-title" src="img/maui-title.png" />
+        <p class="lead">Learn this fantastic technology to build apps for Android, iOS, MacOs and Windows.</p>
     </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.MAUI))
@@ -220,6 +226,7 @@
 <div class="container">
     <div class="row d-flex justify-content-center title">
         <img class="area-title" src="img/azure-title.png" />
+        <p class="lead">Get started in cloud computing deploying applications to Microsoft's state-of-the-art cloud solution.</p>
     </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.Azure))
@@ -228,7 +235,8 @@
               Id=@project.Id.ToString()
               Title=@project.Title
               Description=@project.Description
-              IconUrl=@project.IconUrl />
+              IconUrl=@project.IconUrl 
+              ReleaseDate=@(project.ReleaseDate)/>
         }
     </div>
 </div>

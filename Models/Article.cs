@@ -9,6 +9,7 @@ public class Article
     public string BannerUrl { get; set; }
     public Area Area { get; set; }
     public List<Block> Blocks { get; set; }
+    public DateTime ReleaseDate { get; set; }
 }
 
 public class Block
