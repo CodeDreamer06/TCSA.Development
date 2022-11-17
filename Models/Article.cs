@@ -40,6 +40,7 @@ public enum Area
     Blazor,
     MAUI,
     Azure,
-    FullStack
+    FullStack,
+    StandAlone
 }
 

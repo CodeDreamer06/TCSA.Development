@@ -901,6 +901,7 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
             {
                 Id = 51,
                 Title = "Roadmap",
+                Area = Area.StandAlone,
                 Blocks = new List<Block>
                 {
                     new Block
@@ -919,11 +920,6 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                             new Paragraph
                             {
                                 Body = @"In a matter of hours, I was hooked. The course had a very clear, organised curriculum and the feedback loop was immediate. Writing code and seeing the results in real time was incredible. After, that, the rest is history. I was addicted. Programming was in the back of my mind 24/7 for two years and now I’m employed and have a promising career ahead of me. And I believe that everyone can do it. "
-                            },
-                            new Paragraph
-                            {
-                                IsPicture= true,
-                                PictureUrl = "roadmap-desktop.png"
                             }
                         }
                     },
@@ -1084,6 +1080,114 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                         }
                     }
                 }
+            },
+            new Article
+            {
+                Id = 52,
+                Title = "Code Reviews",
+                Area = Area.StandAlone,
+                Blocks = new List<Block>
+                {
+                    new Block
+                    {
+                        Title = "Introduction",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "In this article you’ll find out how to submit code to The C# Academy for review. The objective is to make it easy for reviewers to clone and test code and submit comments directly on code. It’s also similar to the work flow used in real life production applications and will force you to get familiar with how to submit pull requests on Github. Here’s a step by step list with the process. You’ll probably need it for the first few projects and then it will become second nature. "
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "1. Forking the Review Repository",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "Log into Github and create a fork of our review repository, which can be found here. When naming your fork, choose the following format: YourDiscordAlias.ProjectName. "
+                            },
+                            new Paragraph
+                            {
+                                IsPicture = true,
+                                PictureUrl = "code-review-1.png"
+                            },
+                            new Paragraph
+                            {
+                                IsPicture = true,
+                                PictureUrl = "code-review-2.png"
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "2. Clone The Fork",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "Click on the green “Code” button to see the repository name. You can click on the two-square icon to copy the repository’s address. "
+                            },
+                            new Paragraph
+                            {
+                                IsPicture = true,
+                                PictureUrl = "code-review-3.png"
+                            },
+                            new Paragraph
+                            {
+                                Body = @"Using the command line, navigate to a folder of your choice and use the following command:<br><br>
+<code>git clone your-repository-name</code>"
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "3. Commit and Push your Changes",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = @"After finishing working on your project, stage, commit and push your changes to your fork. You can use Visual Studio or the command line, where you can use the following commands: <br><br>
+<code>git add . <br>
+git commit -m ""type your message here""<br>
+git push</code>"
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "4. Create a Pull Request",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "You’ll see a message saying your branch is ahead of the master. Click on contribute and “Open Pull Request”. By default, the title will be the message in your last commit. You can choose to choose the title or leave as it is. Then click on “Create Pull Request”. "
+                            },
+                            new Paragraph
+                            {
+                                IsPicture = true,
+                                PictureUrl = "code-review-4.png"
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "5. Rework your project",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "Once you change your project based on the comments, all you need to do is repeat step 3 (stage, commit, push) and the pull request will be updated. You don’t need to submit another Pull request. "
+                            },
+                            new Paragraph
+                            {
+                                IsPicture = true,
+                                PictureUrl = "code-review-5.png"
+                            }
+                        }
+                    }
+                }
             }
         };
     }
@@ -1178,7 +1282,7 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                         {
                             new Paragraph
                             {
-                                Body = "If you want your code to be reviewed by a member of the C# Academy, instead of creating your own repository, <a href='https://www.thecsharpacademy.com/code-reviews'>follow this article</a>, where you’ll learn how to create a fork from our base review repository."
+                                Body = "If you want your code to be reviewed by a member of the C# Academy, instead of creating your own repository, <a href='article/52'>follow this article</a>, where you’ll learn how to create a fork from our base review repository."
                             }
                         }
                     },
@@ -1301,12 +1405,12 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                             new Paragraph
                             {
                                 IsPicture = true,
-                                PictureUrl = "MicrosoftTeams-image-1.png"
+                                PictureUrl = "working-directory-1.png"
                             },
                             new Paragraph
                             {
                                 IsPicture = true,
-                                PictureUrl = "MicrosoftTeams-image-2.png"
+                                PictureUrl = "working-directory-2.png"
                             }
                         }
                     },
@@ -1323,7 +1427,7 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                             new Paragraph
                             {
                                 IsPicture = true,
-                                PictureUrl = "Copy-of-Copy-of-ASP.NET-MVC-PROJECT-768x432.png"
+                                PictureUrl = "habit-menu.png"
                             },
                             new Paragraph
                             {
@@ -1396,7 +1500,7 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                         {
                             new Paragraph
                             {
-                                Body = "If you want your code to be reviewed by a member of the C# Academy, instead of creating your own repository, <a href='https://www.thecsharpacademy.com/code-reviews'>follow this article</a>, where you’ll learn how to create a fork from our base review repository."
+                                Body = "If you want your code to be reviewed by a member of the C# Academy, instead of creating your own repository, <a href='article/52'>follow this article</a>, where you’ll learn how to create a fork from our base review repository."
                             }
                         }
                     },
