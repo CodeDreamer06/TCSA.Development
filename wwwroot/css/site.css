@@ -10,6 +10,7 @@ a, .btn-link {
 
 p {
     font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
 
 .btn-primary {
@@ -96,6 +97,10 @@ code {
 }
 
 @media (max-width: 800px) {
+
+    p {
+        font-size: 16px;
+    }
     .container {
         width: 100% !important;
     }
