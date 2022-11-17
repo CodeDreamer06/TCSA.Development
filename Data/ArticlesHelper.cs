@@ -896,6 +896,194 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                         }
                     }
                 }
+            },
+            new Article
+            {
+                Id = 51,
+                Title = "Roadmap",
+                Blocks = new List<Block>
+                {
+                    new Block
+                    {
+                        Title = "The C# Academy Roadmap",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "I’m live proof that a job in technology can be obtained without a college degree. I landed a job as a software engineer at a large Australian company at the age of 39, after learning online for less than two years."
+                            },
+                            new Paragraph
+                            {
+                                Body = "One day in 2019, I was exploring possibilities of remote work. I considered language teaching, content creation, personal assistants, and a few other options, but I quickly realised that these fields were already crowded. I needed a highly skilled, high in demand, well-paid profession."
+                            },
+                            new Paragraph
+                            {
+                                Body = @"In a matter of hours, I was hooked. The course had a very clear, organised curriculum and the feedback loop was immediate. Writing code and seeing the results in real time was incredible. After, that, the rest is history. I was addicted. Programming was in the back of my mind 24/7 for two years and now I’m employed and have a promising career ahead of me. And I believe that everyone can do it. "
+                            },
+                            new Paragraph
+                            {
+                                IsPicture= true,
+                                PictureUrl = "roadmap-desktop.png"
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Learn a Back-End Language",
+                        ImgUrl = "icons8-coding-512.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "Pick any of the most used languages. Really. Don’t overthink it. Read a few articles just to see what’s out there and start learning a programming language, TODAY. You can do it for free. There are abundant beginner resources for the most common languages out there, and you can make a lot of progress without spending a cent. If you can afford a course, even better. "
+                            },
+                            new Paragraph
+                            {
+                                Body = "There are, however, a few criteria you can use to help pick a language. The main thing would be to start with a language that someone you know can help you with. I started learning Java but switched early to C# because a close friend was a senior C# developer and he was willing to help. I got unstuck many times by asking him questions and seeing him work helped me shape the way I think about code.  "
+                            },
+                            new Paragraph
+                            {
+                                Body = @"In a matter of hours, I was hooked. The course had a very clear, organised curriculum and the feedback loop was immediate. Writing code and seeing the results in real time was incredible. After, that, the rest is history. I was addicted. Programming was in the back of my mind 24/7 for two years and now I’m employed and have a promising career ahead of me. And I believe that everyone can do it. "
+                            },
+                            new Paragraph
+                            {
+                                Body = "Another criteria is community support. Super common languages such as Java, C#, Javascript and PHP have so many users that most of your questions for the first few years of learning will already have been answered online. And most of the time you’ll be looking for answers in forums, so it pays off to start with a widely-used language."
+                            },
+                            new Paragraph
+                            {
+                                Body = "You don’t need to become an expert in this first language. You’ll be able to build interesting applications with beginner knowledge and very cool stuff just getting to intermediate. And even when you get a job, you’ll keep learning this language, so don’t worry too much about trying to learn EVERYTHING about it."
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Learn front-end technologies ",
+                        ImgUrl = "icons8-front-end-512.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "I included Javascript in the back-end languages because you can do a lot of ‘under the hood’ work with JS these days, but it’s very important that you learn how to interact with a browser, so Javascript is the way to go.  "
+                            },
+                            new Paragraph
+                            {
+                                Body = "You’ll be building very interesting applications with only a little knowledge of javascript. Even if you don’t plan to become a web developer, I would still learn it so I can quickly build projects that are out in the world for people to use. Javascript will allow that.   "
+                            },
+                            new Paragraph
+                            {
+                                Body = @"Of course, you’ll also need to learn basic HTML and CSS, but the learning curve isn’t so steep and you can learn the basics in a matter of hours.  "
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Build stuff",
+                        ImgUrl = "icons8-builder-64.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "Your knowledge will only be solid once you build applications. You’ll never get the knowledge necessary to succeed in an enterprise environment without creating stuff that works and works well. And I doubt you’ll get a job without it anyways.  "
+                            },
+                            new Paragraph
+                            {
+                                Body = "<b>Start Small</b>: In the process of learning the technologies we talked about above, you’ll be building small applications, using one or a few libraries. These small projects are very important to understand how these things work in isolation. They should definitely be part of your library of projects.   "
+                            },
+                            new Paragraph
+                            {
+                                Body = @"<b>Complex Tutorials</b>: On top of that, it’s very important to build applications that involve dozens of technologies tied together. That’s a bit closer to the world of enterprise applications you’ll have to navigate when getting a job. Many tutorials have this approach, using many libraries and design patterns. "
+                            },
+                            new Paragraph
+                            {
+                                Body = @"In my view, It’s a big mistake to start with complex tutorials. Not only the chances are higher you’ll feel overwhelmed and might end up quitting, but also you might not understand how each piece of the puzzle works before getting them to work in unison. "
+                            },
+                            new Paragraph
+                            {
+                                Body = @"If you escalate the complexity of your projects and still find yourself overwhelmed, you don’t need to quit them, just take a step back and start a little side project to understand how one of the pieces of the big tutorial work separately. Everything will make more sense after taking that step. Do it as many times as necessary until you get comfortable with all the concepts."
+                            },
+                            new Paragraph
+                            {
+                                Body = @"The first Udemy course I bought to learn Asp.Net overwhelmed me because there were so many things to learn at the same time. I ended up stepping back and approaching each subject separately and the tutorial was very useful later on, with a bit more experience in each part of that stack."
+                            },
+                            new Paragraph
+                            {
+                                Body = @" <b>Tweaking</b>:  Once you complete a complex tutorial, try to create something based on that, adding, subtracting or modifying features to suit your own needs. Think of applications you can actually use, or something you can build for someone. I recommend you build an application for someone else, as you’ll get used to the constant back and forth of feedback that happens in the real world. You’ll have to get used to another person’s needs and learn to communicate with them, which is really important for a developer. "
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Create a Portfolio",
+                        ImgUrl = "icons8-portfolio-512.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "After you build your first big project, you can build a portfolio. It’s ok to just have one thing in there. You can also add a few of the other smaller ones to have some more content, but I suggest you curate your public portfolio with solid projects. You need things that will stand out and impress your recruiters. You could even have two sections, something like “Small Projects” and “Big Projects”.  "
+                            },
+                            new Paragraph
+                            {
+                                Body = "If you have just one project, you’ll feel the urge to build more. An empty portfolio will give you extra motivation to build things to fill it with. Also, you’ll inevitably raise the bar for what you’ll build, paying more attention to detail, knowing it will be out in the world for people to see. "
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Apply for Jobs",
+                        ImgUrl = "icons8-job-seeking-512.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "If you’re consistent with your training, you should be ready to apply for jobs in six months. It could be faster or slower depending on how much time you dedicate to it, but the reality is that stage five can come faster than you imagine. You just have to free yourself from the idea that you need to get to a certain stage before applying for jobs. "
+                            },
+                            new Paragraph
+                            {
+                                Body = "The objective here isn’t to get a job as soon as you start applying. More likely than not, you’ll get a lot of rejections and that’s fine. But getting yourself out there and sending resumes will make you feel it’s real. It will force you to take a closer look at your material. You’ll scrutinise your knowledge, your projects, your portfolio, your CV. Knowing it will be looked at by recruiters will make you push yourself harder."
+                            },
+                            new Paragraph
+                            {
+                                Body = "Don’t worry too much about the job prerequisites. Apply for jobs in your two main areas of expertise: The languages you chose for front-end and back-end. There will usually be a list of other technologies and that can be disheartening. Start tackling them one by one, making small projects in each of them, and then trying to add them to your bigger projects. By the end of a year, you’ll notice that you have some experience in most items on most jobs’ list of requirements."
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Don’t give up",
+                        ImgUrl = "icons8-climbing-512-1.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "I know you’ve heard this gazillions of times: “Don’t give up and you’ll get there”. It’s obvious, but it’s true. By showing up and studying every day, you’ll get increasingly comfortable. After a few months of looking at it, the things that initially overwhelmed you will feel easy. "
+                            },
+                            new Paragraph
+                            {
+                                Body = "Spending an hour in front of the computer will be difficult for the first week, but if you push yourself a little more every day, you’ll be able to train for several hours and crave more after a few months."
+                            },
+                            new Paragraph
+                            {
+                                Body = "If you set your expectations correctly, you won’t be beaten into quitting before getting to where you want. You have to expect to be rejected many times, to have lazy days where you are unmotivated, to feel hopeless and stupid because you can’t understand a concept or a piece of code, to get stuck for weeks trying to solve an issue. These are all normal and it happens to every single programmer.  "
+                            }
+                        }
+                    },
+                    new Block
+                    {
+                        Title = "Enjoy the journey",
+                        ImgUrl = "icons8-playing-512.png",
+                        Paragraphs = new List<Paragraph>
+                        {
+                            new Paragraph
+                            {
+                                Body = "You might find out this is not for you. If after a few months, every day you dread sitting down to study, you probably don’t like it enough to keep going. And that’s perfectly fine. But you have to know that the better we get, the more motivated we’re likely to be. That’s why it’s important to start with easy small projects and get a few wins in the beginning. "
+                            },
+                            new Paragraph
+                            {
+                                Body = "After that, think that whatever happens, you’ll have fun. I just loved sitting down and coding, regardless of getting a job or not. If I never got a job, I wouldn’t think of my time as having been wasted. I learned a new skill, I learned how to learn, I grew. And I gave it a solid try. Way better than not doing anything. In the worst case scenario, you lose nothing. In the best case scenario, you get your dream job and change your life. "
+                            }
+                        }
+                    }
+                }
             }
         };
     }

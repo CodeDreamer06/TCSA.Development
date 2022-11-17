@@ -39,7 +39,10 @@
                 {
                     if (paragraph.IsPicture)
                     {
-                        <img src="img/@paragraph.PictureUrl" width="500">
+                        <div class="d-flex justify-content-center">
+                            <img src="img/@paragraph.PictureUrl" width="500" />
+                        </div>
+                        
                     }
 
                     if (paragraph.IsVideo)
@@ -152,30 +155,30 @@
 
     protected async Task GetUser()
     {
-        if (httpContextAccessor.HttpContext.User.Identity.Name != null)
+        if (httpContextAccessor.HttpContext?.User != null)
         {
             IsLogged = true;
-        }
 
-        var email = httpContextAccessor.HttpContext.User.Identity.Name;
+            var email = httpContextAccessor.HttpContext.User.Identity.Name;
 
-        try
-        {
-            user = await UserService.GetUser(email);
-
-            if (user.DashboardProjects.Any(x => x.ProjectId == int.Parse(ArticleId)))
+            try
             {
-                incomingDashboardProject = user.DashboardProjects.Single(x => x.ProjectId == Article.Id);
-                IsCompleted = incomingDashboardProject.IsCompleted;
+                user = await UserService.GetUser(email);
+
+                if (user.DashboardProjects.Any(x => x.ProjectId == int.Parse(ArticleId)))
+                {
+                    incomingDashboardProject = user.DashboardProjects.Single(x => x.ProjectId == Article.Id);
+                    IsCompleted = incomingDashboardProject.IsCompleted;
+                }
+                else
+                {
+                    IsCompleted = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                IsCompleted = false;
+                Console.WriteLine(ex.Message);
             }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
         }
     }
 

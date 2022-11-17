@@ -523,8 +523,6 @@
     }
 </div>
 
-
-
 @code {
     [Inject]
     protected IUserService UserService { get; set; }
@@ -548,29 +546,30 @@
 
     protected async Task GetUser()
     {
-        if (httpContextAccessor.HttpContext.User.Identity.Name != null)
+        if (httpContextAccessor.HttpContext?.User != null)
         {
             IsLogged = true;
-        }
 
-        var email = httpContextAccessor.HttpContext.User.Identity.Name;
+            var email = httpContextAccessor.HttpContext.User.Identity?.Name;
 
-        try
-        {
-            user = await UserService.GetUser(email);
-
-            if (user.DashboardProjects.Any(x => x.ProjectId == int.Parse(ProjectId)))
+            try
             {
-                incomingDashboardProject = user.DashboardProjects.Single(x => x.ProjectId == Project.Id);
-                IsCompleted = incomingDashboardProject.IsCompleted;
-            } else
-            {
-                IsCompleted = false;
+                user = await UserService.GetUser(email);
+
+                if (user.DashboardProjects.Any(x => x.ProjectId == int.Parse(ProjectId)))
+                {
+                    incomingDashboardProject = user.DashboardProjects.Single(x => x.ProjectId == Project.Id);
+                    IsCompleted = incomingDashboardProject.IsCompleted;
+                }
+                else
+                {
+                    IsCompleted = false;
+                }
             }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 

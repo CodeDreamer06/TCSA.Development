@@ -84,11 +84,6 @@ a, .btn-link {
     padding-bottom: 0px !important;
 }
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.ttf');
-}
-
 @media (min-width: 800px) {
     .title-mobile {
         display: none !important;
