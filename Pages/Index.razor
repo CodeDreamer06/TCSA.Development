@@ -46,7 +46,7 @@
         <h1 class="display-4 justify-content-center area-title-text">How it Works</h1>
         @foreach (var article in articles.Where(x => x.Area == Area.HowItWorks))
         {
-            <div class="col-lg col-sm-1 col-xs-1">
+            <div class="col-lg col-sm-1 col-md-3 col-xs-1">
                 <div class="card text-center w-75" style="width: 18rem;">
                     <div class="text-center">
                         <img class="card-img-top" mx-auto d-block src="img/@article.IconUrl" />
@@ -85,7 +85,7 @@
             <img class="area-title" src="img/console-title.png" />
         </div>
     <div class="row d-flex justify-content-center">
-        <div class="col-lg-3 col-sm-1 my-3">
+        <div class="col-lg-3 col-md-12 col-sm-1 my-3">
             <div class="card shadow rounded-lg text-center" style="width: 18rem;">
                 <a href="@($"article/{consoleArticle.Id}")" class="stretched-link" target="_blank">
                     <img class="card-img-top" src="img/@consoleArticle.IconUrl" alt="Card image cap">

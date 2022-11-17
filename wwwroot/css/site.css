@@ -64,7 +64,6 @@ p {
     }
 
 .container {
-    width: 70%;
     margin-top: 50px !important;
     margin-bottom: 50px !important;
 }
@@ -92,6 +91,8 @@ code {
     .title-mobile {
         display: none !important;
     }
+
+    width: 70%;
 }
 
 @media (max-width: 800px) {

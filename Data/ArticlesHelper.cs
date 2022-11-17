@@ -108,7 +108,7 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "At the C# Academy you can find a roadmap with all the steps necessary to become a full stack web developer. It’s not necessarily linear and the lines between the stages are blurry. You’ll be constantly revisiting the previous items on the checklist, at any given time during your progress. <a href='https://www.thecsharpacademy.com/2021/09/10/road-map/'>Here's the roadmap</a>."
+                                Body = "At the C# Academy you can find a roadmap with all the steps necessary to become a full stack web developer. It’s not necessarily linear and the lines between the stages are blurry. You’ll be constantly revisiting the previous items on the checklist, at any given time during your progress. <a href='article/51' target='blank'>Here's the roadmap</a>."
                             },
                             new Paragraph
                             {
@@ -609,7 +609,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "It’s time to start coding! Welcome to fantastic world of C#! If you haven’t yet, checkout the <a href='https://www.thecsharpacademy.com/setup/'>C# Setup</a> article. You’ll need to set up your C# developer environment before starting."
+                                Body = "It’s time to start coding! Welcome to fantastic world of C#! If you haven’t yet, checkout the <a href='article/7' target='blank'>C# Setup</a> article. You’ll need to set up your C# developer environment before starting."
                             },
                             new Paragraph
                             {
@@ -694,7 +694,7 @@ public static class ArticlesHelper
                         {
                             new Paragraph
                             {
-                                Body = "In the <a href='https://www.thecsharpacademy.com/setup/'>C# Setup</a> article , you learned you have to create your source control repository. This will be your ultimate reference book. Every piece of code you ever write should be saved there. And guess what? That will also become your tool box. You’ll constantly grab pieces of code you’ve written before to reuse in your projects. "
+                                Body = "In the <a href='article/7' target='blank'>C# Setup</a> article , you learned you have to create your source control repository. This will be your ultimate reference book. Every piece of code you ever write should be saved there. And guess what? That will also become your tool box. You’ll constantly grab pieces of code you’ve written before to reuse in your projects. "
                             },
                             new Paragraph
                             {
@@ -1282,7 +1282,7 @@ git push</code>"
                         {
                             new Paragraph
                             {
-                                Body = "If you want your code to be reviewed by a member of the C# Academy, instead of creating your own repository, <a href='article/52'>follow this article</a>, where you’ll learn how to create a fork from our base review repository."
+                                Body = "If you want your code to be reviewed by a member of the C# Academy, instead of creating your own repository, <a href='article/52' target='blank'>follow this article</a>, where you’ll learn how to create a fork from our base review repository."
                             }
                         }
                     },
@@ -1294,7 +1294,7 @@ git push</code>"
                         {
                             new Paragraph
                             {
-                                Body = "If you have watched the <a href='https://www.thecsharpacademy.com/code-reviews'>entire C# Foundation course</a>, you have already created a <a href='https://www.thecsharpacademy.com/code-reviews'>Math Game Desktop app using the amazing .NET MAUI</a>. It will be great practice to build a desktop Calculator App with the same functionality you’ve created for this console app. There will be some challenges, but you’ve already got all the skills necessary. And remember, if you get stuck, reach out on Discord and we will help!"
+                                Body = "If you have watched the <a href='article/7' target='blank'>entire C# Foundation course</a>, you have already created a Math Game Desktop app using the amazing .NET MAUI</a>. It will be great practice to build a desktop Calculator App with the same functionality you’ve created for this console app. There will be some challenges, but you’ve already got all the skills necessary. And remember, if you get stuck, reach out on Discord and we will help!"
                             }
                         }
                     }
@@ -1356,7 +1356,7 @@ git push</code>"
                     "Let the users create their own habits to track. That will require that you let them choose the unit of measurement of each habit.",
                     "Create a report functionality where the users can view specific information (i.e. how many times the user ran in a year? how many kms?) SQL allows you to ask very interesting things from your database."
                 },
-                 LearningIntro = "If you have learned the basics of C# following the <a href='https://www.thecsharpacademy.com/foundations/'>C# Foundations</a> article, you should know all the basic techniques needed to complete this project. Here’s a list of the things you’ll need to fulfil the requirements:",
+                 LearningIntro = "If you have learned the basics of C# following the <a href='article/8' target='blank'>C# Foundations</a> article, you should know all the basic techniques needed to complete this project. Here’s a list of the things you’ll need to fulfil the requirements:",
                  LearningItems = new List<string>
                  {
                      "Taking user input from the console.",
@@ -1376,7 +1376,7 @@ git push</code>"
                         {
                             new Paragraph
                             {
-                                Body = "This tutorial requires that you already have set up your .NET environment. If you haven’t yet, check <a href='https://www.thecsharpacademy.com/setup/'>this article</a> out with the first steps. If you absolutely want to use another IDE, let me know."
+                                Body = "This tutorial requires that you already have set up your .NET environment. If you haven’t yet, check <a href='article/7' target='blank'>this article</a> out with the first steps. If you absolutely want to use another IDE, let me know."
                             },
                             new Paragraph
                             {
@@ -1439,7 +1439,7 @@ git push</code>"
                             },
                             new Paragraph
                             {
-                                Body = "That’s where your actual code begins! You’re on your own for a while. If you get stuck, keep trying, <a href='https://www.thecsharpacademy.com/get-help/'>remember the steps to debug your app</a>. And if you ultimately can’t do it, reach out to our <a href='https://discord.com/channels/925901888203935744/925901888203935747'>Discord Community</a> or myself and we will help!"
+                                Body = "That’s where your actual code begins! You’re on your own for a while. If you get stuck, keep trying, <a href='article/6' target='blank'>remember the steps to debug your app/get unstuck</a>. And if you ultimately can’t do it, reach out to our <a href='https://discord.com/channels/925901888203935744/925901888203935747'>Discord Community</a> or myself and we will help!"
                             },
                         }
                     },
@@ -1530,7 +1530,7 @@ git push</code>"
                 {
                     new Paragraph
                     {
-                        Body="This app should be very similar to the <a href='https://www.thecsharpacademy.com/habit-tracker'>Habit Tracker</a> you’ve previously completed. It will serve the purpose of reinforcing what you’ve learned with a bit of repetition and building on that knowledge with slightly more challenging requirements. "
+                        Body="This app should be very similar to the <a href='article/12' target='blank'>Habit Tracker</a> you’ve previously completed. It will serve the purpose of reinforcing what you’ve learned with a bit of repetition and building on that knowledge with slightly more challenging requirements. "
                     },
                     new Paragraph
                     {
@@ -1559,7 +1559,7 @@ git push</code>"
                     "<a href='https://docs.microsoft.com/en-us/troubleshoot/dotnet/csharp/store-custom-information-config-file'>Using Configuration Manager</a>",
                     "<a href='https://stackoverflow.com/questions/371987/how-to-validate-a-datetime-in-c'>Parsing DateTime in C#</a>"
                 },
-                ResourcesIntro = "If you have learned the basics of C# following the <a href='https://www.thecsharpacademy.com/foundations/'>C# Foundations</a> article, and completed the <a href='https://www.thecsharpacademy.com/habit-tracker/'>Habit Tracker</a> project, you should know all the basic techniques needed to complete this project. Here’s a list of extra resources you might need:",
+                ResourcesIntro = "If you have learned the basics of C# following the <a href='article/8' target='blank'>C# Foundations</a> article, and completed the <a href='article/12' target='blank'>Habit Tracker</a> project, you should know all the basic techniques needed to complete this project. Here’s a list of extra resources you might need:",
                 Tips = new List<string>
                 {
                     "It's up to you the order in which you'll build, but we recommend you do it in this order: configuration file, model, database/table creation, CRUD controller (where the operations will happen), TableVisualisationEngine (where the consoleTableExt code will be run) and finally: validation of data.",
@@ -1809,7 +1809,7 @@ git push</code>"
                     },
                     new Paragraph
                     {
-                        Body="In the <a href='https://www.thecsharpacademy.com/drinks-info/'>Drinks Info App</a> we have created a program that consumed an external API. This time we will track a worker’s “shifts”. We’ll create an API and the console app that will consume it. When using Microsoft’s Documentation, often times you’ll come across Web APIs being developed with Entity Framework, which acts as layer between the “endpoints” and the actual database. "
+                        Body="In the <a href='article/15' target='blank'>Drinks Info App</a> we have created a program that consumed an external API. This time we will track a worker’s “shifts”. We’ll create an API and the console app that will consume it. When using Microsoft’s Documentation, often times you’ll come across Web APIs being developed with Entity Framework, which acts as layer between the “endpoints” and the actual database. "
                     },
                     new Paragraph
                     {
@@ -2899,7 +2899,7 @@ git push</code>"
                     "You shouldn't need a database for the game functionality. All the information about the cards can be in lists in the code base.",
                     "Since it only requires basic operations, use Entity Framework for recording game history."
                 },
-                ResourcesConclusion = "You should be able to complete this project with the same resources found in the <a href='https://www.thecsharpacademy.com/wardrobe/'>Blazor Wardrobe Inventory</a> project.",
+                ResourcesConclusion = "You should be able to complete this project with the same resources found in the <a href='article/39' target='blank'>Blazor Wardrobe Inventory</a> project.",
                 Tips = new List<string>
                 {
                     "Split the development in three phases: game functionality, games history, styling.",
