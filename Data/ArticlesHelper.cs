@@ -1643,13 +1643,6 @@ git push</code>"
                     "For management of stacks, let the user choose the stack by name.",
                     "Think of the \"stacks\" and \"study\" areas almost as separate applications. The study area is merely using data from the stacks area."
                 },
-                Challenges = new List<string>
-                {
-                    "Add the possibility of tracking the coding time via a stopwatch so the user can track the session as it happens.",
-                    "Let the users filter their coding records per period (weeks, days, years) and/or order ascending or descending.",
-                    "Create reports where the users can see their total and average coding session per period.",
-                    "Create the ability to set coding goals and show how far the users are from reaching their goal, along with how many hours a day they would have to code to reach their goal. You can do it via SQL queries or with C#.",
-                },
                 LearningIntro = "If you have learned the basics of C# following the  <a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE'>C# Foundations </a> article, you should know all the basic techniques needed to complete this project. Here’s a list of the things you’ll need to fulfil the requirements:",
                 LearningItems = new List<string>
                  {
@@ -1689,20 +1682,20 @@ git push</code>"
                             new Paragraph
                             {
                                 IsPicture = true,
-                                PictureUrl = "Screen-Shot-2022-04-04-at-6.49.23-am-1-1024x305.png"
+                                PictureUrl = "flashcards-8.png"
                             }
                         }
                     }
                 },
                 Screenshots = new List<string>
                 {
-                    "Screen-Shot-2022-04-04-at-6.42.37-am.png",
-                    "Screen-Shot-2022-04-04-at-6.44.38-am.png",
-                    "Screen-Shot-2022-04-04-at-6.45.08-am.png",
-                    "Screen-Shot-2022-04-04-at-6.45.19-am.png",
-                    "Screen-Shot-2022-04-04-at-6.46.40-am.png",
-                    "Screen-Shot-2022-04-04-at-6.47.43-am-150x150.png",
-                    "Screen-Shot-2022-04-04-at-6.48.09-am-150x150.png"
+                    "flashcards-1.png",
+                    "flashcards-2.png",
+                    "flashcards-3.png",
+                    "flashcards-4.png",
+                    "flashcards-5.png",
+                    "flashcards-6.png",
+                    "flashcards-7.png"
                 }
             },
             new Project
