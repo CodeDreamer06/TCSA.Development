@@ -88,16 +88,17 @@ code {
     background-color: lightgray;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 820px) {
     .title-mobile {
         display: none !important;
     }
 
-    width: 70%;
+    container {
+        max-width: 50% !important;
+    }
 }
 
-@media (max-width: 800px) {
-
+@media (max-width: 820px) {
     p {
         font-size: 16px;
     }

@@ -2493,7 +2493,7 @@ git push</code>"
                         Body="Make no mistake, Angular and React are massive. There’s a fair amount of complexity and the learning curve is definitely steep. So be patient, you won’t become an expert overnight. However, these frameworks are very welcoming to beginners. Building simple apps with them is somewhat straightforward, so be careful not to get caught into unnecessary complexities early on. Let’s build a few simple apps first. And what better way to start than building a Coffee app? ☕🤩"
                     }
                 },
-                RequirementsIntro="From Angular’s documentation page: 'The <i>Tour of Heroes</i> application that you build helps a staffing agency manage its stable of heroes. The application has many of the features you’d expect to find in any data-driven application. The finished application acquires and displays a list of heroes, edits a selected hero’s detail, and navigates among different views of heroic data.'",
+                RequirementsIntro="From Angular’s documentation page: 'The <b>Tour of Heroes</b> application that you build helps a staffing agency manage its stable of heroes. The application has many of the features you’d expect to find in any data-driven application. The finished application acquires and displays a list of heroes, edits a selected hero’s detail, and navigates among different views of heroic data.'",
                 Requirements = new List<string>
                 {
                     "This project has only one requirement: You should complete the \"Tour of Heroes\" app in Angular's documentation page."

@@ -41,7 +41,7 @@
             <h1 class="article-section-title">Requirements</h1>
             @if (!String.IsNullOrEmpty(Project.RequirementsIntro))
             {
-                <p>@Project.RequirementsIntro</p>
+                <p><p>@((MarkupString)(Project.RequirementsIntro))</p></p>
             }
             <ul class="list-group  list-group-flush">
                 @foreach (var requirement in Project.Requirements)
@@ -298,7 +298,7 @@
 
             @if (!String.IsNullOrEmpty(Project.RequirementsIntro))
             {
-                <p>@Project.RequirementsIntro</p>
+                <p><p>@((MarkupString)(Project.RequirementsIntro))</p></p>
             }
             <ul class="list-group  list-group-flush">
                 @foreach (var requirement in Project.Requirements)
@@ -587,10 +587,11 @@
 
         if (response == 1)
         {
-            ResultMessage = "Your project was submitted successfuly"; 
+            ResultMessage = "Your project was submitted successfuly";
 
             await InvokeAsync(async () => { await GetUser(); StateHasChanged(); submitProject = false; });
-        } else
+        }
+        else
         {
             ResultMessage = "There was an error when submitting your project";
         }
