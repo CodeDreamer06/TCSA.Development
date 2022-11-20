@@ -196,7 +196,7 @@ public static class ArticlesHelper
                     new Block
                     {
                         Title = "Notes",
-                        ImgUrl = "icons8-timetable-96.png",
+                        ImgUrl = "icons8-notes-64.png",
                         Paragraphs = new List<Paragraph>
                         {
                             new Paragraph
@@ -236,7 +236,7 @@ public static class ArticlesHelper
                     new Block
                     {
                         Title = "Mindset",
-                        ImgUrl = "icons8-to-do-96.png",
+                        ImgUrl = "icons8-dreaming-96.png",
                         Paragraphs = new List<Paragraph>
                         {
                             new Paragraph
@@ -1735,7 +1735,7 @@ git push</code>"
                 },
                 Screenshots = new List<string>
                 {
-                    "Screen-Shot-2021-12-12-at-11.09.56-am.png"
+                    "drinks-1.png"
                 }
             },
             new Project
@@ -1841,7 +1841,7 @@ git push</code>"
                 },
                 Screenshots = new List<string>
                 {
-                    "Screen-Shot-2022-02-11-at-7.17.46-am-768x444.png"
+                    "drinks-1.png"
                 }
             },
             new Project

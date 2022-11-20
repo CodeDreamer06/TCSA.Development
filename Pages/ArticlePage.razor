@@ -157,9 +157,11 @@
     {
         if (httpContextAccessor.HttpContext?.User != null)
         {
-            IsLogged = true;
-
-            var email = httpContextAccessor.HttpContext.User.Identity.Name;
+            var email = httpContextAccessor.HttpContext.User.Identity?.Name;
+            if (!String.IsNullOrEmpty(email))
+            {
+                IsLogged = true;
+            }
 
             try
             {
@@ -198,7 +200,10 @@
         {
             ResultMessage = "Your project was submitted successfuly";
 
-            await InvokeAsync(async () => { await GetUser(); StateHasChanged(); });
+            await InvokeAsync(async () => { 
+                await GetUser(); 
+                StateHasChanged(); 
+            });
         }
         else
         {

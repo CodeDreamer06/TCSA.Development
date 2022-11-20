@@ -65,7 +65,7 @@
     {
         <div class="row pb-5">
             <div class="col-2 icon-div">
-                <img src="img/Screen-Shot-2022-05-25-at-5.23.20-am-768x722.png" width="70" alt="" class="align-middle">
+                <img src="img/books.png" width="70" alt="" class="align-middle">
             </div>
             <div class=col-10>
                 <h1 class="article-section-title">What you'll learn</h1>
@@ -86,7 +86,7 @@
     {
         <div class="row pb-5">
             <div class="col-2 icon-div">
-                <img src="img/Screen-Shot-2022-05-25-at-5.23.20-am-768x722.png" width="70" alt="" class="align-middle">
+                <img src="img/books.png" width="70" alt="" class="align-middle">
             </div>
             <div class=col-10>
                 <h1 class="article-section-title">Resources</h1>
@@ -245,7 +245,6 @@
 
                     @if (submitProject)
                     {
-
                         <div class="form-group">
                             <EditForm Model="@dashboardProject" OnValidSubmit="SubmitProject">
                                 <DataAnnotationsValidator />
@@ -322,7 +321,7 @@
     {
 
         <div class="col d-flex justify-content-center icon-div">
-            <img src="img/Screen-Shot-2022-05-25-at-5.23.20-am-768x722.png" width="70" alt="" class="align-middle">
+            <img src="img/books.png" width="70" alt="" class="align-middle">
         </div>
         <div class="row pb-5">
             <div class="col">
@@ -346,7 +345,7 @@
     @if (Project.Resources != null)
     {
         <div class="col d-flex justify-content-center icon-div">
-            <img src="img/Screen-Shot-2022-05-25-at-5.23.20-am-768x722.png" width="70" alt="" class="align-middle">
+            <img src="img/books.png" width="70" alt="" class="align-middle">
         </div>
         <div class="row pb-5">
             <div class="col">
@@ -548,9 +547,11 @@
     {
         if (httpContextAccessor.HttpContext?.User != null)
         {
-            IsLogged = true;
-
             var email = httpContextAccessor.HttpContext.User.Identity?.Name;
+            if (!String.IsNullOrEmpty(email))
+            {
+                IsLogged = true;
+            }
 
             try
             {
@@ -589,7 +590,11 @@
         {
             ResultMessage = "Your project was submitted successfuly";
 
-            await InvokeAsync(async () => { await GetUser(); StateHasChanged(); submitProject = false; });
+            await InvokeAsync(async () => { 
+                await GetUser(); 
+                StateHasChanged(); 
+                submitProject = false; 
+            });
         }
         else
         {
@@ -604,7 +609,9 @@
         if (response == 1)
         {
             ResultMessage = "Your project was marked as incomplete";
-            await InvokeAsync(async () => { await GetUser(); StateHasChanged(); });
+            await InvokeAsync(async () => { 
+                await GetUser(); 
+                StateHasChanged(); });
         }
         else
         {
