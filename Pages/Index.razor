@@ -12,14 +12,14 @@
                     <p class="last-updated">Last Updated: Oct-22-2022</p>
                 </div>
             </div>
-            <div class="title-mobile col-xl-6 col-lg-6 col-sm-1 d-flex align-items-center justify-content-center">
+            <div class="title-mobile col-xl-6 col-md-6 col-lg-6 col-sm-1 d-flex align-items-center justify-content-center">
                 <div>
                     <h1 class="display-1 text-center">THE C# <br />ACADEMY</h1>
                     <p class="lead text-center">Learn with Projects!</p>
-                    <p class="last-updated text-center">Last Updated: Oct-22-2022</p>
+                    <p class="last-updated text-center">Last Updated: Nov-21-2022</p>
                 </div>
             </div>
-            <div class="col">
+            <div class="col col-md-6">
                 <img class="img-fluid" src="img/main-banner.gif" />
             </div>
         </div>
@@ -28,8 +28,8 @@
 <div class="jumbotron jumbotron-fluid latest-updates">
     <div class="container latest-updates-container">
         <p class="latest-updates-title">Latest Updates</p>
+        <p class="latest-updates-list">2022-Nov-21 : Ported website from Wordpress to Blazor/Azure</p>
         <p class="latest-updates-list">2022-Oct-22 : Updated Phone Book Entity Framework project</p>
-        <p class="latest-updates-list">2022-Oct-14 : Updated 'Shift Tracker' .NET Core Web API project</p>
     </div>
 </div>
 <div class="jumbotron jumbotron-fluid">
@@ -123,7 +123,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center title">
             <img class="area-title" src="img/apply-title.png" />
-            <p class="lead">With these projects, you'll showcase your work and start applying for jobs.</p>
+            <p class="lead area-description area-description-dark">With these projects, you'll showcase your work and start applying for jobs.</p>
         </div>
         <div class="row d-flex justify-content-center">
             @foreach (var project in projects.Where(x => x.Area == Area.StartApplying))
@@ -310,11 +310,6 @@
     .area-first-steps {
         background-color: #1C236D;
         padding-bottom: 50px;
-    }
-
-    .area-title {
-        max-width: 250px;
-        padding-bottom: 10px;
     }
 
     .area-title-text {

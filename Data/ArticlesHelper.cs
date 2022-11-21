@@ -60,7 +60,7 @@ public static class ArticlesHelper
                             },
                             new Paragraph
                             {
-                                Body = "My name is Pablo and it’s a pleasure to have the opportunity to help you in your journey. I hope The C# Academy will give you some direction! I’m a self-taught software developer and got my first job at 39 after two years of relentless, daily, coding practice. If you want to know more about my journey, please read this blog post."
+                                Body = "My name is Pablo and it’s a pleasure to have the opportunity to help you in your journey. I hope The C# Academy will give you some direction! I’m a self-taught software developer and got my first job at 39 after two years of relentless, daily, coding practice. If you want to know more about my journey, please read <a href='https://cappuccinocoding.com/2021/06/24/i-got-my-first-software-developer-job/'>this blog post.</a>"
                             },
                             new Paragraph
                             {
