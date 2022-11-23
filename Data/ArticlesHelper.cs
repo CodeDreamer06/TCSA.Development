@@ -1,4 +1,4 @@
-﻿using TCSA.Models;
+using TCSA.Models;
 
 namespace TCSA.Data;
 
@@ -1732,6 +1732,7 @@ git push</code>"
                 {
                     "<a href='https://www.thecocktaildb.com/api.php'>Cocktail Database</a>",
                     "<a href='https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient'>Microsoft Docs: Http Requests</a>"
+                    "<a href='https://www.youtube.com/watch?v=fc7peZ-FHs4'>Video: Drinks Info App (FULL PROJECT)</a>"
                 },
                 Screenshots = new List<string>
                 {
