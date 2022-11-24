@@ -1614,11 +1614,11 @@ git push</code>"
                 {
                     new Paragraph
                     {
-                        Body="After the first two projects, you should be somewhat comfortable with how things work in C#. It’s time to make things slightly more complex. You’ll be using  <a href='SQL Server'>entire C# Foundation course</a> for the first time. We could continue using SQLite, as it does everything needed for most small applications, but SQL Server is heavily used in the industry and the sooner we get familiar with it, the better."
+                        Body="After the first two projects, you should be somewhat comfortable with how things work in C#. It’s time to make things slightly more complex. You’ll be using <b>SQL Server</b> for the first time. We could continue using SQLite, as it does everything needed for most small applications, but SQL Server is heavily used in the industry and the sooner we get familiar with it, the better."
                     },
                     new Paragraph
                     {
-                        Body="This time the database will be a little more complex as well. We will have two tables linked by a foreign key. And for the first time we will be working with  <a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE'>DTOs (Data Transfer Objects)</a>, which will help us use the same object in different ways."
+                        Body="This time the database will be a little more complex as well. We will have two tables linked by a foreign key. And for the first time we will be working with  <a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE' target='_blank'>DTOs (Data Transfer Objects)</a>, which will help us use the same object in different ways."
                     },
                     new Paragraph
                     {
@@ -1643,13 +1643,13 @@ git push</code>"
                     "For management of stacks, let the user choose the stack by name.",
                     "Think of the \"stacks\" and \"study\" areas almost as separate applications. The study area is merely using data from the stacks area."
                 },
-                LearningIntro = "If you have learned the basics of C# following the  <a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE'>C# Foundations </a> article, you should know all the basic techniques needed to complete this project. Here’s a list of the things you’ll need to fulfil the requirements:",
+                LearningIntro = "If you have learned the basics of C# following the  <a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE' target='_blank'>C# Foundations </a> article, you should know all the basic techniques needed to complete this project. Here’s a list of the things you’ll need to fulfil the requirements:",
                 LearningItems = new List<string>
                  {
                      "Using SQL Server.",
                      "Creating linked tables with SQL.",
                      "Using DTOs to create different versions of classes.",
-                     "<a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE'>Pivoting Tables in SQL</a>"
+                     "<a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE' target='_blank'>Pivoting Tables in SQL</a>"
                  },
                 Blocks = new List<Block>
                 {
@@ -1730,9 +1730,9 @@ git push</code>"
                 ResourcesIntro = "Here are the links for using HTTP calls with C# and to the Drinks API documentation:",
                 Resources = new List<string>
                 {
-                    "<a href='https://www.thecocktaildb.com/api.php'>Cocktail Database</a>",
-                    "<a href='https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient'>Microsoft Docs: Http Requests</a>"
-                    "<a href='https://www.youtube.com/watch?v=fc7peZ-FHs4'>Video: Drinks Info App (FULL PROJECT)</a>"
+                    "<a href='https://www.thecocktaildb.com/api.php' target='_blank'>Cocktail Database</a>",
+                    "<a href='https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient' target='_blank'>Microsoft Docs: Http Requests</a>",
+                    "<a href='https://www.youtube.com/watch?v=fc7peZ-FHs4' target='_blank'>Video: Drinks Info App (FULL PROJECT)</a>"
                 },
                 Screenshots = new List<string>
                 {
