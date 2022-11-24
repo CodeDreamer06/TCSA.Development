@@ -25,6 +25,7 @@
         </div>
     </div>
 </div>
+
 <div class="jumbotron jumbotron-fluid latest-updates">
     <div class="container latest-updates-container">
         <p class="latest-updates-title">Latest Updates</p>
@@ -65,7 +66,7 @@
 <div class="area-first-steps">
     <div class="container w-75">
         <div class="row d-flex justify-content-center">
-            <h1 class="display-4 area-title-text first-steps-area-title">First Steps</h1>
+            <h1 id="first-steps-area" class="display-4 area-title-text first-steps-area-title">First Steps</h1>
             <p class="text-center area-description area-description-dark">Get started with our program reading and following the instructions in these articles. If possible, follow them in order. They cover everything you need to prepare for your C# journey.</p>
 
             @foreach (var article in articles.Where(x => x.Area == Area.StartHere))
@@ -82,7 +83,8 @@
 
 <div class="container w-75">
     <div class="row d-flex justify-content-center title">
-            <img class="area-title" src="img/console-title.png" />
+            <h1 id="console-area"></h1>
+            <img id="console_title" class="area-title" src="img/console-title.png" />
         </div>
     <div class="row d-flex justify-content-center">
         <div class="col-lg-3 col-md-12 col-sm-1 my-3">
@@ -122,8 +124,9 @@
 <div class="area-first-steps start-applying">
     <div class="container">
         <div class="row d-flex justify-content-center title">
+            <h1 id="jobs-area"></h1>
             <img class="area-title" src="img/apply-title.png" />
-            <p class="lead area-description area-description-dark">With these projects, you'll showcase your work and start applying for jobs.</p>
+            <p class="lead text-center area-description area-description-dark">With these projects, you'll showcase your work and start applying for jobs.</p>
         </div>
         <div class="row d-flex justify-content-center">
             @foreach (var project in projects.Where(x => x.Area == Area.StartApplying))
@@ -141,7 +144,7 @@
 <div class="container w-75">
     <div class="row d-flex justify-content-center text-center title">
         <img class="area-title" src="img/mvc-title.png" />
-        <p class="lead">Learn the fundamentals of ASP.NET MVC</p>
+        <p id="mvc-area" class="lead">Learn the fundamentals of ASP.NET MVC</p>
         </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.MVC))
@@ -158,7 +161,7 @@
 <div class="container w-75">
     <div class="row d-flex justify-content-center text-center title">
         <img class="area-title" src="img/angular-title.png" />
-        <p class="lead">Learn how .NET works together with this powerful front-end framework</p>
+        <p id="angular-area" class="lead">Learn how .NET works together with this powerful front-end framework</p>
     </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.Angular))
@@ -175,7 +178,7 @@
 <div class="container w-75">
     <div class="row d-flex justify-content-center text-center title">
         <img class="area-title" src="img/react-title.png" />
-        <p class="lead">Learn how .NET works together with this powerful front-end framework</p>
+        <p id="react-area"  class="lead">Learn how .NET works together with this powerful front-end framework</p>
     </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.React))
@@ -192,7 +195,7 @@
 <div class="container w-75">
     <div class="row d-flex text-center justify-content-center title">
         <img class="area-title" src="img/blazor-title.png" />
-        <p class="lead">Learn the latest .NET solution for web development</p>
+        <p id="blazor-area" class="lead">Learn the latest .NET solution for web development</p>
     </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.Blazor))
@@ -209,7 +212,7 @@
 <div class="container w-75">
     <div class="row d-flex justify-content-center text-center title">
         <img class="area-title" src="img/maui-title.png" />
-        <p class="lead">Learn this fantastic technology to build apps for Android, iOS, MacOs and Windows.</p>
+        <p id="maui-area"  class="lead">Learn this fantastic technology to build apps for Android, iOS, MacOs and Windows.</p>
     </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.MAUI))
@@ -226,7 +229,7 @@
 <div class="container w-75">
     <div class="row d-flex justify-content-center text-center title">
         <img class="area-title" src="img/azure-title.png" />
-        <p class="lead">Get started in cloud computing deploying applications to Microsoft's state-of-the-art cloud solution.</p>
+        <p id="azure-area" class="lead">Get started in cloud computing deploying applications to Microsoft's state-of-the-art cloud solution.</p>
     </div>
     <div class="row d-flex justify-content-center">
         @foreach (var project in projects.Where(x => x.Area == Area.Azure))
@@ -240,6 +243,8 @@
         }
     </div>
 </div>
+
+<AnchorNavigation/>
 
 @code {
     protected List<Article> articles = new();
@@ -343,5 +348,6 @@
     .start-applying {
         padding-top: 1px;
     }
+
 
 </style>

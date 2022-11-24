@@ -68,10 +68,14 @@
                 <img src="img/icons8-completed-task-96.png" width="70" alt="" class="align-middle">
             </div>
             <div class=col-10>
-                @*@if (IsCompleted)
+                @if (IsCompleted)
                 {
-                    <button class="btn btn-outline-secondary" type="button" @onclick="MarkAsIncomplete">Mark As Unread</button>
-                }*@
+                    <div class="card">
+                        <div class="card-body">
+                            This article was marked as read.
+                        </div>
+                    </div>
+                }
                 @if (!IsCompleted)
                 {
                     <p>If you're following the roadmap, mark this article as read before moving to the next.</p>
@@ -79,7 +83,6 @@
                         <btn class="btn btn-outline-secondary" type="button" @onclick="MarkAsComplete">Mark As Read</btn>
                     </div>
                 }
-                    <p>@ResultMessage</p>
             </div>
         </div>
 
@@ -149,6 +152,7 @@
     protected async override Task OnInitializedAsync()
     {
         Article = ArticlesHelper.GetArticles().Single(x => x.Id == int.Parse(ArticleId));
+        //HasNext = GroupArticles.Contains(int.Parse(ArticleId));
 
         await GetUser();
     }
@@ -218,7 +222,10 @@
         if (response == 1)
         {
             ResultMessage = "Your project was marked as incomplete";
-            await InvokeAsync(async () => { await GetUser(); StateHasChanged(); });
+            await InvokeAsync(async () => { 
+                await GetUser(); 
+                StateHasChanged(); 
+            });
         }
         else
         {

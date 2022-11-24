@@ -88,6 +88,10 @@ code {
     background-color: lightgray;
 }
 
+.area-title {
+    max-width: 250px;
+}
+
 @media (min-width: 1024px) {
     .title-mobile {
         display: none !important;
@@ -106,6 +110,7 @@ code {
     p {
         font-size: 16px;
     }
+
     .container {
         width: 100% !important;
     }
@@ -160,5 +165,13 @@ code {
 
     .area-title {
         max-width: 250px;
+    }
+
+    .area-description {
+        font-size: 16px !important;
+    }
+
+    .lead {
+        font-size: 16px !important; 
     }
 }
