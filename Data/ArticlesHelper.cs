@@ -1,4 +1,5 @@
 using TCSA.Models;
+using static System.Net.WebRequestMethods;
 
 namespace TCSA.Data;
 
@@ -1106,7 +1107,7 @@ But I'll be surprised if you get to the end of this list and you don't have a jo
                         {
                             new Paragraph
                             {
-                                Body = "Log into Github and create a fork of our review repository, which can be found here. When naming your fork, choose the following format: YourDiscordAlias.ProjectName. "
+                                Body = "Log into Github and create a fork of our review repository, which can be found <a href='https://github.com/TheCSharpAcademy/Console.Review' target='_blank'>here</a>. When naming your fork, choose the following format: YourDiscordAlias.ProjectName. "
                             },
                             new Paragraph
                             {
@@ -1618,7 +1619,7 @@ git push</code>"
                     },
                     new Paragraph
                     {
-                        Body="This time the database will be a little more complex as well. We will have two tables linked by a foreign key. And for the first time we will be working with  <a href='https://www.youtube.com/watch?v=o81wpRuOGjE&list=PL4G0MUH8YWiAMypwveH2LlLK_o8Jto9CE' target='_blank'>DTOs (Data Transfer Objects)</a>, which will help us use the same object in different ways."
+                        Body="This time the database will be a little more complex as well. We will have two tables linked by a foreign key. And for the first time we will be working with  <a href='https://www.codeproject.com/Articles/1050468/Data-Transfer-Object-Design-Pattern-in-Csharp' target='_blank'>DTOs (Data Transfer Objects)</a>, which will help us use the same object in different ways."
                     },
                     new Paragraph
                     {
