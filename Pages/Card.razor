@@ -42,8 +42,8 @@
 
 <style>
     .card-slot {
-        margin-bottom: 10px;
-    }
+        margin-bottom: 2rem;
+    }   
 
     .card-img-top {
         max-width: 100px;
@@ -51,9 +51,23 @@
 
     .card {
         border: none;
+        border-radius: 15px;
         padding: 30px 0;
         min-height: 100%;
         width: 100% !important;
+        transition: all 200ms ease-in-out;
+    }
+
+    .card-no-transition {
+        transition: none;
+    }
+
+    .card-no-transition:hover {
+        transform: none !important;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
     }
 
     .card-title {
